@@ -38,7 +38,7 @@ export default function Navbar() {
               Homeo<span className="text-[#0084FF]">Network</span>
             </span>
             <span className="hidden sm:inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-              হোমিওপ্যাথদের জন্য
+              হোমিওপ্যাথ চিকিৎসকদের জন্য
             </span>
           </div>
         </Link>
@@ -66,13 +66,13 @@ export default function Navbar() {
         {/* Action Button */}
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="https://wa.me/8801700000000"
+            href="https://wa.me/8801886950505"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs font-semibold text-slate-600 hover:text-[#0052CC] flex items-center gap-1.5"
           >
             <PhoneCall className="w-3.5 h-3.5 text-emerald-600" />
-            <span>হোয়াটসঅ্যাপ</span>
+            <span>হোয়াটসঅ্যাপ হটলাইন</span>
           </a>
           <Link
             href="/contact"

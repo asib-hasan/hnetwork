@@ -7,13 +7,13 @@ import {
   ArrowRight, 
   Sparkles, 
   Globe, 
-  CalendarCheck, 
   Search, 
   TrendingUp, 
   Palette, 
   Database, 
   Share2, 
-  Cpu
+  Cpu,
+  UserCheck
 } from "lucide-react";
 import { servicesList } from "@/data/servicesData";
 
@@ -21,11 +21,11 @@ export default function ServicesShowcase() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const categories = [
-    { id: "all", label: "সকল ৮টি সেবা", count: 8 },
-    { id: "web", label: "ওয়েবসাইট ও বুকিং", count: 2, items: ["medical-website", "online-appointments"] },
-    { id: "seo", label: "এসইও ও বিজ্ঞাপন", count: 2, items: ["medical-seo", "digital-marketing"] },
-    { id: "software", label: "ক্লিনিক সিআরএম ও বট", count: 2, items: ["clinic-crm-software", "tech-automation"] },
-    { id: "branding", label: "ব্র্যান্ডিং ও সোশ্যাল", count: 2, items: ["branding-identity", "social-media-management"] },
+    { id: "all", label: "সকল সেবা", count: servicesList.length },
+    { id: "web", label: "ডাক্তার ওয়েবসাইট ও ডিরেক্টরি", count: 2, items: ["medical-website", "doctor-directory-listing"] },
+    { id: "seo", label: "এসইও ও ফেসবুক বিজ্ঞাপন", count: 2, items: ["medical-seo", "digital-marketing"] },
+    { id: "software", label: "ক্লিনিক সফটওয়্যার ও বট", count: 2, items: ["clinic-crm-software", "tech-automation"] },
+    { id: "branding", label: "ব্র্যান্ডিং ও সোশ্যাল রিলস", count: 2, items: ["branding-identity", "social-media-management"] },
   ];
 
   const filteredServices = servicesList.filter((service) => {
@@ -39,8 +39,8 @@ export default function ServicesShowcase() {
     switch (name) {
       case "Globe":
         return <Globe {...props} />;
-      case "CalendarCheck":
-        return <CalendarCheck {...props} />;
+      case "UserCheck":
+        return <UserCheck {...props} />;
       case "Search":
         return <Search {...props} />;
       case "TrendingUp":

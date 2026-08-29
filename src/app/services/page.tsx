@@ -3,12 +3,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Cpu } from "lucide-react";
 import ServicesShowcase from "@/components/ServicesShowcase";
-import PricingPackages from "@/components/PricingPackages";
 
 export const metadata: Metadata = {
   title: "ডিজিটাল সেবাসমূহ ও স্বাস্থ্যসেবা প্রযুক্তি",
   description:
-    "হোমিওপ্যাথিক চিকিৎসকদের জন্য বিশেষায়িত ৮টি ডিজিটাল সেবা: ওয়েবসাইট, টেলিমেডিসিন, গুগল এসইও, কেস সফটওয়্যার, ক্লিনিক ব্র্যান্ডিং ও অটোমেশন।",
+    "হোমিওপ্যাথিক চিকিৎসকদের জন্য বিশেষায়িত ডিজিটাল সেবাসমূহ: ওয়েবসাইট, ডক্টর ডিরেক্টরি, গুগল এসইও, ফেসবুক অ্যাড, ক্লিনিক ম্যানেজমেন্ট সফটওয়্যার, চেম্বার ব্র্যান্ডিং ও হোয়াটসঅ্যাপ অটোমেশন।",
 };
 
 export default function ServicesPage() {
@@ -27,7 +26,7 @@ export default function ServicesPage() {
           </h1>
 
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-            গুগলে নতুন রোগী পাওয়া থেকে শুরু করে স্বয়ংক্রিয় সিরিয়াল ও ডিজিটাল কেস রেকর্ড—আপনার চেম্বারের পূর্ণাঙ্গ ডিজিটাল ইকোসিস্টেম।
+            গুগলে নতুন রোগী পাওয়া থেকে শুরু করে ডিজিটাল প্রেসক্রিপশন প্রিন্টিং ও চেম্বার অটোমেশন—আপনার পূর্ণাঙ্গ ডিজিটাল ইকোসিস্টেম।
           </p>
         </div>
       </section>
@@ -36,9 +35,6 @@ export default function ServicesPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <ServicesShowcase />
       </section>
-
-      {/* Pricing Packages */}
-      <PricingPackages />
 
       {/* CTA Box */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6">

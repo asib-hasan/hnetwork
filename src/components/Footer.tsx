@@ -28,15 +28,15 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              হোমিওপ্যাথিক চিকিৎসক, ক্লিনিক ও চিকিৎসা প্রতিষ্ঠানের জন্য নিবেদিত ডিজিটাল প্ল্যাটফর্ম ও টেকনোলজি সলিউশন।
+              বাংলাদেশ হোমিওপ্যাথি বোর্ডের নিবন্ধিত DHMS ও বিএইচএমএস চিকিৎসকদের চেম্বার অটোমেশন ও ডিজিটাল প্রবৃদ্ধির নিবেদিত প্ল্যাটফর্ম।
             </p>
 
-            <div className="flex gap-2 pt-1">
+            <div className="flex flex-wrap gap-2 pt-1">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-[10px] border border-slate-700">
                 <ShieldCheck className="w-3 h-3 text-emerald-400" /> সর্বোচ্চ নিরাপত্তা
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-[10px] border border-slate-700">
-                <HeartPulse className="w-3 h-3 text-[#0084FF]" /> ডাক্তার-প্রথম
+                <HeartPulse className="w-3 h-3 text-[#0084FF]" /> ডিগ্রিধারী ডাক্তার-প্রথম
               </span>
             </div>
           </div>
@@ -97,19 +97,22 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#0084FF] shrink-0" />
-                <a href="tel:+8801700000000" className="hover:text-white transition-colors text-slate-200">
-                  +৮৮০ ১৭০০-০০০০০০
+                <a href="tel:+8801886950505" className="hover:text-white transition-colors text-slate-200">
+                  +৮৮০ ১৮৮৬-৯৫০৫০৫
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#0084FF] shrink-0" />
-                <a href="mailto:contact@homeonetwork.com" className="hover:text-white transition-colors text-slate-200">
-                  contact@homeonetwork.com
+                <a href="mailto:support@homeonetwork.com.bd" className="hover:text-white transition-colors text-slate-200">
+                  support@homeonetwork.com.bd
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#0084FF] shrink-0 mt-0.5" />
-                <span>ঢাকা, বাংলাদেশ</span>
+                <div>
+                  <span className="block text-slate-200">বাংলা মোটর, ঢাকা-১০০০</span>
+                  <span className="text-[11px] text-slate-400">মিরপুর-১৪ (সরকারি হোমিও মেডিকেল কলেজ সংলগ্ন)</span>
+                </div>
               </li>
             </ul>
           </div>
@@ -119,7 +122,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>© ২০২৬ Homeo Network. সর্বস্বত্ব সংরক্ষিত।</p>
-          <span>হোমিওপ্যাথিক চিকিৎসকদের বিশ্বস্ত ডিজিটাল সঙ্গী</span>
+          <span>বাংলাদেশি হোমিওপ্যাথিক চিকিৎসকদের আধুনিক প্রযুক্তি সহযোগী</span>
         </div>
       </div>
     </footer>

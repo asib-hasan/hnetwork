@@ -1,13 +1,13 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, MessageSquare, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare, ShieldCheck, Clock } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
-  title: "যোগাযোগ | ফ্রি চেম্বার স্ট্র্যাটেজি সেশন বুক করুন",
+  title: "যোগাযোগ | ফ্রি চেম্বার ডিজিটালাইজেশন সেশন বুক করুন",
   description:
-    "Homeo Network টিমের সাথে যোগাযোগ করুন। আপনার চেম্বার ডিজিটালাইজেশনের জন্য ৩০ মিনিটের ফ্রি কনসালটেশন নিন অথবা হোয়াটসঅ্যাপ হটলাইনে যুক্ত হন।",
+    "Homeo Network টিমের সাথে যোগাযোগ করুন। আপনার চেম্বার ডিজিটালাইজেশনের জন্য ৩০ মিনিটের ফ্রি কনসালটেশন নিন অথবা সরাসরি হোয়াটসঅ্যাপ হটলাইনে যুক্ত হন।",
 };
 
 export default function ContactPage() {
@@ -39,15 +39,15 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-4">
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
               <h2 className="text-lg font-bold text-slate-900">
-                সরাসরি যোগাযোগ
+                সরাসরি যোগাযোগ ও হটলাইন
               </h2>
               <p className="text-xs text-slate-600 leading-relaxed">
-                দ্রুত সহযোগিতার জন্য আপনার সুবিধাজনক মাধ্যমে যোগাযোগ করতে পারেন:
+                সম্মানিত চিকিৎসকদের সেবায় আমাদের টিম সপ্তাহের ৭ দিনই প্রস্তুত:
               </p>
 
               <div className="space-y-3 pt-1">
                 <a
-                  href="https://wa.me/8801700000000"
+                  href="https://wa.me/8801886950505"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 p-3 rounded-xl bg-emerald-50 border border-emerald-200 hover:bg-emerald-100/70 transition-all"
@@ -57,7 +57,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">হোয়াটসঅ্যাপ ইনস্ট্যান্ট কনসালটেশন</div>
-                    <div className="text-xs text-emerald-700 font-semibold">+৮৮০ ১৭০০-০০০০০০</div>
+                    <div className="text-xs text-emerald-700 font-semibold">+৮৮০ ১৮৮৬-৯৫০৫০৫</div>
                     <span className="text-[10px] text-slate-500">সাধারণত ৫ মিনিটে উত্তর দেওয়া হয়</span>
                   </div>
                 </a>
@@ -67,11 +67,11 @@ export default function ContactPage() {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-900">সরাসরি ফোন কল</div>
-                    <a href="tel:+8801700000000" className="text-xs text-[#0052CC] font-semibold hover:underline">
-                      +৮৮০ ১৭০০-০০০০০০
+                    <div className="text-xs font-bold text-slate-900">সরাসরি ফোন কল হটলাইন</div>
+                    <a href="tel:+8801886950505" className="text-xs text-[#0052CC] font-semibold hover:underline">
+                      +৮৮০ ১৮৮৬-৯৫০৫০৫
                     </a>
-                    <span className="text-[10px] text-slate-500 block">সকাল ১০:০০ - রাত ১০:০০ (প্রতিদিন)</span>
+                    <span className="text-[10px] text-slate-500 block">সকাল ৯:০০ - রাত ১০:০০ (প্রতিদিন)</span>
                   </div>
                 </div>
 
@@ -81,8 +81,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">অফিসিয়াল ইমেইল</div>
-                    <a href="mailto:contact@homeonetwork.com" className="text-xs text-[#0052CC] font-semibold hover:underline">
-                      contact@homeonetwork.com
+                    <a href="mailto:support@homeonetwork.com.bd" className="text-xs text-[#0052CC] font-semibold hover:underline">
+                      support@homeonetwork.com.bd
                     </a>
                   </div>
                 </div>
@@ -93,17 +93,23 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">প্রধান কার্যালয়</div>
-                    <span className="text-xs text-slate-600">ঢাকা, বাংলাদেশ (সারাদেশ ও প্রবাসে সেবা প্রদানকারী)</span>
+                    <p className="text-xs text-slate-600 leading-snug">
+                      রূপায়ন ট্রেড সেন্টার, বাংলা মোটর, ঢাকা-১০০০
+                    </p>
+                    <span className="text-[10px] text-slate-500 block mt-0.5">
+                      টেকনিক্যাল সাপোর্ট: মিরপুর-১৪ (সরকারি হোমিওপ্যাথিক মেডিকেল কলেজ সংলগ্ন), ঢাকা-১২০৬
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 flex items-start gap-2.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-              <p className="text-xs text-slate-700 leading-relaxed">
-                <strong>চিকিৎসক গোপনীয়তা:</strong> আপনার চেম্বার সংক্রান্ত সকল তথ্য ও আলোচনার বিষয়বস্তু সর্বোচ্চ গোপনীয়তায় সংরক্ষিত থাকে।
-              </p>
+            <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-start gap-3 text-xs text-emerald-900">
+              <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+              <div>
+                <strong className="block text-slate-900">চিকিৎসকদের তথ্যের সর্বোচ্চ নিরাপত্তা:</strong>
+                আপনার চেম্বারের যাবতীয় রোগীর তথ্য ও ডিজিটাল প্রেসক্রিপশন রেকর্ড শতভাগ এনক্রিপ্টেড এবং সম্পূর্ণ আপনার নিজস্ব নিয়ন্ত্রণে থাকে।
+              </div>
             </div>
           </div>
 

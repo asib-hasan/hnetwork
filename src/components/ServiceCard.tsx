@@ -10,7 +10,8 @@ import {
   Share2, 
   Cpu, 
   ArrowRight,
-  Sparkles
+  Sparkles,
+  UserCheck
 } from "lucide-react";
 import { ServiceItem } from "@/data/servicesData";
 
@@ -24,6 +25,8 @@ export default function ServiceCard({ service }: ServiceCardProps) {
     switch (name) {
       case "Globe":
         return <Globe {...props} />;
+      case "UserCheck":
+        return <UserCheck {...props} />;
       case "CalendarCheck":
         return <CalendarCheck {...props} />;
       case "Search":

@@ -1,22 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  XCircle, 
-  Star, 
-  Activity, 
-  Users, 
-  Zap, 
-  BarChart3, 
-  Globe, 
-  CalendarCheck, 
-  Leaf, 
-  Sparkles, 
-  Stethoscope, 
-  ChevronRight, 
-  PhoneCall 
+import {
+  ArrowRight,
+  CheckCircle2,
+  XCircle,
+  Star,
+  Activity,
+  Users,
+  Zap,
+  MapPin,
+  Globe,
+  CalendarCheck,
+  Leaf,
+  Sparkles,
+  Stethoscope,
+  ChevronRight,
+  ShieldCheck
 } from "lucide-react";
 import { servicesList } from "@/data/servicesData";
 import ServiceCard from "@/components/ServiceCard";
@@ -25,15 +25,14 @@ import FAQSection from "@/components/FAQSection";
 export default function HomePage() {
   return (
     <div className="space-y-16 sm:space-y-24 pb-20">
-      
+
       {/* ===== 1. HERO SECTION WITH AUTHENTIC HOMEO DOCTOR VISUAL ===== */}
       <section className="pt-10 pb-6 sm:pt-14 sm:pb-12 bg-gradient-to-b from-emerald-50/40 via-white to-transparent">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-            
+
             {/* Left Column: Value Proposition */}
             <div className="lg:col-span-7 space-y-5 text-left">
-              
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-slate-900 tracking-tight leading-[1.25]">
                 ক্লাসিক্যাল হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
@@ -42,26 +41,26 @@ export default function HomePage() {
 
               {/* Subtitle */}
               <p className="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
-                ৪৫ মিনিটের গভীর কেস-টেকিং থেকে শুরু করে রেপার্টরি মূল্যায়ন, ওষুধ কুরিয়ার ট্র্যাকিং এবং ২৪/৭ স্বয়ংক্রিয় হোয়াটসঅ্যাপ সিরিয়াল—হোমিওপ্যাথিক চিকিৎসকদের জন্য বিশেষায়িত ওয়েবসাইট, গুগল ম্যাপসে ১ নম্বর এসইও এবং ক্লিনিক সফটওয়্যার।
+                বাংলাদেশ হোমিওপ্যাথি বোর্ডের নিবন্ধিত DHMS ও ঢাকা বিশ্ববিদ্যালয় অধিভুক্ত BHMS চিকিৎসকদের জন্য বিশেষায়িত ডাক্তার ওয়েবসাইট, জাতীয় ডিরেক্টরি লিস্টিং, গুগল ম্যাপস ১ নম্বর এসইও এবং আধুনিক ক্লিনিক সফটওয়্যার।
               </p>
 
               {/* Trust Checkmarks */}
               <div className="grid grid-cols-2 sm:grid-cols-2 gap-2.5 pt-1 text-xs font-semibold text-slate-700">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>কেন্ট ও বোরিক রেপার্টরি উপযোগী</span>
+                  <span>ডিজিটাল প্রেসক্রিপশন ও রোগী ডাটাবেস</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>মায়াজমেটিক লক্ষণ সমষ্টি রেকর্ড</span>
+                  <span>চেম্বার বিলিং ও ওষুধ স্টক হিসাব</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>ওষুধের ডায়েট ও পথ্য নির্দেশনা</span>
+                  <span>জার্মান সিলপ্যাক ওষুধের পথ্য নির্দেশনা</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>গুগলে জটিল রোগের চিকিৎসায় ১ নম্বর</span>
+                  <span>গুগল ম্যাপসে আপনার এলাকায় ১ নম্বর</span>
                 </div>
               </div>
 
@@ -74,12 +73,12 @@ export default function HomePage() {
                   <span>ফ্রি চেম্বার স্ট্র্যাটেজি সেশন বুক করুন</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                
+
                 <Link
                   href="/services"
                   className="btn-secondary text-xs py-3 px-5 font-semibold text-center flex items-center justify-center gap-1.5"
                 >
-                  <span>৮টি ডিজিটাল সমাধান দেখুন</span>
+                  <span>ডিজিটাল সেবাসমূহ দেখুন</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -88,17 +87,17 @@ export default function HomePage() {
               <div className="pt-2 flex items-center gap-3 text-xs text-slate-500">
                 <div className="flex -space-x-2">
                   <div className="w-7 h-7 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-[10px] ring-2 ring-white">
-                    ডা
+                    ডি
                   </div>
                   <div className="w-7 h-7 rounded-full bg-[#0052CC] text-white font-bold flex items-center justify-center text-[10px] ring-2 ring-white">
-                    হো
+                    বি
                   </div>
                   <div className="w-7 h-7 rounded-full bg-amber-500 text-white font-bold flex items-center justify-center text-[10px] ring-2 ring-white">
                     ৫★
                   </div>
                 </div>
                 <span>
-                  বাংলাদেশ ও ভারতে <strong>৫০০+ DHMS ও BHMS চিকিৎসকদের</strong> বিশ্বস্ত প্ল্যাটফর্ম।
+                  ঢাকা, চট্টগ্রাম, সিলেটসহ সারাদেশে <strong>৫০০+ রেজিস্টার্ড চিকিৎসকদের</strong> বিশ্বস্ত প্ল্যাটফর্ম।
                 </span>
               </div>
 
@@ -107,13 +106,13 @@ export default function HomePage() {
             {/* Right Column: Hero Visual with Interactive Badges */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                
+
                 {/* Main Hero Card */}
                 <div className="relative rounded-2xl overflow-hidden border-2 border-emerald-100 shadow-xl bg-white group">
                   <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full">
                     <Image
-                      src="/images/homeo-hero.jpg"
-                      alt="হোমিওপ্যাথিক চিকিৎসকের আধুনিক চেম্বার, রেপার্টরি বই, সুগার গ্লোবিউলস ও ডিজিটাল ক্লিনিক ড্যাশবোর্ড"
+                      src="/images/male-doctor-hero.jpg"
+                      alt="হোমিওপ্যাথিক চিকিৎসকের আধুনিক চেম্বার, ডিজিটাল প্রেসক্রিপশন ও ক্লিনিক ড্যাশবোর্ড"
                       fill
                       priority
                       className="object-cover group-hover:scale-102 transition-transform duration-500"
@@ -127,10 +126,10 @@ export default function HomePage() {
                       <div>
                         <p className="text-xs font-bold flex items-center gap-1 text-emerald-300">
                           <Stethoscope className="w-3.5 h-3.5" />
-                          <span>ডা. স্যামুয়েল ক্লাসিক্যাল ক্লিনিক স্যুট</span>
+                          <span>ডা. কে. আর. রহমান ক্লাসিক্যাল চেম্বার স্যুট</span>
                         </p>
                         <p className="text-[11px] text-slate-200">
-                          ক্লাসিক্যাল রেপার্টরি + ক্লাউড পেশেন্ট সিআরএম
+                          রেজিস্ট্রেশন নং: DHMS-১২৪১৫ · ঢাকা
                         </p>
                       </div>
                       <span className="px-2 py-0.5 rounded bg-emerald-500/90 text-white text-[10px] font-bold">
@@ -146,8 +145,8 @@ export default function HomePage() {
                     <Leaf className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-[11px] font-bold text-slate-900">সিমিলিমাম ম্যাচিং</div>
-                    <div className="text-[10px] text-emerald-600 font-semibold">কেন্ট ও বোরিক রুব্রিক্স</div>
+                    <div className="text-[11px] font-bold text-slate-900">ডিজিটাল প্রেসক্রিপশন</div>
+                    <div className="text-[10px] text-emerald-600 font-semibold">কিউআর কোডযুক্ত প্রিন্ট</div>
                   </div>
                 </div>
 
@@ -158,7 +157,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-slate-900">+৬৮ জন নতুন রোগী</div>
-                    <div className="text-[10px] text-slate-500 font-medium">স্বয়ংক্রিয় হোয়াটসঅ্যাপ বুকিং</div>
+                    <div className="text-[10px] text-slate-500 font-medium">স্বয়ংক্রিয় হোয়াটসঅ্যাপ সিরিয়াল</div>
                   </div>
                 </div>
 
@@ -172,7 +171,7 @@ export default function HomePage() {
       {/* ===== 2. KEY STATS STRIP ===== */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          
+
           <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
             <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-2">
               <Users className="w-4 h-4" />
@@ -181,7 +180,7 @@ export default function HomePage() {
               ৫০০<span className="text-emerald-600">+</span>
             </div>
             <div className="text-xs font-semibold text-slate-600 mt-0.5">
-              হোমিও ডাক্তার ডিজিটাইজড
+              নিবন্ধিত ডাক্তার ডিজিটাইজড
             </div>
           </div>
 
@@ -193,19 +192,19 @@ export default function HomePage() {
               ৮৫ হাজার<span className="text-[#0052CC]">+</span>
             </div>
             <div className="text-xs font-semibold text-slate-600 mt-0.5">
-              জটিল কেস রেকর্ড সংরক্ষিত
+              রোগী ও প্রেসক্রিপশন ডিজিটাইজড
             </div>
           </div>
 
           <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
             <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-2">
-              <BarChart3 className="w-4 h-4" />
+              <MapPin className="w-4 h-4" />
             </div>
             <div className="text-2xl font-extrabold text-slate-900">
-              ৯৮.২<span className="text-emerald-600">%</span>
+              ৬৪<span className="text-emerald-600"> জেলা</span>
             </div>
             <div className="text-xs font-semibold text-slate-600 mt-0.5">
-              গুগল এসইও স্পিড স্কোর
+              দেশব্যাপী ডাক্তার নেটওয়ার্ক
             </div>
           </div>
 
@@ -269,37 +268,37 @@ export default function HomePage() {
             হোমিওপ্যাথিক প্র্যাকটিসের স্বতন্ত্র বৈশিষ্ট্যের জন্য নির্মিত
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-            সাধারণ ক্লিনিক সফটওয়্যার তৈরি হয় ৩ মিনিটের অ্যালোপ্যাথিক প্রেসক্রিপশনের জন্য। কিন্তু ক্লাসিক্যাল হোমিওপ্যাথিতে প্রয়োজন গভীর লক্ষণ সমষ্টি, মায়াজম মূল্যায়ন ও পথ্যের সতর্কবার্তা।
+            হোমিওপ্যাথিক চিকিৎসকদের প্রতিদিনের চেম্বার পরিচালনার জন্য সহজে ডিজিটাল প্রেসক্রিপশন প্রিন্ট, রোগী রেজিস্ট্রি, ভিজিট ফি ও ডিসপেনসারি ব্যবস্থাপনার সম্পূর্ণ সমাধান।
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-          
-          {/* Card 1: Consultation & Case Taking */}
+
+          {/* Card 1: Patient & Prescription */}
           <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs flex flex-col justify-between">
             <div className="relative aspect-[16/10] w-full bg-slate-100">
               <Image
-                src="/images/homeo-consultation.jpg"
-                alt="গভীর মনোযোগে রোগীর কেস হিস্ট্রি গ্রহণ করছেন অভিজ্ঞ হোমিওপ্যাথিক চিকিৎসক"
+                src="/images/male-doctor-consultation.jpg"
+                alt="রোগীর সাথে কথা বলছেন ও ডিজিটাল প্রেসক্রিপশন প্রস্তুত করছেন অভিজ্ঞ চিকিৎসক"
                 fill
                 className="object-cover"
               />
               <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-800 border border-slate-200 shadow-xs">
-                গভীর লক্ষণ সমষ্টি
+                স্মার্ট প্রেসক্রিপশন
               </div>
             </div>
             <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
               <div className="space-y-2">
                 <h3 className="text-base font-bold text-slate-900">
-                  ৪৫ মিনিটের কেস টেকিং ও রেপার্টরি মূল্যায়ন
+                  ডিজিটাল রোগী ব্যবস্থাপনা ও দ্রুত প্রেসক্রিপশন প্রিন্ট
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  রোগীর মানসিক লক্ষণ, শীতকাতরতা/উষ্ণকাতরতা, খাবারের পছন্দ-অপছন্দ এবং বৃদ্ধি ও উপশমের সময় লিপিবদ্ধ রাখুন। ফলো-আপের সময় ২ সেকেন্ডে স্ক্রিনে পুরো ফাইল দৃশ্যমান হবে।
+                  রোগীর নাম বা মোবাইল নম্বর দিতেই ২ সেকেন্ডে পূর্ববর্তী ব্যবস্থাপত্র স্ক্রিনে দৃশ্যমান। কিউআর কোডযুক্ত বাংলা ও ইংরেজি প্রফেশনাল প্রেসক্রিপশন চোখের পলকে প্রিন্ট করুন।
                 </p>
               </div>
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
                 <span className="text-emerald-700 font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> কেন্ট ও বোরিক মায়াজমেটিক নোটস
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> পেশেন্ট ডাটাবেস ও চেম্বার বিলিং রেকর্ড
                 </span>
                 <Link href="/services#clinic-crm-software" className="text-[#0052CC] font-bold hover:underline flex items-center gap-0.5">
                   বিস্তারিত <ChevronRight className="w-3.5 h-3.5" />
@@ -318,16 +317,16 @@ export default function HomePage() {
                 className="object-cover"
               />
               <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-800 border border-slate-200 shadow-xs">
-                ওষুধ প্রস্তুত ও ডায়েট নির্দেশনা
+                সিরিয়াল ও চ্যাটবট
               </div>
             </div>
             <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
               <div className="space-y-2">
                 <h3 className="text-base font-bold text-slate-900">
-                  সুগার গ্লোবিউলস সেবন ও হোয়াটসঅ্যাপ ডায়েট অ্যালার্ট
+                  হোয়াটসঅ্যাপ সিরিয়াল ও চেম্বার শিডিউল
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  সেন্টেসিমাল (30C থেকে 1M) বা ৫০ সহস্রতমিক (LM) পোটেন্সি সঠিকভাবে নির্ধারণ করুন। ওষুধের অ্যাকশন ঠিক রাখতে রোগীর হোয়াটসঅ্যাপে স্বয়ংক্রিয়ভাবে কাঁচা পেঁয়াজ ও কফি পরিহারের সতর্কবার্তা চলে যায়।
+                  রোগীর সিরিয়াল কনফার্মেশন, চেম্বার শিডিউল এবং গুগল ম্যাপস লোকেশন স্বয়ংক্রিয়ভাবে রোগীর হোয়াটসঅ্যাপে পৌঁছে দেওয়ার আধুনিক ব্যবস্থা।
                 </p>
               </div>
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
@@ -344,29 +343,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 5. CHRONIC DISEASE SPECIALTIES (WHERE HOMEOPATHY SHINES ON GOOGLE) ===== */}
+      {/* ===== 5. CHRONIC DISEASE SPECIALTIES (WHERE BD PATIENTS SEARCH HOMEO ON GOOGLE) ===== */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="badge-pill mb-2 inline-flex">
             <Globe className="w-3.5 h-3.5 text-[#0052CC]" />
-            <span>গুগলে নতুন রোগী আকর্ষণ</span>
+            <span>গুগলে জটিল রোগী আকর্ষণ</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             রোগভিত্তিক ডেডিকেটেড গুগল ল্যান্ডিং পেজ
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1">
-            যেসব জটিল রোগের স্থায়ী নিরাময়ের জন্য রোগীরা গুগলে হোমিওপ্যাথি খোঁজেন, সেগুলোর জন্য আপনার চেম্বারের পাতা প্রস্তুত করি:
+            যেসব জটিল রোগের আরোগ্যের জন্য বাংলাদেশি রোগীরা গুগলে নির্ভরযোগ্য হোমিওপ্যাথিক ডাক্তার খোঁজেন:
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
           {[
-            { title: "চর্ম ও অ্যালার্জি", sub: "সোরিয়াসিস, একজিমা, আর্টিকারিয়া", tag: "সর্বাধিক সার্চ" },
-            { title: "শ্বাসতন্ত্র ও অ্যাজমা", sub: "হাঁপানি, ক্রনিক রাইনাইটিস", tag: "উচ্চ চাহিদা" },
-            { title: "মহিলা ও হরমোন", sub: "PCOD, থাইরয়েড, টিউমার", tag: "শীর্ষ স্পেশালিটি" },
-            { title: "শিশু স্বাস্থ্য", sub: "টনসিল, ঘনঘন জ্বর, বিকাশ", tag: "কনস্টিটিউশনাল" },
-            { title: "গ্যাস্ট্রিক ও লিভার", sub: "IBS, ফ্যাটি লিভার, পাইলস", tag: "ক্রনিক কেয়ার" },
-            { title: "বাত ও জয়েন্ট পেইন", sub: "আর্থ্রাইটিস, সায়াটিকা, কোমর ব্যথা", tag: "ব্যথামুক্ত জীবন" },
+            { title: "পাইলস ও ফিস্টুলা", sub: "অর্শ, ভগন্দর ও এনাল ফিশার (বিনা অপারেশনে)", tag: "শীর্ষ অনুসন্ধান" },
+            { title: "কিডনি ও গলব্লাডার পাথর", sub: "রেনাল ক্যালকুলাস অপসারণ কেয়ার", tag: "উচ্চ চাহিদা" },
+            { title: "চর্ম ও ক্রনিক অ্যালার্জি", sub: "একজিমা, সোরিয়াসিস, মেছতা ও ছুলি", tag: "সর্বাধিক সার্চ" },
+            { title: "হাঁপানি ও সাইনোসাইটিস", sub: "ক্রনিক অ্যালার্জিক রাইনাইটিস, পলিপাস", tag: "ক্রনিক কেয়ার" },
+            { title: "মহিলাদের সিস্ট ও টিউমার", sub: "PCOD/PCOS, ওভারিয়ান সিস্ট, ফাইব্রয়েড", tag: "শীর্ষ স্পেশালিটি" },
+            { title: "গ্যাস্ট্রিক, আইবিএস ও লিভার", sub: "ক্রনিক অম্লতা, আলসার, ফ্যাটি লিভার", tag: "নিত্যদিনের সমস্যা" },
+            { title: "বাতব্যথা ও সায়াটিকা", sub: "রিউমাটয়েড আর্থ্রাইটিস, কোমর ব্যথা", tag: "ব্যথামুক্ত জীবন" },
+            { title: "শিশু স্বাস্থ্য ও বিকাশ", sub: "ঘন ঘন টনসিল, কৃমি ও বিকাশগত বিলম্ব", tag: "কনস্টিটিউশনাল" },
           ].map((item, idx) => (
             <div key={idx} className="p-3.5 rounded-xl bg-white border border-slate-200 text-center space-y-1.5 shadow-2xs hover:border-[#0052CC] transition-all">
               <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
@@ -379,11 +380,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 7. 8 SERVICES CATALOG ===== */}
+      {/* ===== 6. SERVICES CATALOG ===== */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
-            ৮টি বিশেষায়িত ডিজিটাল সমাধান
+            বিশেষায়িত ডিজিটাল সমাধান
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
             হোমিওপ্যাথিক চেম্বার ও ক্লিনিকের প্রতিটি ধাপ স্বাচ্ছন্দ্যময় করার সম্পূর্ণ প্রযুক্তি কাঠামো।
@@ -401,7 +402,7 @@ export default function HomePage() {
             href="/services"
             className="btn-secondary text-xs py-2.5 px-6 inline-flex items-center gap-1.5 font-semibold"
           >
-            <span>সকল সেবার বিস্তারিত বিবরণ ও তুলনা দেখুন</span>
+            <span>সকল সেবার বিস্তারিত বিবরণ দেখুন</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -411,7 +412,7 @@ export default function HomePage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="rounded-xl overflow-hidden border border-slate-200 bg-white shadow-xs">
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-            
+
             {/* Traditional */}
             <div className="p-6 space-y-3.5 bg-rose-50/20">
               <div className="flex items-center gap-2.5">
@@ -427,19 +428,19 @@ export default function HomePage() {
               <ul className="space-y-2 text-xs text-slate-600">
                 <li className="flex items-start gap-2">
                   <XCircle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
-                  <span>কাগজের মোটা ফাইল যা হারিয়ে যাওয়ার বা ছেঁড়ার ঝুঁকি থাকে</span>
+                  <span>কাগজের মোটা ফাইল যা ভিজে বা হারিয়ে যাওয়ার ঝুঁকি থাকে</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <XCircle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
-                  <span>গভীর কেস-টেকিং চলাকালীন সময়ে রোগীর বারবার ফোন কলে বিঘ্ন</span>
+                  <span>চেম্বারে রোগী দেখার ব্যস্ত সময়ে সিরিয়াল ও তথ্যের জন্য বারবার ফোন কলে চিকিৎসা বিঘ্নিত হওয়া</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <XCircle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
-                  <span>স্থানীয় জটিল রোগের চিকিৎসায় গুগলে কোনো উপস্থিতি নেই</span>
+                  <span>কোয়াকদের ভিড়ে ডিগ্রিধারী চিকিৎসকের গুগলে কোনো আনুষ্ঠানিক উপস্থিতি না থাকা</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <XCircle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
-                  <span>রিমাইন্ডার না থাকায় ৩০%+ সিরিয়াল দেওয়া রোগী অনুপস্থিত থাকা</span>
+                  <span>রোগীর সিরিয়াল ও সময়সূচির তথ্য দিতে সহকারীর প্রতিদিন ঘণ্টার পর ঘণ্টা সময় অপচয়</span>
                 </li>
               </ul>
             </div>
@@ -459,19 +460,19 @@ export default function HomePage() {
               <ul className="space-y-2 text-xs text-slate-700 font-medium">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>২ সেকেন্ডে ক্লাউড থেকে লক্ষণ সমষ্টি ও অতীত প্রেসক্রিপশন পুনরুদ্ধার</span>
+                  <span>২ সেকেন্ডে রোগীর পূর্ববর্তী ডিজিটাল প্রেসক্রিপশন ও চেম্বার তথ্য প্রদর্শন</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>২৪/৭ স্বয়ংক্রিয় সিরিয়াল বুকিং ও হোয়াটসঅ্যাপ ডায়েট অ্যালার্ট</span>
+                  <span>সরাসরি হোয়াটসঅ্যাপ হটলাইন ও সিরিয়াল কনফার্মেশন</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>গুগল সার্চ ও ম্যাপসে জটিল রোগের জন্য ১ নম্বর অবস্থান</span>
+                  <span>গুগল সার্চ ও গুগল ম্যাপসে জটিল রোগের জন্য ১ নম্বর অবস্থান</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>স্বয়ংক্রিয় এসএমএস রিমাইন্ডারে মিসড অ্যাপয়েন্টমেন্ট ৫% এর নিচে নেমে আসা</span>
+                  <span>চেম্বারের গুগল ম্যাপস লোকেশন ও ডিরেকশন স্বয়ংক্রিয়ভাবে রোগীর কাছে পৌঁছে যাওয়া</span>
                 </li>
               </ul>
             </div>
@@ -480,19 +481,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 10. TESTIMONIALS ===== */}
+      {/* ===== 8. TESTIMONIALS ===== */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
-            সম্মানিত চিকিৎসকদের মতামত
+            সম্মানিত রেজিস্টার্ড চিকিৎসকদের মতামত
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
-            চেম্বার আধুনিকায়নের পর চিকিৎসকদের বাস্তব অভিজ্ঞতা।
+            চেম্বার আধুনিকায়নের পর বাংলাদেশি চিকিৎসকদের বাস্তব অভিজ্ঞতা।
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          
+
           <div className="rounded-xl p-6 bg-white border border-slate-200 flex flex-col justify-between space-y-4 shadow-xs">
             <div className="space-y-2.5">
               <div className="flex gap-0.5 text-amber-400">
@@ -501,7 +502,7 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-xs text-slate-600 leading-relaxed italic">
-                &ldquo;আমাদের ৮০% সিরিয়াল এখন ওয়েবসাইটের মাধ্যমে স্বয়ংক্রিয়ভাবে হয়। ধানমন্ডিতে অ্যালার্জি ও চর্মরোগের চিকিৎসায় আমরা গুগলে ১ নম্বরে আছি।&rdquo;
+                &ldquo;আমাদের ৮০% সিরিয়াল এখন ওয়েবসাইটের মাধ্যমে স্বয়ংক্রিয়ভাবে আসে। পুরানা পল্টন ও মতিঝিল এলাকায় গুগলে আমাদের চেম্বার ১ নম্বরে থাকায় প্রতিদিন নতুন শিক্ষিত রোগী পাচ্ছি।&rdquo;
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
@@ -509,8 +510,8 @@ export default function HomePage() {
                 তা
               </div>
               <div>
-                <h4 className="text-xs font-bold text-slate-900">ডা. তারিকুল ইসলাম</h4>
-                <p className="text-[10px] text-slate-500">DHMS, ক্লাসিক্যাল প্র্যাকটিশনার (ঢাকা)</p>
+                <h4 className="text-xs font-bold text-slate-900">ডা. মো. তারিকুল ইসলাম</h4>
+                <p className="text-[10px] text-slate-500">DHMS (বাংলাদেশ হোমিওপ্যাথি বোর্ড), ঢাকা</p>
               </div>
             </div>
           </div>
@@ -523,7 +524,7 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-xs text-slate-700 leading-relaxed italic font-medium">
-                &ldquo;টেলিমেডিসিন সিস্টেম চালু করায় চট্টগ্রাম, সিলেট এবং যুক্তরাজ্য ও মধ্যপ্রাচ্যের প্রবাসী রোগীদের কোনো ঝামেলা ছাড়াই নিয়মিত পরামর্শ দিতে পারছি।&rdquo;
+                &ldquo;ডিজিটাল ওয়েবসাইট ও ডিরেক্টরি লিস্টিংয়ের মাধ্যমে আমার এলাকায় গুগল সার্চে ১ নম্বরে অবস্থান তৈরি হয়েছে। এখন প্রতিদিন নতুন ক্রনিক রোগীরা সরাসরি চেম্বারে আসছেন।&rdquo;
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
@@ -532,7 +533,7 @@ export default function HomePage() {
               </div>
               <div>
                 <h4 className="text-xs font-bold text-slate-900">ডা. সাবরিনা জাহান</h4>
-                <p className="text-[10px] text-slate-500">BHMS, মহিলা ও ক্রনিক বিশেষজ্ঞ</p>
+                <p className="text-[10px] text-slate-500">BHMS (ঢাকা বিশ্ববিদ্যালয়), ধানমন্ডি, ঢাকা</p>
               </div>
             </div>
           </div>
@@ -545,7 +546,7 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-xs text-slate-600 leading-relaxed italic">
-                &ldquo;তাদের প্রফেশনাল প্রেসক্রিপশন ও ক্লাউড কেস সফটওয়্যার আমাদের ২০ বছরের পুরনো চেম্বারকে একটি সুপ্রতিষ্ঠিত আধুনিক স্বাস্থ্যকেন্দ্রে রূপান্তর করেছে।&rdquo;
+                &ldquo;প্রফেশনাল ডিজিটাল প্রেসক্রিপশন ও ক্লিনিক ম্যানেজমেন্ট সফটওয়্যার আমাদের ২৫ বছরের পুরনো ঐতিহ্যবাহী চেম্বারকে আধুনিক কর্পোরেট মানের ক্লিনিকাল রূপ দিয়েছে।&rdquo;
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
@@ -554,7 +555,7 @@ export default function HomePage() {
               </div>
               <div>
                 <h4 className="text-xs font-bold text-slate-900">ডা. এম. এ. করিম</h4>
-                <p className="text-[10px] text-slate-500">সিনিয়র কনসালটেন্ট (হোমিওপ্যাথি)</p>
+                <p className="text-[10px] text-slate-500">সিনিয়র কনসালটেন্ট, আগ্রাবাদ, চট্টগ্রাম</p>
               </div>
             </div>
           </div>
@@ -562,7 +563,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 10. FAQ ===== */}
+      {/* ===== 9. FAQ ===== */}
       <FAQSection />
 
     </div>
