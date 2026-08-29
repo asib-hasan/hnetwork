@@ -5,12 +5,12 @@ import Link from "next/link";
 import { 
   Calculator, 
   TrendingUp, 
-  Clock, 
   Users, 
   Sparkles, 
   ArrowRight, 
-  CheckCircle2,
-  DollarSign
+  CheckCircle2, 
+  DollarSign,
+  Clock
 } from "lucide-react";
 
 export default function DoctorGrowthCalculator() {
@@ -32,7 +32,6 @@ export default function DoctorGrowthCalculator() {
     }
   };
 
-  // Dynamic calculations for all 8 digital pillars
   const toolMultipliers: Record<string, number> = {
     "medical-website": 0.25,
     "online-appointments": 0.15,
@@ -42,12 +41,6 @@ export default function DoctorGrowthCalculator() {
     "clinic-crm-software": 0.25,
     "social-media-management": 0.30,
     "tech-automation": 0.20,
-    // Backwards compatibility keys
-    website: 0.25,
-    booking: 0.15,
-    seo: 0.35,
-    ads: 0.45,
-    whatsapp: 0.20,
   };
 
   const totalMultiplier = selectedTools.reduce(
@@ -59,122 +52,104 @@ export default function DoctorGrowthCalculator() {
     (patientsPerWeek * 4) * Math.min(totalMultiplier, 1.4)
   );
 
-  const currentMonthlyRevenue = (patientsPerWeek * 4) * consultationFee;
   const projectedExtraMonthlyRevenue = Math.round(
     estimatedNewPatientsPerMonth * consultationFee
   );
 
   const hoursSavedPerWeek =
-    (selectedTools.includes("tech-automation") || selectedTools.includes("whatsapp") ? 8 : 0) +
-    (selectedTools.includes("online-appointments") || selectedTools.includes("booking") ? 6 : 0) +
+    (selectedTools.includes("tech-automation") ? 8 : 0) +
+    (selectedTools.includes("online-appointments") ? 6 : 0) +
     (selectedTools.includes("clinic-crm-software") ? 5 : 0) || 4;
 
   return (
-    <section id="calculator" className="py-20 relative overflow-hidden">
-      {/* Radial accent glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0047BA]/15 rounded-full blur-[140px] pointer-events-none"></div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="badge-pill mb-3 inline-flex">
-            <Calculator className="w-4 h-4 text-[#00E5FF]" />
-            <span>Interactive Clinic Estimator</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-[Outfit] mb-4">
-            Calculate Your Chamber&apos;s <span className="gradient-text">Digital Growth</span>
-          </h2>
-          <p className="text-[#94A3B8] text-base leading-relaxed">
-            See how modern medical web engineering, Google local SEO, and automated booking expand your reach to patients seeking dedicated homeopathic care.
-          </p>
+    <section id="calculator" className="max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="text-center max-w-xl mx-auto mb-8">
+        <div className="badge-pill mb-2 inline-flex">
+          <Calculator className="w-3.5 h-3.5 text-sky-600" />
+          <span>Interactive Estimator</span>
         </div>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit] mb-2">
+          Calculate Your Chamber&apos;s Growth
+        </h2>
+        <p className="text-xs sm:text-sm text-slate-600">
+          See how medical web engineering and local SEO expand your patient reach.
+        </p>
+      </div>
 
-        {/* Calculator Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
-          {/* Controls Panel (Left 7 cols) */}
-          <div className="lg:col-span-7 glass-panel p-6 sm:p-8 flex flex-col justify-between space-y-8 bg-[#091329]/80 border-[#00A3FF]/25">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        
+        {/* Controls (Left 7 cols) */}
+        <div className="lg:col-span-7 bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex flex-col justify-between space-y-5">
+          <div className="space-y-5">
+            {/* Slider 1 */}
             <div>
-              <h3 className="text-xl font-bold text-white font-[Outfit] mb-6 flex items-center gap-2.5">
-                <span className="w-8 h-8 rounded-lg bg-[#00A3FF]/15 border border-[#00A3FF]/30 flex items-center justify-center text-[#00E5FF] text-sm">
-                  1
+              <div className="flex justify-between items-center mb-1.5">
+                <label className="text-xs font-semibold text-slate-700 flex items-center gap-1.5">
+                  <Users className="w-3.5 h-3.5 text-sky-600" />
+                  Current Patients Per Week:
+                </label>
+                <span className="text-sm font-bold text-sky-700 font-[Outfit]">
+                  {patientsPerWeek} patients
                 </span>
-                Practice Metrics
-              </h3>
-
-              {/* Slider 1: Patients per week */}
-              <div className="mb-6">
-                <div className="flex justify-between items-center mb-2">
-                  <label className="text-sm font-semibold text-[#F1F5F9] flex items-center gap-2">
-                    <Users className="w-4 h-4 text-[#00A3FF]" />
-                    Current Patients Per Week:
-                  </label>
-                  <span className="text-lg font-bold text-[#00E5FF] font-[Outfit]">
-                    {patientsPerWeek} patients
-                  </span>
-                </div>
-                <input
-                  type="range"
-                  min="10"
-                  max="150"
-                  step="5"
-                  value={patientsPerWeek}
-                  onChange={(e) => setPatientsPerWeek(Number(e.target.value))}
-                  className="w-full h-2 bg-[#0E1E3D] rounded-lg appearance-none cursor-pointer accent-[#00A3FF]"
-                />
-                <div className="flex justify-between text-[11px] text-[#64748B] mt-1 font-mono">
-                  <span>10/wk (Emerging)</span>
-                  <span>75/wk (Established)</span>
-                  <span>150+/wk (Busy Clinic)</span>
-                </div>
               </div>
-
-              {/* Slider 2: Consultation Fee */}
-              <div className="mb-8">
-                <div className="flex justify-between items-center mb-2">
-                  <label className="text-sm font-semibold text-[#F1F5F9] flex items-center gap-2">
-                    <DollarSign className="w-4 h-4 text-[#00A3FF]" />
-                    Avg. Consultation & Case Fee (BDT):
-                  </label>
-                  <span className="text-lg font-bold text-[#00E5FF] font-[Outfit]">
-                    ৳{consultationFee.toLocaleString()}
-                  </span>
-                </div>
-                <input
-                  type="range"
-                  min="300"
-                  max="3000"
-                  step="100"
-                  value={consultationFee}
-                  onChange={(e) => setConsultationFee(Number(e.target.value))}
-                  className="w-full h-2 bg-[#0E1E3D] rounded-lg appearance-none cursor-pointer accent-[#00A3FF]"
-                />
-                <div className="flex justify-between text-[11px] text-[#64748B] mt-1 font-mono">
-                  <span>৳300</span>
-                  <span>৳1,500</span>
-                  <span>৳3,000+</span>
-                </div>
+              <input
+                type="range"
+                min="10"
+                max="150"
+                step="5"
+                value={patientsPerWeek}
+                onChange={(e) => setPatientsPerWeek(Number(e.target.value))}
+                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600"
+              />
+              <div className="flex justify-between text-[10px] text-slate-400 mt-1">
+                <span>10/wk</span>
+                <span>75/wk</span>
+                <span>150+/wk</span>
               </div>
+            </div>
 
-              <h3 className="text-xl font-bold text-white font-[Outfit] mb-4 flex items-center gap-2.5">
-                <span className="w-8 h-8 rounded-lg bg-[#00A3FF]/15 border border-[#00A3FF]/30 flex items-center justify-center text-[#00E5FF] text-sm">
-                  2
+            {/* Slider 2 */}
+            <div>
+              <div className="flex justify-between items-center mb-1.5">
+                <label className="text-xs font-semibold text-slate-700 flex items-center gap-1.5">
+                  <DollarSign className="w-3.5 h-3.5 text-sky-600" />
+                  Avg. Consultation Fee (BDT):
+                </label>
+                <span className="text-sm font-bold text-sky-700 font-[Outfit]">
+                  BDT {consultationFee.toLocaleString()}
                 </span>
-                Desired Digital Capabilities
-              </h3>
+              </div>
+              <input
+                type="range"
+                min="300"
+                max="3000"
+                step="100"
+                value={consultationFee}
+                onChange={(e) => setConsultationFee(Number(e.target.value))}
+                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600"
+              />
+              <div className="flex justify-between text-[10px] text-slate-400 mt-1">
+                <span>BDT 300</span>
+                <span>BDT 1,500</span>
+                <span>BDT 3,000+</span>
+              </div>
+            </div>
 
-              {/* Tools Toggles - 8 Core Digital Pillars */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {/* Capabilities Toggles */}
+            <div>
+              <span className="text-xs font-semibold text-slate-700 block mb-2">
+                Select Desired Digital Capabilities:
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
-                  { id: "medical-website", label: "Specialized Doctor Website", tag: "+25% Inquiries" },
-                  { id: "online-appointments", label: "24/7 Booking & Telemedicine", tag: "No-Show Cut 75%" },
-                  { id: "medical-seo", label: "Google Local & Medical SEO", tag: "+35% Inquiries" },
-                  { id: "digital-marketing", label: "Targeted Patient Campaigns", tag: "+45% Inquiries" },
-                  { id: "branding-identity", label: "Clinic Branding & Logo Kit", tag: "+15% Authority" },
-                  { id: "clinic-crm-software", label: "Smart Clinic EHR & Case CRM", tag: "Retention +60%" },
-                  { id: "social-media-management", label: "Social Media & Health Reels", tag: "+30% Reach" },
-                  { id: "tech-automation", label: "WhatsApp Bot & Automation", tag: "Saves 8 hrs/wk" },
+                  { id: "medical-website", label: "Doctor Website", tag: "+25%" },
+                  { id: "online-appointments", label: "24/7 Booking & Telemed", tag: "-75% No-Show" },
+                  { id: "medical-seo", label: "Google Local & Medical SEO", tag: "+35%" },
+                  { id: "digital-marketing", label: "Targeted Patient Ads", tag: "+45%" },
+                  { id: "branding-identity", label: "Clinic Branding Kit", tag: "+15%" },
+                  { id: "clinic-crm-software", label: "Clinic EHR & Case CRM", tag: "Retention +60%" },
+                  { id: "social-media-management", label: "Social Media & Reels", tag: "+30%" },
+                  { id: "tech-automation", label: "WhatsApp Automation", tag: "Saves 8h/wk" },
                 ].map((tool) => {
                   const isChecked = selectedTools.includes(tool.id);
                   return (
@@ -182,25 +157,23 @@ export default function DoctorGrowthCalculator() {
                       key={tool.id}
                       type="button"
                       onClick={() => toggleTool(tool.id)}
-                      className={`p-3 rounded-xl text-left border transition-all flex items-center justify-between ${
+                      className={`p-2 rounded-lg text-left border transition-all flex items-center justify-between text-xs ${
                         isChecked
-                          ? "bg-[#0047BA]/20 border-[#00A3FF] text-white shadow-[0_0_15px_rgba(0,163,255,0.15)]"
-                          : "bg-[#070E20]/60 border-[#00A3FF]/15 text-[#94A3B8] hover:border-[#00A3FF]/30"
+                          ? "bg-sky-50 border-sky-500 text-sky-900 font-semibold"
+                          : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                       }`}
                     >
-                      <div className="flex items-center gap-2.5">
+                      <div className="flex items-center gap-1.5">
                         <div
-                          className={`w-4 h-4 rounded-md border flex items-center justify-center text-xs ${
-                            isChecked
-                              ? "bg-[#00A3FF] border-[#00A3FF] text-white"
-                              : "border-[#64748B]"
+                          className={`w-3.5 h-3.5 rounded-sm border flex items-center justify-center text-[10px] ${
+                            isChecked ? "bg-sky-600 border-sky-600 text-white" : "border-slate-300 bg-white"
                           }`}
                         >
-                          {isChecked && <CheckCircle2 className="w-3.5 h-3.5" />}
+                          {isChecked && <CheckCircle2 className="w-3 h-3" />}
                         </div>
-                        <span className="text-xs font-semibold">{tool.label}</span>
+                        <span>{tool.label}</span>
                       </div>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#00A3FF]/15 text-[#38BDF8] font-mono">
+                      <span className="text-[10px] px-1.5 py-0.2 rounded bg-white text-sky-700 border border-slate-200">
                         {tool.tag}
                       </span>
                     </button>
@@ -208,100 +181,77 @@ export default function DoctorGrowthCalculator() {
                 })}
               </div>
             </div>
+          </div>
 
-            <div className="text-[12px] text-[#64748B] italic pt-4 border-t border-[#00A3FF]/15">
-              * Calculations based on verified average metrics from over 250+ digitized healthcare clinics and medical practices.
+          <div className="text-[10px] text-slate-400 italic pt-2 border-t border-slate-100">
+            * Estimated metrics based on verified averages from 250+ digitized clinics.
+          </div>
+        </div>
+
+        {/* Results Panel (Right 5 cols) */}
+        <div className="lg:col-span-5 rounded-xl p-5 sm:p-6 bg-slate-900 text-white flex flex-col justify-between space-y-4">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span className="text-xs uppercase font-bold tracking-wider text-sky-400">
+                Projected Monthly Growth
+              </span>
+              <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1">
+                <Sparkles className="w-3 h-3" /> High ROI
+              </span>
+            </div>
+
+            {/* Metric 1 */}
+            <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
+              <div className="flex items-center justify-between text-xs text-slate-400">
+                <span>Est. New Patients</span>
+                <TrendingUp className="w-3.5 h-3.5 text-sky-400" />
+              </div>
+              <div className="mt-1 flex items-baseline gap-1.5">
+                <span className="text-2xl font-bold text-white font-[Outfit]">
+                  +{estimatedNewPatientsPerMonth}
+                </span>
+                <span className="text-xs text-sky-400">patients / month</span>
+              </div>
+            </div>
+
+            {/* Metric 2 */}
+            <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
+              <div className="flex items-center justify-between text-xs text-slate-400">
+                <span>Est. Additional Revenue</span>
+                <DollarSign className="w-3.5 h-3.5 text-emerald-400" />
+              </div>
+              <div className="mt-1 flex items-baseline gap-1.5">
+                <span className="text-2xl font-bold text-emerald-400 font-[Outfit]">
+                  +BDT {projectedExtraMonthlyRevenue.toLocaleString()}
+                </span>
+                <span className="text-xs text-slate-400">/ month</span>
+              </div>
+            </div>
+
+            {/* Metric 3 */}
+            <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
+              <div className="flex items-center justify-between text-xs text-slate-400">
+                <span>Staff Time Saved</span>
+                <Clock className="w-3.5 h-3.5 text-sky-400" />
+              </div>
+              <div className="mt-1 flex items-baseline gap-1.5">
+                <span className="text-xl font-bold text-white font-[Outfit]">
+                  ~{hoursSavedPerWeek} Hours
+                </span>
+                <span className="text-xs text-sky-400">/ week saved</span>
+              </div>
             </div>
           </div>
 
-          {/* Results Display Panel (Right 5 cols) */}
-          <div className="lg:col-span-5 relative rounded-2xl p-8 bg-gradient-to-b from-[#0E2046] to-[#081229] border border-[#00A3FF]/40 shadow-[0_10px_40px_rgba(0,0,0,0.6)] flex flex-col justify-between">
-            <div className="space-y-6">
-              
-              <div className="flex items-center justify-between border-b border-[#00A3FF]/20 pb-4">
-                <span className="text-xs uppercase font-bold tracking-widest text-[#38BDF8]">
-                  Projected Monthly Impact
-                </span>
-                <span className="flex items-center gap-1 text-xs font-semibold text-[#00E5FF]">
-                  <Sparkles className="w-3.5 h-3.5" /> High ROI Potential
-                </span>
-              </div>
-
-              {/* Metric 1 */}
-              <div className="p-4 rounded-xl bg-[#060D1E]/80 border border-[#00A3FF]/20">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#94A3B8]">Est. New Chronic Patients</span>
-                  <TrendingUp className="w-4 h-4 text-[#00E5FF]" />
-                </div>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-white font-[Outfit]">
-                    +{estimatedNewPatientsPerMonth}
-                  </span>
-                  <span className="text-xs text-[#00E5FF] font-medium">
-                    patients / month
-                  </span>
-                </div>
-                <p className="text-[11px] text-[#64748B] mt-1">
-                  Qualified patients searching specifically for homeopathy
-                </p>
-              </div>
-
-              {/* Metric 2 */}
-              <div className="p-4 rounded-xl bg-[#060D1E]/80 border border-[#00A3FF]/20">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#94A3B8]">Est. Additional Clinic Revenue</span>
-                  <DollarSign className="w-4 h-4 text-[#00E5FF]" />
-                </div>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-[#38BDF8] font-[Outfit]">
-                    +৳{projectedExtraMonthlyRevenue.toLocaleString()}
-                  </span>
-                  <span className="text-xs text-[#94A3B8] font-medium">
-                    / month extra
-                  </span>
-                </div>
-                <p className="text-[11px] text-[#64748B] mt-1">
-                  Current: ৳{currentMonthlyRevenue.toLocaleString()} → Est. Total: ৳{(currentMonthlyRevenue + projectedExtraMonthlyRevenue).toLocaleString()}
-                </p>
-              </div>
-
-              {/* Metric 3 */}
-              <div className="p-4 rounded-xl bg-[#060D1E]/80 border border-[#00A3FF]/20">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#94A3B8]">Assistant & Admin Time Saved</span>
-                  <Clock className="w-4 h-4 text-[#00E5FF]" />
-                </div>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-white font-[Outfit]">
-                    ~{hoursSavedPerWeek} hrs
-                  </span>
-                  <span className="text-xs text-[#00E5FF] font-medium">
-                    saved / week
-                  </span>
-                </div>
-                <p className="text-[11px] text-[#64748B] mt-1">
-                  Via 24/7 WhatsApp automation and digital appointment booking
-                </p>
-              </div>
-
-            </div>
-
-            {/* CTA action */}
-            <div className="pt-6 mt-6 border-t border-[#00A3FF]/20">
-              <Link
-                href={`/contact?source=calculator&patients=${patientsPerWeek}&tools=${selectedTools.join(",")}`}
-                className="btn-primary w-full py-3.5 text-sm font-bold flex items-center justify-center gap-2 group shadow-[0_0_25px_rgba(0,163,255,0.4)]"
-              >
-                <span>Deploy This Digital Growth Plan</span>
-                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <p className="text-center text-[11px] text-[#64748B] mt-2">
-                Free 30-minute clinic digital transformation consultation
-              </p>
-            </div>
-
+          <div className="pt-2 border-t border-slate-800">
+            <Link
+              href={`/contact?tools=${selectedTools.join(",")}&patients=${patientsPerWeek}`}
+              className="btn-primary w-full py-2.5 text-xs font-semibold justify-center flex items-center gap-1.5"
+            >
+              <span>Get Custom Roadmap for this Estimation</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
-
         </div>
 
       </div>

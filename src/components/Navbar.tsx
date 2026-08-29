@@ -4,67 +4,54 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { 
-  Menu, 
-  X, 
-  PhoneCall, 
-  ArrowRight, 
-  Sparkles
-} from "lucide-react";
+import { Menu, X, PhoneCall } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "About Us", href: "/about" },
-    { name: "Growth Calculator", href: "/#calculator" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#050B17] border-b border-white/5 shadow-[0_1px_0_0_rgba(255,255,255,0.05)] py-3">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-11 h-11 rounded-xl overflow-hidden p-1 bg-[#0A1630] border border-[#00A3FF]/40 group-hover:border-[#00E5FF] transition-all duration-300 shadow-[0_0_15px_rgba(0,163,255,0.25)] flex items-center justify-center">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center p-1">
             <Image
               src="/logo.png"
-              alt="Homeo Network Logo"
-              width={40}
-              height={40}
-              className="object-contain transform group-hover:scale-105 transition-transform"
+              alt="Homeo Network"
+              width={28}
+              height={28}
+              className="object-contain"
               priority
             />
           </div>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5">
-              <span className="text-xl font-extrabold tracking-tight text-white font-[Outfit]">
-                Homeo<span className="text-[#00A3FF]">Network</span>
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] animate-pulse"></span>
-            </div>
-            <span className="text-[10px] tracking-wider uppercase text-[#94A3B8] font-medium">
-              Digital Platform for Doctors
+          <div className="flex items-center gap-1.5">
+            <span className="text-lg font-bold tracking-tight text-slate-900 font-[Outfit]">
+              Homeo<span className="text-sky-600">Network</span>
             </span>
           </div>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1 bg-[#0B1730]/70 border border-[#00A3FF]/15 rounded-full px-5 py-1.5 backdrop-blur-md">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-3.5 py-1.5 rounded-md text-xs font-semibold transition-colors ${
                   isActive
-                    ? "text-[#00E5FF] bg-[#00A3FF]/15 shadow-[0_0_12px_rgba(0,163,255,0.2)]"
-                    : "text-[#94A3B8] hover:text-white hover:bg-white/5"
+                    ? "text-sky-700 bg-sky-50"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                 }`}
               >
                 {link.name}
@@ -73,84 +60,58 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Action Button & Hotline */}
-        <div className="hidden lg:flex items-center gap-4">
+        {/* Action Button */}
+        <div className="hidden sm:flex items-center gap-3">
           <a
-            href="https://wa.me/8801700000000?text=Hello%20Homeo%20Network,%20I%20am%20a%20doctor%20and%20interested%20in%20your%20digital%20services."
+            href="https://wa.me/8801700000000"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs font-semibold text-[#38BDF8] hover:text-white transition-colors"
+            className="text-xs font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1.5"
           >
-            <div className="w-7 h-7 rounded-full bg-[#00A3FF]/15 flex items-center justify-center text-[#00E5FF]">
-              <PhoneCall className="w-3.5 h-3.5" />
-            </div>
-            <span>WhatsApp Consultation</span>
+            <PhoneCall className="w-3.5 h-3.5 text-emerald-600" />
+            <span>WhatsApp</span>
           </a>
-
           <Link
             href="/contact"
-            className="btn-primary text-xs py-2.5 px-5 group"
+            className="btn-primary py-2 px-4 text-xs font-semibold"
           >
-            <span>Consult an Expert</span>
-            <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+            Get Started
           </Link>
         </div>
 
-        {/* Mobile Hamburger Menu Button */}
-        <div className="md:hidden flex items-center gap-2">
-          <Link
-            href="/contact"
-            className="btn-primary text-xs py-2 px-3 flex items-center gap-1.5"
-          >
-            <span>Book Call</span>
-          </Link>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="p-2.5 rounded-xl bg-[#0B1730] border border-[#00A3FF]/30 text-white focus:outline-none focus:ring-2 focus:ring-[#00A3FF]"
-            aria-label="Toggle navigation menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
+        {/* Mobile Menu Button */}
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+          aria-label="Toggle Navigation"
+        >
+          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
+
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#070E1E]/95 backdrop-blur-2xl border-b border-[#00A3FF]/20 px-6 py-6 transition-all animate-fadeIn">
-          <div className="flex flex-col space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`py-2 px-4 rounded-xl text-base font-medium transition-colors ${
-                  pathname === link.href
-                    ? "bg-[#00A3FF]/15 text-[#00E5FF] font-semibold"
-                    : "text-[#94A3B8] hover:text-white hover:bg-white/5"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="pt-4 border-t border-[#00A3FF]/15 flex flex-col gap-3">
-              <a
-                href="https://wa.me/8801700000000?text=Hello%20Homeo%20Network,%20I%20am%20interested%20in%20your%20services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary w-full justify-center text-sm py-3"
-              >
-                <PhoneCall className="w-4 h-4 text-[#00E5FF]" />
-                <span>WhatsApp Helpline</span>
-              </a>
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="btn-primary w-full justify-center text-sm py-3"
-              >
-                <Sparkles className="w-4 h-4" />
-                <span>Get Free Clinic Audit</span>
-              </Link>
-            </div>
+        <div className="md:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-2">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 rounded-md text-xs font-semibold text-slate-700 hover:bg-slate-50"
+            >
+              {link.name}
+            </Link>
+          ))}
+          <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className="btn-primary w-full py-2 text-xs text-center"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       )}
