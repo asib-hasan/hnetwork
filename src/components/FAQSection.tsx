@@ -10,28 +10,28 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "Why does a Homeopathic Doctor need a dedicated digital presence?",
-    answer: "Homeopathy relies on patient trust, detailed symptom evaluation, and chronic care discovery. Millions of patients search Google daily for natural healing from allergies, skin issues, asthma, or chronic ailments. A dedicated website and Google Maps presence ensures these patients discover and trust your chamber."
+    question: "হোমিওপ্যাথিক চিকিৎসকের জন্য একটি বিশেষায়িত ওয়েবসাইট ও গুগল উপস্থিতি কেন জরুরি?",
+    answer: "হোমিওপ্যাথি চিকিৎসা গভীর বিশ্বাস, বিস্তারিত কেস হিস্ট্রি ও জটিল রোগের সফল সমাধানের ওপর নির্ভরশীল। প্রতিদিন হাজার হাজার মানুষ চর্মরোগ, অ্যালার্জি, অ্যাজমা বা জটিল ক্রনিক সমস্যার স্থায়ী নিরাময়ের জন্য গুগলে সার্চ করেন। একটি বিশেষায়িত ওয়েবসাইট ও গুগল ম্যাপস প্রোফাইল থাকলে তারা সরাসরি আপনার চেম্বারের সন্ধান পায় ও আস্থা স্থাপন করে।"
   },
   {
-    question: "I am not tech-savvy. Will the Homeo Network team handle everything?",
-    answer: "Yes, 100%! We provide an end-to-end done-for-you service. From domain setup, web design, Google SEO, to WhatsApp automated replies and staff training—we manage the entire tech foundation so you can focus entirely on patient care."
+    question: "আমি প্রযুক্তিতে খুব বেশি পারদর্শী নই। হোমিও নেটওয়ার্ক টিম কি সব পরিচালনা করবে?",
+    answer: "হ্যাঁ, শতভাগ! আমরা সম্পূর্ণ 'ডান-ফর-ইউ' (Done-for-you) সেবা দিয়ে থাকি। ডোমেইন, ওয়েবসাইট ডিজাইন, গুগল এসইও থেকে শুরু করে হোয়াটসঅ্যাপ অটোমেশন ও চেম্বার সহকারীকে ট্রেনিং দেওয়া—সবকিছু আমাদের টিম সম্পন্ন করে। ফলে আপনি কোনো প্রযুক্তিগত ঝামেলা ছাড়াই শুধু রোগীদের চিকিৎসা দিতে পারেন।"
   },
   {
-    question: "How does the Online Appointment and Telemedicine system operate?",
-    answer: "Patients select an open slot from your digital calendar and receive an instant confirmation on WhatsApp with your chamber address or a private HD video link. Automated reminder SMS messages are dispatched prior to the visit to eliminate missed appointments."
+    question: "অনলাইন অ্যাপয়েন্টমেন্ট ও দূরবর্তী রোগীদের টেলিমেডিসিন কীভাবে কাজ করে?",
+    answer: "রোগীরা আপনার ডিজিটাল ক্যালেন্ডার থেকে নিজের সুবিধাজনক সময় বেছে নিয়ে সিরিয়াল দেয়। বুকিং নিশ্চিত হওয়ামাত্রই রোগীর হোয়াটসঅ্যাপে স্বয়ংক্রিয়ভাবে চেম্বারের লোকেশন বা ভিডিও কনসালটেশনের লিঙ্ক পৌঁছে যায়। একই সাথে অ্যাপয়েন্টমেন্টের আগের দিন রিমাইন্ডার এসএমএস পাঠানো হয়।"
   },
   {
-    question: "Is patient case history and prescription data completely secure?",
-    answer: "Strict medical confidentiality is our highest priority. All electronic health records (EHR) and prescriptions are protected with bank-grade 256-bit SSL encryption and HIPAA-compliant privacy standards."
+    question: "রোগীদের পুরনো কেস হিস্ট্রি ও প্রেসক্রিপশন ডেটা কতটা নিরাপদ থাকবে?",
+    answer: "চিকিৎসাসেবায় রোগীর গোপনীয়তা রক্ষা করা আমাদের সর্বোচ্চ অগ্রাধিকার। প্রতিটি কেস রেকর্ড ও প্রেসক্রিপশন ব্যাংক-গ্রেড ২৫৬-বিট এসএসএল এনক্রিপশনের মাধ্যমে সম্পূর্ণ নিরাপদে সংরক্ষিত থাকে, যা অন্য কারো অ্যাক্সেস করার সুযোগ নেই।"
   },
   {
-    question: "How quickly can my clinic website and booking software be launched?",
-    answer: "Standard doctor websites and booking systems go live within 7 to 10 business days. Custom institutional solutions typically take 2 to 3 weeks with personalized staff onboarding."
+    question: "কত দিনের মধ্যে আমার চেম্বার ওয়েবসাইট ও বুকিং সিস্টেম প্রস্তুত হবে?",
+    answer: "সাধারণত চুক্তি চূড়ান্ত হওয়ার ৭ থেকে ১০ কার্যদিবসের মধ্যে আপনার লাইভ ডাক্তার ওয়েবসাইট ও বুকিং সিস্টেম চালু হয়ে যায়। মাল্টি-ডাক্তার ক্লিনিক সফটওয়্যার ও কাস্টম সমাধানের ক্ষেত্রে প্রায় ২ থেকে ৩ সপ্তাহ সময় প্রয়োজন হয়।"
   },
   {
-    question: "What results can I expect from Local Medical SEO and Google Maps ranking?",
-    answer: "Within 60-90 days of structured healthcare SEO, your clinic will rank in Google's Top 3 Map Pack for critical search terms like 'Best Homeopathic Doctor in [Your City]'. This generates a consistent stream of direct patient calls."
+    question: "গুগল ম্যাপস ও লোকাল এসইও থেকে আমি কেমন ফল আশা করতে পারি?",
+    answer: "নিয়মতান্ত্রিক মেডিকেল এসইওর মাধ্যমে ৬০ থেকে ৯০ দিনের মধ্যে আপনার এলাকায় 'Best Homeopathic Doctor in [Your City]' জাতীয় হাই-ইনটেন্ট সার্চে আপনার চেম্বার গুগল ম্যাপসের শীর্ষ ৩টি রেজাল্টের মধ্যে স্থান করে নেয়। এর ফলে গুগল থেকে নিয়মিত নতুন রোগীর ফোন ও ভিজিট নিশ্চিত হয়।"
   }
 ];
 
@@ -47,13 +47,13 @@ export default function FAQSection() {
       <div className="text-center max-w-xl mx-auto mb-8">
         <div className="badge-pill mb-2 inline-flex">
           <HelpCircle className="w-3.5 h-3.5 text-blue-700" />
-          <span>Common Questions</span>
+          <span>সাধারণ প্রশ্নোত্তর</span>
         </div>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
-          Frequently Asked Questions
+          প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী
         </h2>
         <p className="text-xs sm:text-sm text-slate-600">
-          Clear answers about doctor websites, local Google SEO, and chamber automation.
+          ডাক্তার ওয়েবসাইট, লোকাল গুগল এসইও এবং ক্লিনিক অটোমেশন সম্পর্কিত যাবতীয় তথ্য।
         </p>
       </div>
 
@@ -65,7 +65,7 @@ export default function FAQSection() {
               key={index}
               className={`rounded-xl border transition-all overflow-hidden ${
                 isOpen
-                  ? "bg-white border-blue-400 shadow-xs"
+                  ? "bg-white border-blue-400 shadow-2xs"
                   : "bg-white border-slate-200 hover:border-slate-300"
               }`}
             >
@@ -74,7 +74,7 @@ export default function FAQSection() {
                 onClick={() => toggle(index)}
                 className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 focus:outline-hidden"
               >
-                <span className="text-sm sm:text-base font-bold text-slate-900">
+                <span className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                   {faq.question}
                 </span>
                 <div

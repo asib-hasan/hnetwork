@@ -65,7 +65,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       </p>
 
       <div className="mt-4 pt-3 border-t border-slate-100 flex items-center text-xs font-semibold text-[#0052CC]">
-        <span>Explore Solution</span>
+        <span>বিস্তারিত দেখুন</span>
         <ArrowRight className="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition-transform" />
       </div>
     </Link>

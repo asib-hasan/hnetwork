@@ -21,11 +21,11 @@ export default function ServicesShowcase() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const categories = [
-    { id: "all", label: "All 8 Solutions", count: 8 },
-    { id: "web", label: "Websites & Booking", count: 2, items: ["medical-website", "online-appointments"] },
-    { id: "seo", label: "SEO & Ads", count: 2, items: ["medical-seo", "digital-marketing"] },
-    { id: "software", label: "Clinic CRM & Bot", count: 2, items: ["clinic-crm-software", "tech-automation"] },
-    { id: "branding", label: "Branding & Social", count: 2, items: ["branding-identity", "social-media-management"] },
+    { id: "all", label: "সকল ৮টি সেবা", count: 8 },
+    { id: "web", label: "ওয়েবসাইট ও বুকিং", count: 2, items: ["medical-website", "online-appointments"] },
+    { id: "seo", label: "এসইও ও বিজ্ঞাপন", count: 2, items: ["medical-seo", "digital-marketing"] },
+    { id: "software", label: "ক্লিনিক সিআরএম ও বট", count: 2, items: ["clinic-crm-software", "tech-automation"] },
+    { id: "branding", label: "ব্র্যান্ডিং ও সোশ্যাল", count: 2, items: ["branding-identity", "social-media-management"] },
   ];
 
   const filteredServices = servicesList.filter((service) => {
@@ -71,7 +71,7 @@ export default function ServicesShowcase() {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
                 isActive
-                  ? "bg-blue-700 text-white shadow-xs"
+                  ? "bg-[#0052CC] text-white shadow-xs"
                   : "bg-white border border-slate-200 text-slate-600 hover:text-slate-900"
               }`}
             >
@@ -98,7 +98,7 @@ export default function ServicesShowcase() {
                   {renderIcon(service.iconName)}
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-700 block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0052CC] block">
                     {service.tag}
                   </span>
                   <h2 className="text-lg font-bold text-slate-900">
@@ -113,7 +113,7 @@ export default function ServicesShowcase() {
 
               <div className="space-y-1.5 pt-2 border-t border-slate-100">
                 <span className="text-[11px] uppercase font-bold text-slate-700 block">
-                  Included Deliverables:
+                  অন্তর্ভুক্ত সুবিধাসমূহ:
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {service.deliverables.map((item, idx) => (
@@ -130,7 +130,7 @@ export default function ServicesShowcase() {
                   href={`/contact?service=${encodeURIComponent(service.title)}`}
                   className="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5 font-semibold"
                 >
-                  <span>Request Proposal for this Solution</span>
+                  <span>এই সেবার প্রস্তাবনা গ্রহণ করুন</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
@@ -139,12 +139,12 @@ export default function ServicesShowcase() {
             {/* Benefits Box */}
             <div className="lg:col-span-5 rounded-xl p-5 bg-slate-50 border border-slate-200 space-y-3">
               <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">
-                Direct Clinical Benefits
+                চেম্বারের বাস্তব ফলাফল
               </span>
               <div className="space-y-2">
                 {service.benefits.map((benefit, bIdx) => (
                   <div key={bIdx} className="flex items-start gap-2 text-xs text-slate-700">
-                    <span className="w-4 h-4 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 font-bold text-[10px] mt-0.5">
+                    <span className="w-4 h-4 rounded-full bg-blue-100 text-[#0052CC] flex items-center justify-center shrink-0 font-bold text-[10px] mt-0.5">
                       {bIdx + 1}
                     </span>
                     <span>{benefit}</span>

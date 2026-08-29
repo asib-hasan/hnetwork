@@ -11,18 +11,18 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "হোম", href: "/" },
+    { name: "সেবাসমূহ", href: "/services" },
+    { name: "আমাদের সম্পর্কে", href: "/about" },
+    { name: "যোগাযোগ", href: "/contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-2xs">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         
         {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-2.5 group">
           <div className="relative w-10 h-10 flex items-center justify-center">
             <Image
               src="/logo.png"
@@ -33,9 +33,12 @@ export default function Navbar() {
               priority
             />
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
             <span className="text-xl font-bold tracking-tight text-[#0047BA]">
               Homeo<span className="text-[#0084FF]">Network</span>
+            </span>
+            <span className="hidden sm:inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+              হোমিওপ্যাথদের জন্য
             </span>
           </div>
         </Link>
@@ -69,13 +72,13 @@ export default function Navbar() {
             className="text-xs font-semibold text-slate-600 hover:text-[#0052CC] flex items-center gap-1.5"
           >
             <PhoneCall className="w-3.5 h-3.5 text-emerald-600" />
-            <span>WhatsApp</span>
+            <span>হোয়াটসঅ্যাপ</span>
           </a>
           <Link
             href="/contact"
             className="btn-primary py-2 px-4 text-xs font-semibold"
           >
-            Get Started
+            পরামর্শ নিন
           </Link>
         </div>
 
@@ -84,7 +87,7 @@ export default function Navbar() {
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-          aria-label="Toggle Navigation"
+          aria-label="মেনু টগল করুন"
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -110,7 +113,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="btn-primary w-full py-2 text-xs text-center"
             >
-              Get Started
+              পরামর্শ নিন
             </Link>
           </div>
         </div>

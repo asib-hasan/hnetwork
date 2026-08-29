@@ -12,154 +12,154 @@ export interface ServiceItem {
 export const servicesList: ServiceItem[] = [
   {
     id: "medical-website",
-    title: "Specialized Doctor Websites",
+    title: "বিশেষায়িত ডাক্তার ওয়েবসাইট",
     iconName: "Globe",
-    tag: "Core Asset",
-    shortDesc: "Fast, Google-optimized doctor websites showcasing your clinical specialty, credentials, and chamber hours.",
-    fullDesc: "Modern, secure Next.js websites built specifically for homeopathic practitioners. Includes chronic condition treatment pages, patient education blogs, and verified credentials.",
+    tag: "মূল সম্পদ",
+    shortDesc: "আপনার চেম্বার, চিকিৎসা অভিজ্ঞতা, ডিগ্রি ও ভিজিটের সময়সূচি প্রদর্শনে দ্রুতগতির গুগল-বান্ধব ওয়েবসাইট।",
+    fullDesc: "হোমিওপ্যাথিক চিকিৎসকদের জন্য বিশেষভাবে তৈরি আধুনিক ও সুরক্ষিত ওয়েবসাইট। এতে জটিল রোগের চিকিৎসা বিবরণ, স্বাস্থ্য পরামর্শ ব্লগ এবং সরাসরি রোগী যোগাযোগের ব্যবস্থা থাকে।",
     deliverables: [
-      "Custom responsive website (Next.js & modern UX)",
-      "Doctor bio, credentials & chamber timings",
-      "Specialty treatment pages (Skin, Asthma, Allergy, PCOD, etc.)",
-      "Integrated patient contact & inquiry forms"
+      "রেসপনসিভ ও আধুনিক কাস্টম ওয়েবসাইট (মোবাইল ও পিসি ফ্রেন্ডলি)",
+      "ডাক্তারের পরিচিতি, শিক্ষাগত যোগ্যতা ও চেম্বার শিডিউল",
+      "বিশেষ চিকিৎসা পাতা (চর্ম, অ্যালার্জি, অ্যাজমা, PCOD ইত্যাদি)",
+      "রোগীদের অ্যাপয়েন্টমেন্ট ও ইনকোয়ারি ফর্ম"
     ],
     benefits: [
-      "Instantly build clinical trust and authority",
-      "24/7 digital presence for patient discovery",
-      "100% mobile-friendly and ultra-fast loading"
+      "রোগীদের মাঝে তাৎক্ষণিক বিশ্বাস ও মর্যাদা তৈরি করে",
+      "২৪ ঘণ্টা অনলাইনে রোগী পাওয়ার নিশ্চিত সুযোগ",
+      "১০০% মোবাইল-বান্ধব ও চোখের পলকে লোড হওয়া পেজ"
     ]
   },
   {
     id: "online-appointments",
-    title: "Online Booking & Telemedicine",
+    title: "অনলাইন বুকিং ও টেলিমেডিসিন",
     iconName: "CalendarCheck",
-    tag: "Automation",
-    shortDesc: "Automated booking system with WhatsApp confirmations and encrypted HD video telemedicine.",
-    fullDesc: "Eliminate receptionist phone calls with self-service booking. Patients receive instant WhatsApp alerts with chamber directions or private video consultation links.",
+    tag: "অটোমেশন",
+    shortDesc: "স্বয়ংক্রিয় অ্যাপয়েন্টমেন্ট বুকিং, হোয়াটসঅ্যাপ কনফার্মেশন ও প্রবাসীদের জন্য এনক্রিপ্টেড এইচডি ভিডিও পরামর্শ।",
+    fullDesc: "বারবার ফোন রিসিভ করার ঝামেলা ছাড়াই রোগীরা নিজের সুবিধাজনক সময়ে বুকিং দেয়। স্বয়ংক্রিয়ভাবে রোগীর কাছে চেম্বার লোকেশন অথবা ভিডিও কনসালটেশনের লিঙ্ক পৌঁছে যায়।",
     deliverables: [
-      "Self-service patient appointment calendar",
-      "Automated WhatsApp & SMS reminders",
-      "Pre-case symptom notes collection form",
-      "Integrated HD video telemedicine for remote patients"
+      "রোগীদের সেলফ-সার্ভিস অ্যাপয়েন্টমেন্ট ক্যালেন্ডার",
+      "স্বয়ংক্রিয় হোয়াটসঅ্যাপ ও এসএমএস রিমাইন্ডার",
+      "পরামর্শের আগে রোগীর প্রাথমিক লক্ষণ সংগ্রহ ফর্ম",
+      "দূরদূরান্ত ও প্রবাসীদের জন্য এইচডি ভিডিও টেলিমেডিসিন"
     ],
     benefits: [
-      "Cut appointment no-show rates by 75%",
-      "Zero receptionist overhead during busy hours",
-      "Expand patient reach across districts and overseas"
+      "সিরিয়াল দিয়ে রোগী না আসার হার ৭৫% পর্যন্ত কমিয়ে আনে",
+      "চেম্বারের ব্যস্ত সময়ে রিসেপশনিস্টের ওপর অতিরিক্ত চাপ মুক্ত করে",
+      "সারা দেশ ও প্রবাসে দূরবর্তী রোগী দেখার সুযোগ তৈরি হয়"
     ]
   },
   {
     id: "medical-seo",
-    title: "Google Local & Medical SEO",
+    title: "গুগল লোকাল ও মেডিকেল এসইও",
     iconName: "Search",
-    tag: "High ROI",
-    shortDesc: "Rank #1 on Google Search and Google Maps for high-intent homeopathic treatment searches.",
-    fullDesc: "Targeted local healthcare SEO that places your chamber at the top of Google when patients in your city search for classical homeopathy and chronic cures.",
+    tag: "শীর্ষ রেজাল্ট",
+    shortDesc: "আপনার এলাকায় যেকোনো জটিল রোগের প্রাকৃতিক চিকিৎসার গুগল সার্চ ও গুগল ম্যাপসে ১ নম্বরে থাকুন।",
+    fullDesc: "টার্গেটেড লোকাল হেলথকেয়ার এসইও, যার মাধ্যমে আপনার শহরের রোগীরা হোমিওপ্যাথি চিকিৎসার সন্ধান করলেই সবার আগে আপনার চেম্বার খুঁজে পাবে।",
     deliverables: [
-      "Google Business Profile (Maps) #1 optimization",
-      "Targeted homeopathic disease & remedy keyword strategy",
-      "Local healthcare directory citations",
-      "Automated 5-star Google review collection system"
+      "গুগল বিজনেস প্রোফাইল (ম্যাপস) ১ নম্বর পজিশন অপটিমাইজেশন",
+      "হোমিওপ্যাথিক রোগ ও রেমিডি কিওয়ার্ড স্ট্র্যাটেজি",
+      "লোকাল ডিরেক্টরি ও ডিজিটাল হেলথ সাইটেশন",
+      "রোগীদের কাছ থেকে স্বয়ংক্রিয় ৫-স্টার গুগল রিভিউ সংগ্রহ"
     ],
     benefits: [
-      "Consistent organic stream of new patient calls",
-      "High local search visibility without recurring ad costs",
-      "Established clinical reputation in your city"
+      "প্রতিদিন গুগল থেকে সরাসরি নতুন রোগীর ফোন ও ভিজিট",
+      "বিজ্ঞাপনী খরচ ছাড়াই আজীবন অর্গানিক রোগী পাওয়ার নিশ্চয়তা",
+      "আপনার শহরে চিকিৎসাক্ষেত্রে একচ্ছত্র পরিচিতি"
     ]
   },
   {
     id: "digital-marketing",
-    title: "Targeted Patient Ads",
+    title: "টার্গেটেড পেশেন্ট অ্যাডভার্টাইজিং",
     iconName: "TrendingUp",
-    tag: "Growth",
-    shortDesc: "Precision campaigns on Google, Facebook, and Instagram reaching patients seeking natural healing.",
-    fullDesc: "Ethical medical marketing campaigns targeting patients suffering from chronic ailments like eczema, psoriasis, migraine, and arthritis with proven conversion funnels.",
+    tag: "গ্রোথ",
+    shortDesc: "গুগল, ফেসবুক ও ইনস্টাগ্রামে স্থায়ী নিরাময় প্রত্যাশী ক্রনিক রোগীদের লক্ষ্য করে কার্যকরী ক্যাম্পেইন।",
+    fullDesc: "একজিমা, সোরিয়াসিস, মাইগ্রেন, অ্যাজমা কিংবা বাতের ব্যথায় ভোগা রোগীদের কাছে পৌঁছানোর নীতিসম্মত ও উচ্চ ফলপ্রসূ ডিজিটাল ক্যাম্পেইন।",
     deliverables: [
-      "Meta (Facebook & Instagram) disease-targeted campaigns",
-      "Google Search PPC for urgent doctor searches",
-      "Engaging medical ad creatives",
-      "Dedicated conversion landing pages & analytics"
+      "রোগভিত্তিক ফেসবুক ও ইনস্টাগ্রাম টার্গেটেড বিজ্ঞাপন",
+      "জরুরি ডাক্তার খোঁজা রোগীদের জন্য গুগল সার্চ অ্যাড",
+      "আকর্ষণীয় মেডিকেল ক্রিয়েটিভ ও স্বাস্থ্য সচেতনতামূলক পোস্ট",
+      "ডেডিকেটেড পেশেন্ট ল্যান্ডিং পেজ ও স্বচ্ছ রিপোর্ট"
     ],
     benefits: [
-      "Predictable influx of new chronic cases",
-      "Hyper-targeted by geographical location and age",
-      "Transparent ROI and detailed monthly analytics"
+      "প্রতি মাসে ধারাবাহিকভাবে নিশ্চিত নতুন জটিল রোগীর আগমন",
+      "বয়স ও এলাকা অনুযায়ী নির্দিষ্ট রোগীদের টার্গেট করার সুবিধা",
+      "স্বচ্ছ আরওআই (ROI) এবং বিস্তারিত মাসিক প্রবৃদ্ধি রিপোর্ট"
     ]
   },
   {
     id: "branding-identity",
-    title: "Branding & Logo Identity",
+    title: "ক্লিনিক ব্র্যান্ডিং ও প্রেসক্রিপশন ডিজাইন",
     iconName: "Palette",
-    tag: "Prestige",
-    shortDesc: "Distinguished branding reflecting the science, purity, and clinical prestige of your practice.",
-    fullDesc: "Complete visual identity kit crafted for homeopathy clinics. From elegant logos and prescription pads to chamber signage and digital letterheads.",
+    tag: "মর্যাদা",
+    shortDesc: "আপনার চেম্বারের গাম্ভীর্য, মর্যাদা ও বিজ্ঞানসম্মত পরিচয়ের পূর্ণাঙ্গ ব্র্যান্ডিং কিট।",
+    fullDesc: "হোমিওপ্যাথিক ক্লিনিকের উপযোগী রুচিশীল ভিজ্যুয়াল আইডেন্টিটি। আকর্ষণীয় লোগো, প্রফেশনাল প্রেসক্রিপশন প্যাড থেকে শুরু করে চেম্বার সাইনবোর্ড ডিজাইন।",
     deliverables: [
-      "Custom medical clinic logo with vector master files",
-      "Professional prescription pad, envelope & card designs",
-      "Chamber signboard & reception backdrop mockups",
-      "Complete brand guideline (colors, fonts, usage)"
+      "ক্লিনিকের কাস্টম প্রফেশনাল লোগো ও ভেক্টর ফাইল",
+      "ক্লাসিক্যাল প্রেসক্রিপশন প্যাড, খাম ও ভিজিটিং কার্ড ডিজাইন",
+      "চেম্বারের সাইনবোর্ড ও রিসেপশন ব্যাকড্রপ মকআপ",
+      "পূর্ণাঙ্গ ব্র্যান্ড গাইডলাইন (রং, ফন্ট ও ব্যবহারবিধি)"
     ],
     benefits: [
-      "Command respect as an elite healthcare institute",
-      "Uniform clinical branding across print and digital",
-      "Memorable identity that patients remember and recommend"
+      "একটি শীর্ষস্থানীয় আধুনিক চিকিৎসাকেন্দ্র হিসেবে মর্যাদা প্রতিষ্ঠা",
+      "প্রিন্ট ও ডিজিটালে অভিন্ন পেশাদার উপস্থিতি",
+      "রোগীদের মনে দীর্ঘস্থায়ী আস্থা তৈরি"
     ]
   },
   {
     id: "clinic-crm-software",
-    title: "Clinic CRM & Case History",
+    title: "হোমিও কেস হিস্ট্রি ও ক্লিনিক সিআরএম",
     iconName: "Database",
-    tag: "Software",
-    shortDesc: "Cloud-based digital case taking, encrypted health records (EHR), and automated follow-ups.",
-    fullDesc: "Cloud-based homeopathic practice software with symptom repertorization notes, past prescription archives, and automated follow-up reminders.",
+    tag: "সফটওয়্যার",
+    shortDesc: "ক্লাউড-ভিত্তিক ডিজিটাল কেস টেকিং, এনক্রিপ্টেড রেকর্ড এবং রেপার্টরি পর্যবেক্ষণ সফটওয়্যার।",
+    fullDesc: "হোমিওপ্যাথির স্বতন্ত্র বৈশিষ্ট্যের উপযোগী সফটওয়্যার—যেখানে মানসিক লক্ষণ, হ্রাস-বৃদ্ধি, মায়াজম ও অতীত ব্যবস্থাপত্র ২ সেকেন্ডে খুঁজে পাওয়া যায়।",
     deliverables: [
-      "Cloud electronic health records (EHR) with 256-bit encryption",
-      "Homeopathic case-taking & miasmatic evaluation module",
-      "QR-code enabled digital prescription generator",
-      "Patient retention & follow-up tracking"
+      "২৫৬-বিট এনক্রিপ্টেড ক্লাউড ইলেকট্রনিক হেলথ রেকর্ড (EHR)",
+      "হোমিওপ্যাথিক কেস-টেকিং ও মায়াজমেটিক মূল্যায়ন মডিউল",
+      "কিউআর কোডযুক্ত ডিজিটাল প্রেসক্রিপশন জেনারেটর",
+      "রোগীর ফলো-আপ ও পরবর্তী ভিজিট ট্র্যাকিং"
     ],
     benefits: [
-      "Retrieve complete case histories in 2 seconds",
-      "Eliminate fragile paper files permanently",
-      "Boost long-term chronic patient retention by 60%"
+      "যেকোনো পুরনো রোগীর পূর্ণাঙ্গ ইতিহাস ২ সেকেন্ডে স্ক্রিনে",
+      "কাগজের মোটা ফাইল হারিয়ে যাওয়া বা নষ্ট হওয়ার ঝুঁকি চিরতরে দূর",
+      "দীর্ঘমেয়াদী ক্রনিক রোগীদের ফলো-আপ ৬০% বৃদ্ধি"
     ]
   },
   {
     id: "social-media-management",
-    title: "Social Media & Health Content",
+    title: "সোশ্যাল মিডিয়া ও স্বাস্থ্য সচেতনতা",
     iconName: "Share2",
-    tag: "Awareness",
-    shortDesc: "Engaging educational video reels, infographics, and authority-building healthcare posts.",
-    fullDesc: "Turn your practice into a trusted medical voice with customized health awareness content, chronic disease explainers, and homeopathic case study showcases.",
+    tag: "সচেতনতা",
+    shortDesc: "শিক্ষণীয় ভিডিও রিলস, ইনফোগ্রাফিক্স এবং রোগী সচেতনতামূলক ফেসবুক-ইউটিউব কনটেন্ট।",
+    fullDesc: "নিয়মিত রোগভিত্তিক স্বাস্থ্য টিপস, হোমিওপ্যাথির বিজ্ঞানসম্মত ব্যাখ্যা ও সুস্থ হওয়া রোগীদের কেস স্টাডি দিয়ে সোশ্যাল মিডিয়ায় আপনার সুনাম ছড়িয়ে দেওয়া।",
     deliverables: [
-      "12-16 custom designed social media posts & carousels/month",
-      "Short-form video reels scriptwriting & editing",
-      "Community management & patient inquiry responses",
-      "Monthly audience growth and engagement report"
+      "মাসে ১২-১৬টি আকর্ষণীয় সোশ্যাল মিডিয়া পোস্ট ও ক্যারোসেল",
+      "শর্ট ভিডিও রিলসের আকর্ষণীয় স্ক্রিপ্ট ও প্রফেশনাল এডিটিং",
+      "রোগীদের ইনবক্স মেসেজ ও কমেন্টের পেশাদার উত্তর প্রদান",
+      "মাসিক ফলোয়ার গ্রোথ ও অডিয়েন্স এনগেজমেন্ট রিপোর্ট"
     ],
     benefits: [
-      "Establish authority as a leading homeopathic expert",
-      "Educate public on natural non-toxic healing",
-      "Continuous organic patient referrals via social platforms"
+      "একজন সুপরিচিত বিশেষজ্ঞ হোমিওপ্যাথিক চিকিৎসক হিসেবে পরিচিতি",
+      "পার্শ্বপ্রতিক্রিয়াহীন স্থায়ী চিকিৎসার সচেতনতা বৃদ্ধি",
+      "সোশ্যাল মিডিয়া থেকে নিয়মিত নতুন রোগীর রেফারেল"
     ]
   },
   {
     id: "tech-automation",
-    title: "WhatsApp Bot & Automation",
+    title: "হোয়াটসঅ্যাপ বট ও চেম্বার অটোমেশন",
     iconName: "Cpu",
-    tag: "Efficiency",
-    shortDesc: "Smart WhatsApp chatbots, automated medicine courier updates, and clinic workflow integration.",
-    fullDesc: "Automate repetitive chamber tasks. WhatsApp bots answer patient FAQs, verify clinic open hours, and dispatch courier tracking for home-delivered remedies.",
+    tag: "দক্ষতা",
+    shortDesc: "স্মার্ট হোয়াটসঅ্যাপ চ্যাটবট, পথ্য ও ওষুধের অ্যান্টিডোট নির্দেশনা এবং কুরিয়ার ট্র্যাকিং।",
+    fullDesc: "চেম্বারের পুনরাবৃত্তিমূলক কাজের ঝামেলা দূর করে। রোগীর সাধারণ প্রশ্নের উত্তর দেওয়া, চেম্বারের সময়সূচি জানানো এবং কুরিয়ারে পাঠানো ওষুধের আপডেট দেওয়া।",
     deliverables: [
-      "Verified WhatsApp Business API integration",
-      "Automated FAQ answering bot (chamber address, fees, timings)",
-      "Medicine courier tracking integration",
-      "Automated birthday & seasonal wellness greetings"
+      "অফিসিয়াল হোয়াটসঅ্যাপ বিজনেস এপিআই ইন্টিগ্রেশন",
+      "স্বয়ংক্রিয় এফএকিউ বট (চেম্বারের ঠিকানা, ভিজিট ফী, সময়)",
+      "দূরবর্তী রোগীদের ওষুধ কুরিয়ার ট্র্যাকিং মেসেজ",
+      "ওষুধের ডায়েট নিয়মাবলী (কাঁচা পেঁয়াজ, কফি ইত্যাদি সতর্কবার্তা)"
     ],
     benefits: [
-      "Save 8+ staff hours every week",
-      "Instant response to patients 24 hours a day",
-      "Seamless medicine delivery tracking for patients"
+      "প্রতি সপ্তাহে চেম্বার সহকারীর ৮+ ঘণ্টা সময় সাশ্রয়",
+      "২৪ ঘণ্টা রোগীকে তাত্ক্ষণিক সঠিক তথ্যের উত্তর প্রদান",
+      "ওষুধের নিয়ম ও পথ্য নিয়ে বারবার ফোন আসার ঝামেলা শেষ"
     ]
   }
 ];

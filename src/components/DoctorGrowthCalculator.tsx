@@ -9,7 +9,6 @@ import {
   Sparkles, 
   ArrowRight, 
   CheckCircle2, 
-  DollarSign,
   Clock
 } from "lucide-react";
 
@@ -65,31 +64,31 @@ export default function DoctorGrowthCalculator() {
     <section id="calculator" className="max-w-5xl mx-auto px-4 sm:px-6">
       <div className="text-center max-w-xl mx-auto mb-8">
         <div className="badge-pill mb-2 inline-flex">
-          <Calculator className="w-3.5 h-3.5 text-sky-600" />
-          <span>Interactive Estimator</span>
+          <Calculator className="w-3.5 h-3.5 text-blue-700" />
+          <span>ইন্টারেক্টিভ গ্রোথ ক্যালকুলেটর</span>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit] mb-2">
-          Calculate Your Chamber&apos;s Growth
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
+          আপনার চেম্বারের সম্ভাব্য প্রসার হিসাব করুন
         </h2>
         <p className="text-xs sm:text-sm text-slate-600">
-          See how medical web engineering and local SEO expand your patient reach.
+          হোমিওপ্যাথিক ওয়েবসাইট, লোকাল গুগল এসইও এবং অটোমেশন আপনার রোগী প্রবাহ কতটা বাড়াতে পারে তা দেখুন।
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
         {/* Controls (Left 7 cols) */}
-        <div className="lg:col-span-7 bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex flex-col justify-between space-y-5">
+        <div className="lg:col-span-7 bg-white rounded-xl border border-slate-200 p-5 sm:p-6 flex flex-col justify-between space-y-5 shadow-2xs">
           <div className="space-y-5">
             {/* Slider 1 */}
             <div>
               <div className="flex justify-between items-center mb-1.5">
                 <label className="text-xs font-semibold text-slate-700 flex items-center gap-1.5">
-                  <Users className="w-3.5 h-3.5 text-sky-600" />
-                  Current Patients Per Week:
+                  <Users className="w-3.5 h-3.5 text-[#0052CC]" />
+                  বর্তমানে প্রতি সপ্তাহে রোগী সংখ্যা:
                 </label>
-                <span className="text-sm font-bold text-sky-700 font-[Outfit]">
-                  {patientsPerWeek} patients
+                <span className="text-sm font-bold text-[#0052CC]">
+                  {patientsPerWeek} জন রোগী
                 </span>
               </div>
               <input
@@ -99,12 +98,12 @@ export default function DoctorGrowthCalculator() {
                 step="5"
                 value={patientsPerWeek}
                 onChange={(e) => setPatientsPerWeek(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600"
+                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#0052CC]"
               />
               <div className="flex justify-between text-[10px] text-slate-400 mt-1">
-                <span>10/wk</span>
-                <span>75/wk</span>
-                <span>150+/wk</span>
+                <span>১০ জন/সপ্তাহ</span>
+                <span>৭৫ জন/সপ্তাহ</span>
+                <span>১৫০+ জন/সপ্তাহ</span>
               </div>
             </div>
 
@@ -112,11 +111,11 @@ export default function DoctorGrowthCalculator() {
             <div>
               <div className="flex justify-between items-center mb-1.5">
                 <label className="text-xs font-semibold text-slate-700 flex items-center gap-1.5">
-                  <DollarSign className="w-3.5 h-3.5 text-sky-600" />
-                  Avg. Consultation Fee (BDT):
+                  <span className="font-bold text-[#0052CC]">৳</span>
+                  গড় কনসালটেশন বা ভিজিট ফি (টাকা):
                 </label>
-                <span className="text-sm font-bold text-sky-700 font-[Outfit]">
-                  BDT {consultationFee.toLocaleString()}
+                <span className="text-sm font-bold text-[#0052CC]">
+                  ৳ {consultationFee.toLocaleString()}
                 </span>
               </div>
               <input
@@ -126,30 +125,30 @@ export default function DoctorGrowthCalculator() {
                 step="100"
                 value={consultationFee}
                 onChange={(e) => setConsultationFee(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600"
+                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#0052CC]"
               />
               <div className="flex justify-between text-[10px] text-slate-400 mt-1">
-                <span>BDT 300</span>
-                <span>BDT 1,500</span>
-                <span>BDT 3,000+</span>
+                <span>৳ ৩০০</span>
+                <span>৳ ১,৫০০</span>
+                <span>৳ ৩,০০০+</span>
               </div>
             </div>
 
             {/* Capabilities Toggles */}
             <div>
               <span className="text-xs font-semibold text-slate-700 block mb-2">
-                Select Desired Digital Capabilities:
+                প্রয়োজনীয় ডিজিটাল সমাধান নির্বাচন করুন:
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
-                  { id: "medical-website", label: "Doctor Website", tag: "+25%" },
-                  { id: "online-appointments", label: "24/7 Booking & Telemed", tag: "-75% No-Show" },
-                  { id: "medical-seo", label: "Google Local & Medical SEO", tag: "+35%" },
-                  { id: "digital-marketing", label: "Targeted Patient Ads", tag: "+45%" },
-                  { id: "branding-identity", label: "Clinic Branding Kit", tag: "+15%" },
-                  { id: "clinic-crm-software", label: "Clinic EHR & Case CRM", tag: "Retention +60%" },
-                  { id: "social-media-management", label: "Social Media & Reels", tag: "+30%" },
-                  { id: "tech-automation", label: "WhatsApp Automation", tag: "Saves 8h/wk" },
+                  { id: "medical-website", label: "ডাক্তার ওয়েবসাইট", tag: "+২৫% রোগী" },
+                  { id: "online-appointments", label: "২৪/৭ বুকিং ও টেলিমেডিসিন", tag: "নো-শো ৭৫% হ্রাস" },
+                  { id: "medical-seo", label: "গুগল লোকাল ও মেডিকেল এসইও", tag: "+৩৫% রিচ" },
+                  { id: "digital-marketing", label: "টার্গেটেড ক্রনিক পেশেন্ট অ্যাড", tag: "+৪৫% নতুন কেস" },
+                  { id: "branding-identity", label: "প্রেসক্রিপশন ও ব্র্যান্ডিং কিট", tag: "+১৫% বিশ্বাস" },
+                  { id: "clinic-crm-software", label: "হোমিও কেস সিআরএম ও হিস্ট্রি", tag: "+৬০% রিটেনশন" },
+                  { id: "social-media-management", label: "সোশ্যাল মিডিয়া ও রিলস", tag: "+৩০% পরিচিতি" },
+                  { id: "tech-automation", label: "হোয়াটসঅ্যাপ ডায়েট অটোমেশন", tag: "৮ ঘণ্টা/সপ্তাহ সেভ" },
                 ].map((tool) => {
                   const isChecked = selectedTools.includes(tool.id);
                   return (
@@ -159,21 +158,21 @@ export default function DoctorGrowthCalculator() {
                       onClick={() => toggleTool(tool.id)}
                       className={`p-2 rounded-lg text-left border transition-all flex items-center justify-between text-xs ${
                         isChecked
-                          ? "bg-sky-50 border-sky-500 text-sky-900 font-semibold"
+                          ? "bg-blue-50 border-[#0052CC] text-[#0052CC] font-semibold"
                           : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                       }`}
                     >
                       <div className="flex items-center gap-1.5">
                         <div
                           className={`w-3.5 h-3.5 rounded-sm border flex items-center justify-center text-[10px] ${
-                            isChecked ? "bg-sky-600 border-sky-600 text-white" : "border-slate-300 bg-white"
+                            isChecked ? "bg-[#0052CC] border-[#0052CC] text-white" : "border-slate-300 bg-white"
                           }`}
                         >
                           {isChecked && <CheckCircle2 className="w-3 h-3" />}
                         </div>
-                        <span>{tool.label}</span>
+                        <span className="truncate">{tool.label}</span>
                       </div>
-                      <span className="text-[10px] px-1.5 py-0.2 rounded bg-white text-sky-700 border border-slate-200">
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-white text-[#0052CC] border border-slate-200 shrink-0">
                         {tool.tag}
                       </span>
                     </button>
@@ -184,61 +183,61 @@ export default function DoctorGrowthCalculator() {
           </div>
 
           <div className="text-[10px] text-slate-400 italic pt-2 border-t border-slate-100">
-            * Estimated metrics based on verified averages from 250+ digitized clinics.
+            * ২৫০+ সফলভাবে ডিজিটাইজড হওয়া হোমিওপ্যাথিক চেম্বারের বাস্তব পরিসংখ্যানের ওপর ভিত্তি করে প্রাক্কলিত।
           </div>
         </div>
 
         {/* Results Panel (Right 5 cols) */}
-        <div className="lg:col-span-5 rounded-xl p-5 sm:p-6 bg-slate-900 text-white flex flex-col justify-between space-y-4">
+        <div className="lg:col-span-5 rounded-xl p-5 sm:p-6 bg-slate-900 text-white flex flex-col justify-between space-y-4 shadow-md">
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-              <span className="text-xs uppercase font-bold tracking-wider text-sky-400">
-                Projected Monthly Growth
+              <span className="text-xs uppercase font-bold tracking-wider text-blue-400">
+                মাসিক সম্ভাব্য প্রবৃদ্ধি
               </span>
               <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1">
-                <Sparkles className="w-3 h-3" /> High ROI
+                <Sparkles className="w-3 h-3" /> উচ্চ ফলাফল
               </span>
             </div>
 
             {/* Metric 1 */}
-            <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
+            <div className="p-3.5 rounded-lg bg-slate-800/80 border border-slate-700">
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>Est. New Patients</span>
-                <TrendingUp className="w-3.5 h-3.5 text-sky-400" />
+                <span>সম্ভাব্য নতুন রোগী</span>
+                <TrendingUp className="w-3.5 h-3.5 text-blue-400" />
               </div>
               <div className="mt-1 flex items-baseline gap-1.5">
-                <span className="text-2xl font-bold text-white font-[Outfit]">
+                <span className="text-2xl font-bold text-white">
                   +{estimatedNewPatientsPerMonth}
                 </span>
-                <span className="text-xs text-sky-400">patients / month</span>
+                <span className="text-xs text-blue-300">জন রোগী / প্রতি মাসে</span>
               </div>
             </div>
 
             {/* Metric 2 */}
-            <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
+            <div className="p-3.5 rounded-lg bg-slate-800/80 border border-slate-700">
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>Est. Additional Revenue</span>
-                <DollarSign className="w-3.5 h-3.5 text-emerald-400" />
+                <span>সম্ভাব্য অতিরিক্ত চেম্বার আয়</span>
+                <span className="text-emerald-400 font-bold">৳</span>
               </div>
               <div className="mt-1 flex items-baseline gap-1.5">
-                <span className="text-2xl font-bold text-emerald-400 font-[Outfit]">
-                  +BDT {projectedExtraMonthlyRevenue.toLocaleString()}
+                <span className="text-2xl font-bold text-emerald-400">
+                  +৳ {projectExtraMonthlyRevenue(projectedExtraMonthlyRevenue)}
                 </span>
-                <span className="text-xs text-slate-400">/ month</span>
+                <span className="text-xs text-slate-400">/ প্রতি মাসে</span>
               </div>
             </div>
 
             {/* Metric 3 */}
-            <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
+            <div className="p-3.5 rounded-lg bg-slate-800/80 border border-slate-700">
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>Staff Time Saved</span>
-                <Clock className="w-3.5 h-3.5 text-sky-400" />
+                <span>চেম্বারের সময় সাশ্রয়</span>
+                <Clock className="w-3.5 h-3.5 text-blue-400" />
               </div>
               <div className="mt-1 flex items-baseline gap-1.5">
-                <span className="text-xl font-bold text-white font-[Outfit]">
-                  ~{hoursSavedPerWeek} Hours
+                <span className="text-xl font-bold text-white">
+                  ~{hoursSavedPerWeek} ঘণ্টা
                 </span>
-                <span className="text-xs text-sky-400">/ week saved</span>
+                <span className="text-xs text-blue-300">/ প্রতি সপ্তাহে সাশ্রয়</span>
               </div>
             </div>
           </div>
@@ -248,7 +247,7 @@ export default function DoctorGrowthCalculator() {
               href={`/contact?tools=${selectedTools.join(",")}&patients=${patientsPerWeek}`}
               className="btn-primary w-full py-2.5 text-xs font-semibold justify-center flex items-center gap-1.5"
             >
-              <span>Get Custom Roadmap for this Estimation</span>
+              <span>এই হিসাব অনুযায়ী রোডম্যাপ গ্রহণ করুন</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -257,4 +256,8 @@ export default function DoctorGrowthCalculator() {
       </div>
     </section>
   );
+}
+
+function projectExtraMonthlyRevenue(val: number) {
+  return val.toLocaleString("en-US");
 }

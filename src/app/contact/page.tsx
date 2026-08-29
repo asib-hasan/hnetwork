@@ -5,9 +5,9 @@ import ContactForm from "@/components/ContactForm";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
-  title: "Contact Us & Book Free Chamber Strategy Session",
+  title: "যোগাযোগ | ফ্রি চেম্বার স্ট্র্যাটেজি সেশন বুক করুন",
   description:
-    "Get in touch with the Homeo Network team. Book your free 30-minute clinic digital transformation consultation or connect via WhatsApp hotline.",
+    "Homeo Network টিমের সাথে যোগাযোগ করুন। আপনার চেম্বার ডিজিটালাইজেশনের জন্য ৩০ মিনিটের ফ্রি কনসালটেশন নিন অথবা হোয়াটসঅ্যাপ হটলাইনে যুক্ত হন।",
 };
 
 export default function ContactPage() {
@@ -18,15 +18,15 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-3">
           <div className="badge-pill mb-1 inline-flex">
             <MessageSquare className="w-3.5 h-3.5 text-blue-700" />
-            <span>Consultation & Support</span>
+            <span>পরামর্শ ও সহায়তা</span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Let&apos;s Build Your Clinic&apos;s Digital Blueprint
+            আপনার চেম্বারের ডিজিটাল রূপরেখা তৈরি করুন
           </h1>
 
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-            Speak directly with our healthcare technology team. We provide personalized audits, demo previews, and transparent guidance.
+            আমাদের হেলথকেয়ার প্রযুক্তি টিমের সাথে সরাসরি কথা বলুন। আমরা আপনার চেম্বারের জন্য কাস্টম অডিট, লাইভ ডেমো ও স্বচ্ছ পরামর্শ প্রদান করি।
           </p>
         </div>
       </section>
@@ -39,10 +39,10 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-4">
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
               <h2 className="text-lg font-bold text-slate-900">
-                Direct Communication
+                সরাসরি যোগাযোগ
               </h2>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Connect directly through your preferred channel for prompt assistance:
+                দ্রুত সহযোগিতার জন্য আপনার সুবিধাজনক মাধ্যমে যোগাযোগ করতে পারেন:
               </p>
 
               <div className="space-y-3 pt-1">
@@ -56,44 +56,44 @@ export default function ContactPage() {
                     <MessageSquare className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-900">WhatsApp Instant Consultation</div>
-                    <div className="text-xs text-emerald-700 font-semibold">+880 1700-000000</div>
-                    <span className="text-[10px] text-slate-500">Typical response in 5 mins</span>
+                    <div className="text-xs font-bold text-slate-900">হোয়াটসঅ্যাপ ইনস্ট্যান্ট কনসালটেশন</div>
+                    <div className="text-xs text-emerald-700 font-semibold">+৮৮০ ১৭০০-০০০০০০</div>
+                    <span className="text-[10px] text-slate-500">সাধারণত ৫ মিনিটে উত্তর দেওয়া হয়</span>
                   </div>
                 </a>
 
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0052CC] flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-900">Direct Phone Line</div>
-                    <a href="tel:+8801700000000" className="text-xs text-blue-800 font-semibold hover:underline">
-                      +880 1700-000000
+                    <div className="text-xs font-bold text-slate-900">সরাসরি ফোন কল</div>
+                    <a href="tel:+8801700000000" className="text-xs text-[#0052CC] font-semibold hover:underline">
+                      +৮৮০ ১৭০০-০০০০০০
                     </a>
-                    <span className="text-[10px] text-slate-500 block">10:00 AM - 10:00 PM (Daily)</span>
+                    <span className="text-[10px] text-slate-500 block">সকাল ১০:০০ - রাত ১০:০০ (প্রতিদিন)</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0052CC] flex items-center justify-center shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-900">Official Mailbox</div>
-                    <a href="mailto:contact@homeonetwork.com" className="text-xs text-blue-800 font-semibold hover:underline">
+                    <div className="text-xs font-bold text-slate-900">অফিসিয়াল ইমেইল</div>
+                    <a href="mailto:contact@homeonetwork.com" className="text-xs text-[#0052CC] font-semibold hover:underline">
                       contact@homeonetwork.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0052CC] flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-900">Headquarters</div>
-                    <span className="text-xs text-slate-600">Dhaka, Bangladesh (Serving Worldwide)</span>
+                    <div className="text-xs font-bold text-slate-900">প্রধান কার্যালয়</div>
+                    <span className="text-xs text-slate-600">ঢাকা, বাংলাদেশ (সারাদেশ ও প্রবাসে সেবা প্রদানকারী)</span>
                   </div>
                 </div>
               </div>
@@ -101,8 +101,8 @@ export default function ContactPage() {
 
             <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 flex items-start gap-2.5">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-              <p className="text-xs text-slate-700">
-                <strong>Doctor Confidentiality:</strong> All medical chamber data and consultation details remain strictly confidential.
+              <p className="text-xs text-slate-700 leading-relaxed">
+                <strong>চিকিৎসক গোপনীয়তা:</strong> আপনার চেম্বার সংক্রান্ত সকল তথ্য ও আলোচনার বিষয়বস্তু সর্বোচ্চ গোপনীয়তায় সংরক্ষিত থাকে।
               </p>
             </div>
           </div>

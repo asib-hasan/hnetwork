@@ -28,15 +28,15 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              Dedicated technology solutions and digital platforms for homeopathic doctors, clinics, and medical institutions.
+              হোমিওপ্যাথিক চিকিৎসক, ক্লিনিক ও চিকিৎসা প্রতিষ্ঠানের জন্য নিবেদিত ডিজিটাল প্ল্যাটফর্ম ও টেকনোলজি সলিউশন।
             </p>
 
             <div className="flex gap-2 pt-1">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-[10px] border border-slate-700">
-                <ShieldCheck className="w-3 h-3 text-emerald-400" /> HIPAA Security
+                <ShieldCheck className="w-3 h-3 text-emerald-400" /> সর্বোচ্চ নিরাপত্তা
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-[10px] border border-slate-700">
-                <HeartPulse className="w-3 h-3 text-[#0084FF]" /> Doctor First
+                <HeartPulse className="w-3 h-3 text-[#0084FF]" /> ডাক্তার-প্রথম
               </span>
             </div>
           </div>
@@ -44,27 +44,27 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <h4 className="text-xs uppercase font-bold text-white tracking-wider mb-3">
-              Navigation
+              নেভিগেশন
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">
-                  Home
+                  হোম
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="hover:text-white transition-colors">
-                  All Digital Services
+                  সকল ডিজিটাল সেবাসমূহ
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="hover:text-white transition-colors">
-                  About Us
+                  আমাদের সম্পর্কে
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-white transition-colors">
-                  Book Strategy Session
+                  ফ্রি স্ট্র্যাটেজি সেশন
                 </Link>
               </li>
             </ul>
@@ -73,7 +73,7 @@ export default function Footer() {
           {/* Solutions */}
           <div>
             <h4 className="text-xs uppercase font-bold text-white tracking-wider mb-3">
-              Solutions
+              সমাধানসমূহ
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               {servicesList.slice(0, 5).map((service) => (
@@ -92,13 +92,13 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="text-xs uppercase font-bold text-white tracking-wider mb-3">
-              Contact & Support
+              যোগাযোগ ও সহায়তা
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#0084FF] shrink-0" />
                 <a href="tel:+8801700000000" className="hover:text-white transition-colors text-slate-200">
-                  +880 1700-000000
+                  +৮৮০ ১৭০০-০০০০০০
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -109,7 +109,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#0084FF] shrink-0 mt-0.5" />
-                <span>Dhaka, Bangladesh</span>
+                <span>ঢাকা, বাংলাদেশ</span>
               </li>
             </ul>
           </div>
@@ -118,8 +118,8 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Homeo Network. All rights reserved.</p>
-          <span>Modern Healthcare Technology Platform</span>
+          <p>© ২০২৬ Homeo Network. সর্বস্বত্ব সংরক্ষিত।</p>
+          <span>হোমিওপ্যাথিক চিকিৎসকদের বিশ্বস্ত ডিজিটাল সঙ্গী</span>
         </div>
       </div>
     </footer>
