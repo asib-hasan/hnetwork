@@ -2,18 +2,7 @@
 
 import React, { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { Send, CheckCircle2, ShieldCheck, Stethoscope, Users } from "lucide-react";
-
-const TOOL_MAP: Record<string, string> = {
-  "medical-website": "Doctor Website",
-  "online-appointments": "Online Booking & Telemedicine",
-  "medical-seo": "Google Local & Medical SEO",
-  "digital-marketing": "Targeted Patient Ads",
-  "branding-identity": "Branding & Logo Identity",
-  "clinic-crm-software": "Clinic CRM & Case Software",
-  "social-media-management": "Social Media & Health Reels",
-  "tech-automation": "WhatsApp Clinic Automation",
-};
+import { CheckCircle2, ShieldCheck, Stethoscope } from "lucide-react";
 
 const availableServices = [
   "Doctor Website",
@@ -36,19 +25,11 @@ function ContactFormInner() {
 
     if (searchParams) {
       const serviceParam = searchParams.get("service");
-      const toolsParam = searchParams.get("tools");
-      const patientsParam = searchParams.get("patients");
-
       if (serviceParam) {
         const matched = availableServices.find(
           (s) => s.toLowerCase() === serviceParam.toLowerCase() || serviceParam.toLowerCase().includes(s.toLowerCase())
         ) || serviceParam;
         services = [matched];
-      } else if (toolsParam) {
-        const toolList = toolsParam.split(",");
-        const matched = toolList.map((t) => TOOL_MAP[t.trim()]).filter(Boolean);
-        if (matched.length > 0) services = matched;
-        if (patientsParam) message = `Patient volume from calculator: ${patientsParam} patients/week.`;
       }
     }
 
@@ -90,13 +71,13 @@ function ContactFormInner() {
   );
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8">
+    <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs">
       {isSubmitted ? (
         <div className="text-center py-8 space-y-4">
           <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
             <CheckCircle2 className="w-6 h-6" />
           </div>
-          <h3 className="text-xl font-bold text-slate-900 font-[Outfit]">
+          <h3 className="text-xl font-bold text-slate-900">
             Consultation Request Received!
           </h3>
           <p className="text-xs text-slate-600 max-w-sm mx-auto leading-relaxed">
@@ -122,8 +103,8 @@ function ContactFormInner() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="border-b border-slate-100 pb-3">
-            <h3 className="text-base font-bold text-slate-900 font-[Outfit] flex items-center gap-1.5">
-              <Stethoscope className="w-4 h-4 text-sky-600" />
+            <h3 className="text-base font-bold text-slate-900 flex items-center gap-1.5">
+              <Stethoscope className="w-4 h-4 text-blue-700" />
               Schedule Free Clinic Strategy Call
             </h3>
             <p className="text-[11px] text-slate-500 mt-0.5">
@@ -142,7 +123,7 @@ function ContactFormInner() {
                 placeholder="e.g. Dr. Mohammad Rahman"
                 value={formData.doctorName}
                 onChange={(e) => setFormData({ ...formData, doctorName: e.target.value })}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-sky-600"
+                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-blue-600"
               />
             </div>
 
@@ -156,7 +137,7 @@ function ContactFormInner() {
                 placeholder="e.g. Pure Cure Homeopathy"
                 value={formData.clinicName}
                 onChange={(e) => setFormData({ ...formData, clinicName: e.target.value })}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-sky-600"
+                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-blue-600"
               />
             </div>
           </div>
@@ -172,7 +153,7 @@ function ContactFormInner() {
                 placeholder="e.g. 017XXXXXXXX"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-sky-600"
+                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-blue-600"
               />
             </div>
 
@@ -186,7 +167,7 @@ function ContactFormInner() {
                 placeholder="e.g. Dhanmondi, Dhaka"
                 value={formData.city}
                 onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-sky-600"
+                className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-blue-600"
               />
             </div>
           </div>
@@ -205,7 +186,7 @@ function ContactFormInner() {
                     onClick={() => toggleService(service)}
                     className={`px-2.5 py-1 rounded-md text-xs transition-all ${
                       active
-                        ? "bg-sky-50 border border-sky-500 text-sky-800 font-semibold"
+                        ? "bg-blue-50 border border-blue-600 text-blue-800 font-semibold"
                         : "bg-slate-50 border border-slate-200 text-slate-600 hover:border-slate-300"
                     }`}
                   >
@@ -225,7 +206,7 @@ function ContactFormInner() {
               placeholder="Tell us about your chamber or specific goals..."
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-sky-600"
+              className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-blue-600"
             />
           </div>
 

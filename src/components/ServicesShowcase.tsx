@@ -35,7 +35,7 @@ export default function ServicesShowcase() {
   });
 
   const renderIcon = (name: string) => {
-    const props = { className: "w-5 h-5 text-sky-600" };
+    const props = { className: "w-5 h-5 text-[#0052CC]" };
     switch (name) {
       case "Globe":
         return <Globe {...props} />;
@@ -71,12 +71,12 @@ export default function ServicesShowcase() {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
                 isActive
-                  ? "bg-sky-600 text-white shadow-xs"
+                  ? "bg-blue-700 text-white shadow-xs"
                   : "bg-white border border-slate-200 text-slate-600 hover:text-slate-900"
               }`}
             >
               <span>{cat.label}</span>
-              <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? "bg-sky-800 text-white" : "bg-slate-100 text-slate-500"}`}>
+              <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? "bg-blue-900 text-white" : "bg-slate-100 text-slate-500"}`}>
                 {cat.count}
               </span>
             </button>
@@ -94,14 +94,14 @@ export default function ServicesShowcase() {
           >
             <div className="lg:col-span-7 space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
                   {renderIcon(service.iconName)}
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-sky-600 block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-700 block">
                     {service.tag}
                   </span>
-                  <h2 className="text-lg font-bold text-slate-900 font-[Outfit]">
+                  <h2 className="text-lg font-bold text-slate-900">
                     {service.title}
                   </h2>
                 </div>
@@ -144,7 +144,7 @@ export default function ServicesShowcase() {
               <div className="space-y-2">
                 {service.benefits.map((benefit, bIdx) => (
                   <div key={bIdx} className="flex items-start gap-2 text-xs text-slate-700">
-                    <span className="w-4 h-4 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 font-bold text-[10px] mt-0.5">
+                    <span className="w-4 h-4 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 font-bold text-[10px] mt-0.5">
                       {bIdx + 1}
                     </span>
                     <span>{benefit}</span>

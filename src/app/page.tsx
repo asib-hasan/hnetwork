@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { 
   ArrowRight, 
-  Sparkles, 
   ShieldCheck, 
   CheckCircle2, 
   XCircle, 
@@ -22,16 +21,16 @@ import FAQSection from "@/components/FAQSection";
 
 export default function HomePage() {
   return (
-    <div className="space-y-20 sm:space-y-28 pb-20">
+    <div className="space-y-16 sm:space-y-24 pb-20">
       
       {/* ===== 1. HERO SECTION ===== */}
       <section className="pt-16 pb-6 sm:pt-20 sm:pb-10 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4">
           
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-slate-900 tracking-tight leading-tight font-[Outfit]">
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-slate-900 tracking-tight leading-tight">
             Transform Your Homeopathic Practice with{" "}
-            <span className="text-sky-600">Modern Digital Technology</span>
+            <span className="text-[#0052CC]">Modern Digital Technology</span>
           </h1>
 
           {/* Subtitle */}
@@ -58,12 +57,12 @@ export default function HomePage() {
           </div>
 
           {/* Trust points */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-500 font-medium border-t border-slate-200/80 max-w-md mx-auto">
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-500 font-medium border-t border-slate-200 max-w-md mx-auto">
             <span className="flex items-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> HIPAA Security
             </span>
             <span className="flex items-center gap-1">
-              <Activity className="w-3.5 h-3.5 text-sky-600" /> 99.9% Uptime
+              <Activity className="w-3.5 h-3.5 text-[#0052CC]" /> 99.9% Uptime
             </span>
             <span className="flex items-center gap-1">
               <Award className="w-3.5 h-3.5 text-emerald-600" /> Classical Workflows
@@ -77,35 +76,35 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           
-          <div className="bg-white rounded-xl border border-slate-200 p-4 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center mx-auto mb-2">
+          <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0052CC] flex items-center justify-center mx-auto mb-2">
               <Users className="w-4 h-4" />
             </div>
-            <div className="text-2xl font-extrabold text-slate-900 font-[Outfit]">
-              500<span className="text-sky-600">+</span>
+            <div className="text-2xl font-extrabold text-slate-900">
+              500<span className="text-[#0052CC]">+</span>
             </div>
             <div className="text-xs font-semibold text-slate-500 mt-0.5">
               Doctors Digitized
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-slate-200 p-4 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center mx-auto mb-2">
+          <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0052CC] flex items-center justify-center mx-auto mb-2">
               <Zap className="w-4 h-4" />
             </div>
-            <div className="text-2xl font-extrabold text-slate-900 font-[Outfit]">
-              85K<span className="text-sky-600">+</span>
+            <div className="text-2xl font-extrabold text-slate-900">
+              85K<span className="text-[#0052CC]">+</span>
             </div>
             <div className="text-xs font-semibold text-slate-500 mt-0.5">
               Appointments Handled
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-slate-200 p-4 text-center shadow-xs">
+          <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
             <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-2">
               <BarChart3 className="w-4 h-4" />
             </div>
-            <div className="text-2xl font-extrabold text-slate-900 font-[Outfit]">
+            <div className="text-2xl font-extrabold text-slate-900">
               98.2<span className="text-emerald-600">%</span>
             </div>
             <div className="text-xs font-semibold text-slate-500 mt-0.5">
@@ -113,12 +112,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-slate-200 p-4 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center mx-auto mb-2">
+          <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0052CC] flex items-center justify-center mx-auto mb-2">
               <Activity className="w-4 h-4" />
             </div>
-            <div className="text-2xl font-extrabold text-slate-900 font-[Outfit]">
-              3.8<span className="text-sky-600">x</span>
+            <div className="text-2xl font-extrabold text-slate-900">
+              3.8<span className="text-[#0052CC]">x</span>
             </div>
             <div className="text-xs font-semibold text-slate-500 mt-0.5">
               Average Growth
@@ -131,7 +130,7 @@ export default function HomePage() {
       {/* ===== 3. CORE PILLARS ===== */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit] mb-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
             Why Modernize Your Practice?
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
@@ -141,11 +140,11 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 space-y-3 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600">
+          <div className="bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center text-[#0052CC]">
               <Globe className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-slate-900 font-[Outfit]">
+            <h3 className="text-base font-bold text-slate-900">
               Doctor Website & SEO
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
@@ -153,11 +152,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 space-y-3 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600">
+          <div className="bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center text-[#0052CC]">
               <CalendarCheck className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-slate-900 font-[Outfit]">
+            <h3 className="text-base font-bold text-slate-900">
               24/7 Automated Booking
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
@@ -165,11 +164,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 space-y-3 shadow-xs">
-            <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600">
+          <div className="bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center text-[#0052CC]">
               <Database className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-slate-900 font-[Outfit]">
+            <h3 className="text-base font-bold text-slate-900">
               Clinic CRM & Records
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
@@ -183,7 +182,7 @@ export default function HomePage() {
       {/* ===== 4. 8 SERVICES CATALOG ===== */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit] mb-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
             8 Specialized Digital Solutions
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
@@ -210,7 +209,7 @@ export default function HomePage() {
 
       {/* ===== 5. COMPARISON TABLE ===== */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xs">
+        <div className="rounded-xl overflow-hidden border border-slate-200 bg-white shadow-xs">
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
             
             {/* Traditional */}
@@ -220,7 +219,7 @@ export default function HomePage() {
                   <XCircle className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 font-[Outfit]">Traditional Chamber</h3>
+                  <h3 className="text-sm font-bold text-slate-900">Traditional Chamber</h3>
                   <span className="text-[11px] text-rose-600 font-medium">Manual & limited reach</span>
                 </div>
               </div>
@@ -252,7 +251,7 @@ export default function HomePage() {
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 font-[Outfit]">With Homeo Network</h3>
+                  <h3 className="text-sm font-bold text-slate-900">With Homeo Network</h3>
                   <span className="text-[11px] text-emerald-700 font-medium">Automated & global reach</span>
                 </div>
               </div>
@@ -284,7 +283,7 @@ export default function HomePage() {
       {/* ===== 6. TESTIMONIALS ===== */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit] mb-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
             Trusted by Respected Homeopaths
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
@@ -294,7 +293,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           
-          <div className="rounded-2xl p-6 bg-white border border-slate-200 flex flex-col justify-between space-y-4 shadow-xs">
+          <div className="rounded-xl p-6 bg-white border border-slate-200 flex flex-col justify-between space-y-4 shadow-xs">
             <div className="space-y-2.5">
               <div className="flex gap-0.5 text-amber-400">
                 {[...Array(5)].map((_, i) => (
@@ -306,7 +305,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-sky-100 text-sky-800 flex items-center justify-center font-bold text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#EFF6FF] text-[#0052CC] flex items-center justify-center font-bold text-xs">
                 DT
               </div>
               <div>
@@ -316,7 +315,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-2xl p-6 bg-white border-2 border-sky-300 shadow-xs flex flex-col justify-between space-y-4">
+          <div className="rounded-xl p-6 bg-white border border-blue-400 shadow-xs flex flex-col justify-between space-y-4">
             <div className="space-y-2.5">
               <div className="flex gap-0.5 text-amber-400">
                 {[...Array(5)].map((_, i) => (
@@ -328,7 +327,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#0052CC] text-white flex items-center justify-center font-bold text-xs">
                 SJ
               </div>
               <div>
@@ -338,7 +337,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-2xl p-6 bg-white border border-slate-200 flex flex-col justify-between space-y-4 shadow-xs">
+          <div className="rounded-xl p-6 bg-white border border-slate-200 flex flex-col justify-between space-y-4 shadow-xs">
             <div className="space-y-2.5">
               <div className="flex gap-0.5 text-amber-400">
                 {[...Array(5)].map((_, i) => (
@@ -350,7 +349,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-sky-100 text-sky-800 flex items-center justify-center font-bold text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#EFF6FF] text-[#0052CC] flex items-center justify-center font-bold text-xs">
                 MK
               </div>
               <div>
@@ -368,8 +367,8 @@ export default function HomePage() {
 
       {/* ===== 8. FINAL CTA ===== */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="rounded-2xl p-8 sm:p-12 bg-gradient-to-r from-sky-600 to-sky-800 text-center text-white space-y-4 shadow-md">
-          <h2 className="text-2xl sm:text-3xl font-extrabold font-[Outfit]">
+        <div className="rounded-xl p-8 sm:p-12 bg-[#0052CC] text-center text-white space-y-4 shadow-md">
+          <h2 className="text-2xl sm:text-3xl font-extrabold">
             Let&apos;s Modernize Your Medical Practice
           </h2>
           <p className="text-white/90 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
@@ -378,7 +377,7 @@ export default function HomePage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-white text-sky-800 font-bold text-xs hover:bg-slate-100 transition-all"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-white text-[#0052CC] font-bold text-xs hover:bg-slate-100 transition-all shadow-xs"
             >
               Schedule Free Strategy Session
             </Link>
@@ -386,7 +385,7 @@ export default function HomePage() {
               href="https://wa.me/8801700000000"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-sky-900/60 hover:bg-sky-900 border border-white/30 text-white font-semibold text-xs transition-all text-center"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-[#0041A8] hover:bg-[#00358A] border border-white/20 text-white font-semibold text-xs transition-all text-center"
             >
               WhatsApp Consultation
             </a>

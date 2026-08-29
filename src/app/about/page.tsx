@@ -1,11 +1,10 @@
 import React from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck, Sparkles, Target, HeartHandshake, CheckCircle2, Cpu, ArrowRight, Globe2 } from "lucide-react";
+import { ShieldCheck, Sparkles, HeartHandshake, CheckCircle2, Cpu, Globe2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Our Mission & Digital Vision",
+  title: "About Us | Our Mission & Engineering Vision",
   description:
     "Learn about Homeo Network: our mission, values, and engineering standards built specifically to modernize and empower homeopathic doctors.",
 };
@@ -17,11 +16,11 @@ export default function AboutPage() {
       <section className="pt-10 pb-6 sm:pt-14 sm:pb-8 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-3">
           <div className="badge-pill mb-1 inline-flex">
-            <Sparkles className="w-3.5 h-3.5 text-sky-600" />
+            <Sparkles className="w-3.5 h-3.5 text-blue-700" />
             <span>Our Mission</span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit]">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             Bridging Classical Homeopathy with Modern Engineering
           </h1>
 
@@ -33,9 +32,9 @@ export default function AboutPage() {
 
       {/* Story */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8 space-y-3">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-[Outfit]">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
               Why Generic IT Agencies Fail Homeopathic Doctors
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -44,7 +43,7 @@ export default function AboutPage() {
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Standard IT agencies don&apos;t understand homeopathic case-taking, miasms, the law of similars, or long-term chronic patient management. <strong className="text-slate-900">Homeo Network</strong> was founded to bridge this exact divide.
             </p>
-            <div className="pt-2 flex flex-wrap gap-3 text-xs font-medium text-sky-700">
+            <div className="pt-2 flex flex-wrap gap-3 text-xs font-medium text-blue-800">
               <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> 100% Homeopathy-Focused</span>
               <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Google-Grade Engineering</span>
               <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Zero Tech Burden</span>
@@ -55,7 +54,7 @@ export default function AboutPage() {
             <div className="w-16 h-16 rounded-xl p-2 bg-white border border-slate-200 flex items-center justify-center">
               <Image src="/logo.png" alt="Homeo Network" width={50} height={50} className="object-contain" />
             </div>
-            <h3 className="text-sm font-bold text-slate-900 font-[Outfit]">Homeo Network</h3>
+            <h3 className="text-sm font-bold text-slate-900">Homeo Network</h3>
             <p className="text-[11px] text-slate-500">Connecting classical practice with modern technology.</p>
           </div>
         </div>
@@ -64,7 +63,7 @@ export default function AboutPage() {
       {/* Core Values */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit] mb-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
             Our Core Values
           </h2>
         </div>
@@ -78,11 +77,11 @@ export default function AboutPage() {
           ].map((val, idx) => {
             const Icon = val.icon;
             return (
-              <div key={idx} className="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
-                <div className="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center">
+              <div key={idx} className="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center">
                   <Icon className="w-4 h-4" />
                 </div>
-                <h3 className="text-sm font-bold text-slate-900 font-[Outfit]">{val.title}</h3>
+                <h3 className="text-sm font-bold text-slate-900">{val.title}</h3>
                 <p className="text-xs text-slate-600 leading-relaxed">{val.desc}</p>
               </div>
             );

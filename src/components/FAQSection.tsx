@@ -46,10 +46,10 @@ export default function FAQSection() {
     <section className="max-w-4xl mx-auto px-4 sm:px-6">
       <div className="text-center max-w-xl mx-auto mb-8">
         <div className="badge-pill mb-2 inline-flex">
-          <HelpCircle className="w-3.5 h-3.5 text-sky-600" />
+          <HelpCircle className="w-3.5 h-3.5 text-blue-700" />
           <span>Common Questions</span>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit] mb-2">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
           Frequently Asked Questions
         </h2>
         <p className="text-xs sm:text-sm text-slate-600">
@@ -65,7 +65,7 @@ export default function FAQSection() {
               key={index}
               className={`rounded-xl border transition-all overflow-hidden ${
                 isOpen
-                  ? "bg-white border-sky-300 shadow-xs"
+                  ? "bg-white border-blue-400 shadow-xs"
                   : "bg-white border-slate-200 hover:border-slate-300"
               }`}
             >
@@ -74,12 +74,12 @@ export default function FAQSection() {
                 onClick={() => toggle(index)}
                 className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 focus:outline-hidden"
               >
-                <span className="text-sm sm:text-base font-bold text-slate-900 font-[Outfit]">
+                <span className="text-sm sm:text-base font-bold text-slate-900">
                   {faq.question}
                 </span>
                 <div
                   className={`w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center shrink-0 text-slate-600 transition-transform ${
-                    isOpen ? "rotate-180 bg-sky-100 text-sky-700" : ""
+                    isOpen ? "rotate-180 bg-blue-100 text-blue-800" : ""
                   }`}
                 >
                   <ChevronDown className="w-3.5 h-3.5" />

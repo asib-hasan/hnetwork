@@ -17,11 +17,11 @@ export default function ContactPage() {
       <section className="pt-10 pb-6 sm:pt-14 sm:pb-8 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-3">
           <div className="badge-pill mb-1 inline-flex">
-            <MessageSquare className="w-3.5 h-3.5 text-sky-600" />
+            <MessageSquare className="w-3.5 h-3.5 text-blue-700" />
             <span>Consultation & Support</span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit]">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             Let&apos;s Build Your Clinic&apos;s Digital Blueprint
           </h1>
 
@@ -37,8 +37,8 @@ export default function ContactPage() {
           
           {/* Info Column */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="bg-white p-6 rounded-xl border border-slate-200 space-y-4">
-              <h2 className="text-lg font-bold text-slate-900 font-[Outfit]">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
+              <h2 className="text-lg font-bold text-slate-900">
                 Direct Communication
               </h2>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -50,9 +50,9 @@ export default function ContactPage() {
                   href="https://wa.me/8801700000000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 p-3 rounded-lg bg-emerald-50 border border-emerald-200 hover:bg-emerald-100/70 transition-all"
+                  className="flex items-start gap-3 p-3 rounded-xl bg-emerald-50 border border-emerald-200 hover:bg-emerald-100/70 transition-all"
                 >
-                  <div className="w-8 h-8 rounded-md bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0">
                     <MessageSquare className="w-4 h-4" />
                   </div>
                   <div>
@@ -62,33 +62,33 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">Direct Phone Line</div>
-                    <a href="tel:+8801700000000" className="text-xs text-sky-700 font-semibold hover:underline">
+                    <a href="tel:+8801700000000" className="text-xs text-blue-800 font-semibold hover:underline">
                       +880 1700-000000
                     </a>
                     <span className="text-[10px] text-slate-500 block">10:00 AM - 10:00 PM (Daily)</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">Official Mailbox</div>
-                    <a href="mailto:contact@homeonetwork.com" className="text-xs text-sky-700 font-semibold hover:underline">
+                    <a href="mailto:contact@homeonetwork.com" className="text-xs text-blue-800 font-semibold hover:underline">
                       contact@homeonetwork.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-sky-50 border border-sky-200 flex items-start gap-2.5">
+            <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 flex items-start gap-2.5">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <p className="text-xs text-slate-700">
                 <strong>Doctor Confidentiality:</strong> All medical chamber data and consultation details remain strictly confidential.

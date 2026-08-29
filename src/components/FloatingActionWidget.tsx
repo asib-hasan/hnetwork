@@ -51,7 +51,7 @@ export default function FloatingActionWidget() {
               href="tel:+8801700000000"
               className="w-full p-2 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold flex items-center gap-2.5 transition-all"
             >
-              <div className="w-6 h-6 rounded-md bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+              <div className="w-6 h-6 rounded-md bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
                 <Phone className="w-3.5 h-3.5" />
               </div>
               <div className="flex flex-col">
@@ -74,7 +74,7 @@ export default function FloatingActionWidget() {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-sky-600 hover:bg-sky-700 text-white shadow-md text-xs font-bold font-[Outfit]"
+        className="flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-md text-xs font-bold font-[Outfit]"
         aria-label="Doctor Helpline"
       >
         <MessageCircle className="w-4 h-4" />

@@ -10,7 +10,7 @@ export default function NotFound() {
           404 Not Found
         </span>
 
-        <h1 className="text-2xl font-bold text-slate-900 font-[Outfit]">
+        <h1 className="text-2xl font-bold text-slate-900">
           Page Unavailable
         </h1>
 

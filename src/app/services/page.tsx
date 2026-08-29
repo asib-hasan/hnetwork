@@ -17,11 +17,11 @@ export default function ServicesPage() {
       <section className="pt-10 pb-6 sm:pt-14 sm:pb-8 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-3">
           <div className="badge-pill mb-1 inline-flex">
-            <Cpu className="w-3.5 h-3.5 text-sky-600" />
+            <Cpu className="w-3.5 h-3.5 text-blue-700" />
             <span>Tech Suite for Homeopathy</span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-[Outfit]">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             Engineered Exclusively for Homeopathic Practice
           </h1>
 
@@ -38,8 +38,8 @@ export default function ServicesPage() {
 
       {/* CTA Box */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="bg-white p-6 sm:p-8 text-center rounded-xl border border-slate-200 space-y-3">
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-[Outfit]">
+        <div className="bg-white p-6 sm:p-8 text-center rounded-2xl border border-slate-200 shadow-xs space-y-3">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
             Need a Custom Solution for Your Clinic?
           </h2>
           <p className="text-xs text-slate-600 max-w-lg mx-auto leading-relaxed">

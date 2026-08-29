@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActionWidget from "@/components/FloatingActionWidget";
 
-const outfit = Outfit({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -37,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${plusJakarta.variable}`}>
-      <body className="min-h-screen flex flex-col font-[family-name:var(--font-jakarta)] bg-[#F8FAFC] text-[#0F172A] antialiased">
+    <html lang="en" className={inter.variable}>
+      <body className="min-h-screen flex flex-col font-sans bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-[#EFF6FF] selection:text-[#0052CC]">
         <Navbar />
         <main className="flex-grow">
           {children}

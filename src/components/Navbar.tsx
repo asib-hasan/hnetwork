@@ -18,24 +18,24 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         
-        {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center p-1">
+        {/* Brand Logo & Name */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 flex items-center justify-center">
             <Image
               src="/logo.png"
-              alt="Homeo Network"
-              width={28}
-              height={28}
-              className="object-contain"
+              alt="Homeo Network Logo"
+              width={40}
+              height={40}
+              className="object-contain transform group-hover:scale-105 transition-transform"
               priority
             />
           </div>
-          <div className="flex items-center gap-1.5">
-            <span className="text-lg font-bold tracking-tight text-slate-900 font-[Outfit]">
-              Homeo<span className="text-sky-600">Network</span>
+          <div className="flex items-center">
+            <span className="text-xl font-bold tracking-tight text-[#0047BA]">
+              Homeo<span className="text-[#0084FF]">Network</span>
             </span>
           </div>
         </Link>
@@ -48,9 +48,9 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-3.5 py-1.5 rounded-md text-xs font-semibold transition-colors ${
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                   isActive
-                    ? "text-sky-700 bg-sky-50"
+                    ? "text-[#0052CC] bg-[#EFF6FF] font-bold"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                 }`}
               >
@@ -66,7 +66,7 @@ export default function Navbar() {
             href="https://wa.me/8801700000000"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1.5"
+            className="text-xs font-semibold text-slate-600 hover:text-[#0052CC] flex items-center gap-1.5"
           >
             <PhoneCall className="w-3.5 h-3.5 text-emerald-600" />
             <span>WhatsApp</span>
