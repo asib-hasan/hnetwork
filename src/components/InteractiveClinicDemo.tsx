@@ -242,7 +242,7 @@ export default function InteractiveClinicDemo() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="text-xs font-bold truncate">ডা. কে. আর. রহমান, DHMS (রেজি: নং-১২৪১৫)</div>
-                  <div className="text-[10px] text-emerald-200">ক্লাসিক্যাল হোমিও ক্লিনিক, পল্টন, ঢাকা</div>
+                  <div className="text-[10px] text-emerald-200">হোমিও ক্লিনিক, পল্টন, ঢাকা</div>
                 </div>
               </div>
 
@@ -324,7 +324,7 @@ export default function InteractiveClinicDemo() {
                         ১ নম্বর রেজাল্ট
                       </span>
                       <h4 className="text-sm font-bold text-slate-900">
-                        ডা. মো. ফারহান আহমেদ, BHMS (ঢাকা বিশ্ববিদ্যালয়) — ক্লাসিক্যাল হোমিওপ্যাথি সেন্টার
+                        ডা. মো. ফারহান আহমেদ, BHMS (ঢাকা বিশ্ববিদ্যালয়) — হোমিওপ্যাথি সেন্টার
                       </h4>
                     </div>
                     <div className="flex items-center gap-2 text-xs">
@@ -410,7 +410,7 @@ export default function InteractiveClinicDemo() {
                 <div className="space-y-2 text-xs border-t border-slate-200 pt-3 text-slate-700">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-[#0052CC] shrink-0" />
-                    <span>ধানমন্ডি ক্লাসিক্যাল হোমিও চেম্বার, রোড ২৭, ঢাকা</span>
+                    <span>ধানমন্ডি হোমিও চেম্বার, রোড ২৭, ঢাকা</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-3.5 h-3.5 text-[#0052CC] shrink-0" />

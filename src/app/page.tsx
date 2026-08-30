@@ -35,7 +35,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-5 text-left">
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-slate-900 tracking-tight leading-[1.25]">
-                ক্লাসিক্যাল হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
+                হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
                 <span className="text-[#0052CC]">আধুনিক প্রযুক্তির পূর্ণাঙ্গ শক্তি</span>
               </h1>
 
@@ -126,7 +126,7 @@ export default function HomePage() {
                       <div>
                         <p className="text-xs font-bold flex items-center gap-1 text-emerald-300">
                           <Stethoscope className="w-3.5 h-3.5" />
-                          <span>ডা. কে. আর. রহমান ক্লাসিক্যাল চেম্বার স্যুট</span>
+                          <span>ডা. কে. আর. রহমান হোমিওপ্যাথিক চেম্বার স্যুট</span>
                         </p>
                         <p className="text-[11px] text-slate-200">
                           রেজিস্ট্রেশন নং: DHMS-১২৪১৫ · ঢাকা
@@ -240,7 +240,7 @@ export default function HomePage() {
                 — মহাত্মা ডা. স্যামুয়েল হ্যানিম্যান (অর্গানন অব মেডিসিন, ১ম সূত্র)
               </p>
               <p className="text-xs text-emerald-200/90 pt-1 max-w-xl leading-relaxed">
-                আমরা ক্লাসিক্যাল চিকিৎসার বিজ্ঞান ও পবিত্রতা অক্ষুণ্ণ রেখে আপনার চেম্বারকে গুগল ও ডিজিটালে শীর্ষ শক্তিতে রূপান্তরিত করি।
+                আমরা হোমিওপ্যাথি চিকিৎসার বিজ্ঞান ও পবিত্রতা অক্ষুণ্ণ রেখে আপনার চেম্বারকে গুগল ও ডিজিটালে শীর্ষ শক্তিতে রূপান্তরিত করি।
               </p>
             </div>
 
@@ -257,7 +257,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 4. CLASSICAL HOMEOPATHY MEETS DIGITAL PRECISION ===== */}
+      {/* ===== 4. HOMEOPATHY MEETS DIGITAL PRECISION ===== */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="badge-pill mb-2 inline-flex">
