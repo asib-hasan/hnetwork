@@ -153,7 +153,7 @@ function ContactFormInner() {
               <input
                 type="text"
                 required
-                placeholder="যেমন: ক্লাসিক্যাল হোমিও কিউর চেম্বার"
+                placeholder="যেমন: হোমিও কিউর চেম্বার"
                 value={formData.clinicName}
                 onChange={(e) => setFormData({ ...formData, clinicName: e.target.value })}
                 className="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-hidden focus:bg-white focus:border-[#0052CC]"
