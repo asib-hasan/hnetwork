@@ -11,12 +11,8 @@ import {
   Zap,
   MapPin,
   Globe,
-  CalendarCheck,
-  Leaf,
   Sparkles,
-  Stethoscope,
-  ChevronRight,
-  ShieldCheck
+  ChevronRight
 } from "lucide-react";
 import { servicesList } from "@/data/servicesData";
 import ServiceCard from "@/components/ServiceCard";
@@ -26,145 +22,82 @@ export default function HomePage() {
   return (
     <div className="space-y-16 sm:space-y-24 pb-20">
 
-      {/* ===== 1. HERO SECTION WITH AUTHENTIC HOMEO DOCTOR VISUAL ===== */}
-      <section className="pt-10 pb-6 sm:pt-14 sm:pb-12 bg-gradient-to-b from-emerald-50/40 via-white to-transparent">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      {/* ===== 1. HERO SECTION (NO IMAGE - CLEAN & HIGH-CONVERSION) ===== */}
+      <section className="pt-12 pb-8 sm:pt-16 sm:pb-14 bg-gradient-to-b from-emerald-50/50 via-white to-transparent">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-7">
 
-            {/* Left Column: Value Proposition */}
-            <div className="lg:col-span-7 space-y-5 text-left">
-              {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-slate-900 tracking-tight leading-[1.25]">
-                ক্লাসিক্যাল হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
-                <span className="text-[#0052CC]">আধুনিক প্রযুক্তির পূর্ণাঙ্গ শক্তি</span>
-              </h1>
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.25] max-w-4xl mx-auto">
+            ক্লাসিক্যাল হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0052CC] to-emerald-600">
+              আধুনিক প্রযুক্তির পূর্ণাঙ্গ শক্তি
+            </span>
+          </h1>
 
-              {/* Subtitle */}
-              <p className="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
-                বাংলাদেশ হোমিওপ্যাথি বোর্ডের নিবন্ধিত DHMS ও ঢাকা বিশ্ববিদ্যালয় অধিভুক্ত BHMS চিকিৎসকদের জন্য বিশেষায়িত ডাক্তার ওয়েবসাইট, জাতীয় ডিরেক্টরি লিস্টিং, গুগল ম্যাপস ১ নম্বর এসইও এবং আধুনিক ক্লিনিক সফটওয়্যার।
-              </p>
+          {/* Subtitle */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            বাংলাদেশ হোমিওপ্যাথি বোর্ডের নিবন্ধিত DHMS ও ঢাকা বিশ্ববিদ্যালয় অধিভুক্ত BHMS চিকিৎসকদের জন্য বিশেষায়িত ডাক্তার ওয়েবসাইট, জাতীয় ডিরেক্টরি লিস্টিং, গুগল ম্যাপস ১ নম্বর এসইও এবং আধুনিক ক্লিনিক সফটওয়্যার।
+          </p>
 
-              {/* Trust Checkmarks */}
-              <div className="grid grid-cols-2 sm:grid-cols-2 gap-2.5 pt-1 text-xs font-semibold text-slate-700">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>ডিজিটাল প্রেসক্রিপশন ও রোগী ডাটাবেস</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>চেম্বার বিলিং ও ওষুধ স্টক হিসাব</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>জার্মান সিলপ্যাক ওষুধের পথ্য নির্দেশনা</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>গুগল ম্যাপসে আপনার এলাকায় ১ নম্বর</span>
-                </div>
-              </div>
+          {/* Action Buttons */}
+          <div className="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+            <Link
+              href="/contact"
+              className="btn-primary text-xs sm:text-sm py-3 px-6 font-bold shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
+            >
+              <span>ফ্রি চেম্বার স্ট্র্যাটেজি সেশন বুক করুন</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
 
-              {/* Action Buttons */}
-              <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                <Link
-                  href="/contact"
-                  className="btn-primary text-xs py-3 px-6 font-bold shadow-sm flex items-center justify-center gap-2"
-                >
-                  <span>ফ্রি চেম্বার স্ট্র্যাটেজি সেশন বুক করুন</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-
-                <Link
-                  href="/services"
-                  className="btn-secondary text-xs py-3 px-5 font-semibold text-center flex items-center justify-center gap-1.5"
-                >
-                  <span>ডিজিটাল সেবাসমূহ দেখুন</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              {/* Social proof note */}
-              <div className="pt-2 flex items-center gap-3 text-xs text-slate-500">
-                <div className="flex -space-x-2">
-                  <div className="w-7 h-7 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-[10px] ring-2 ring-white">
-                    ডি
-                  </div>
-                  <div className="w-7 h-7 rounded-full bg-[#0052CC] text-white font-bold flex items-center justify-center text-[10px] ring-2 ring-white">
-                    বি
-                  </div>
-                  <div className="w-7 h-7 rounded-full bg-amber-500 text-white font-bold flex items-center justify-center text-[10px] ring-2 ring-white">
-                    ৫★
-                  </div>
-                </div>
-                <span>
-                  ঢাকা, চট্টগ্রাম, সিলেটসহ সারাদেশে <strong>৫০০+ রেজিস্টার্ড চিকিৎসকদের</strong> বিশ্বস্ত প্ল্যাটফর্ম।
-                </span>
-              </div>
-
-            </div>
-
-            {/* Right Column: Hero Visual with Interactive Badges */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative mx-auto max-w-md lg:max-w-none">
-
-                {/* Main Hero Card */}
-                <div className="relative rounded-2xl overflow-hidden border-2 border-emerald-100 shadow-xl bg-white group">
-                  <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full">
-                    <Image
-                      src="/images/male-doctor-hero.jpg"
-                      alt="হোমিওপ্যাথিক চিকিৎসকের আধুনিক চেম্বার, ডিজিটাল প্রেসক্রিপশন ও ক্লিনিক ড্যাশবোর্ড"
-                      fill
-                      priority
-                      className="object-cover group-hover:scale-102 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                  </div>
-
-                  {/* Caption overlay */}
-                  <div className="absolute bottom-0 inset-x-0 p-4 text-white">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-xs font-bold flex items-center gap-1 text-emerald-300">
-                          <Stethoscope className="w-3.5 h-3.5" />
-                          <span>ডা. কে. আর. রহমান ক্লাসিক্যাল চেম্বার স্যুট</span>
-                        </p>
-                        <p className="text-[11px] text-slate-200">
-                          রেজিস্ট্রেশন নং: DHMS-১২৪১৫ · ঢাকা
-                        </p>
-                      </div>
-                      <span className="px-2 py-0.5 rounded bg-emerald-500/90 text-white text-[10px] font-bold">
-                        সরাসরি চেম্বার
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Badge 1: Top Right */}
-                <div className="absolute -top-3 -right-2 sm:-right-4 bg-white/95 backdrop-blur-md rounded-xl p-2.5 shadow-lg border border-slate-200 flex items-center gap-2.5 z-10">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
-                    <Leaf className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-[11px] font-bold text-slate-900">ডিজিটাল প্রেসক্রিপশন</div>
-                    <div className="text-[10px] text-emerald-600 font-semibold">কিউআর কোডযুক্ত প্রিন্ট</div>
-                  </div>
-                </div>
-
-                {/* Floating Badge 2: Bottom Left */}
-                <div className="absolute -bottom-4 -left-2 sm:-left-4 bg-white/95 backdrop-blur-md rounded-xl p-2.5 shadow-lg border border-slate-200 flex items-center gap-2.5 z-10">
-                  <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#0052CC] flex items-center justify-center shrink-0">
-                    <CalendarCheck className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-[11px] font-bold text-slate-900">+৬৮ জন নতুন রোগী</div>
-                    <div className="text-[10px] text-slate-500 font-medium">স্বয়ংক্রিয় হোয়াটসঅ্যাপ সিরিয়াল</div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
+            <Link
+              href="/services"
+              className="btn-secondary text-xs sm:text-sm py-3 px-5 font-semibold text-center flex items-center justify-center gap-1.5 w-full sm:w-auto"
+            >
+              <span>ডিজিটাল সেবাসমূহ দেখুন</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
+
+          {/* Trust Checkmarks */}
+          <div className="pt-2 max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 text-xs font-semibold text-slate-700">
+              <div className="flex items-center justify-center gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="truncate">ডিজিটাল প্রেসক্রিপশন</span>
+              </div>
+              <div className="flex items-center justify-center gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="truncate">চেম্বার বিলিং ও স্টক</span>
+              </div>
+              <div className="flex items-center justify-center gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="truncate">জার্মান ওষুধের পথ্য</span>
+              </div>
+              <div className="flex items-center justify-center gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="truncate">গুগলে এলাকাভিত্তিক ১ নম্বর</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Proof Bar */}
+          <div className="pt-1 flex flex-wrap items-center justify-center gap-3 text-xs text-slate-500">
+            <div className="flex -space-x-2">
+              <div className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
+                ডি
+              </div>
+              <div className="w-6 h-6 rounded-full bg-[#0052CC] text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
+                বি
+              </div>
+              <div className="w-6 h-6 rounded-full bg-amber-500 text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
+                ৫★
+              </div>
+            </div>
+            <span>
+              ঢাকা, চট্টগ্রাম, সিলেটসহ সারাদেশে <strong>৫০০+ রেজিস্টার্ড চিকিৎসকদের</strong> বিশ্বস্ত প্ল্যাটফর্ম।
+            </span>
+          </div>
+
         </div>
       </section>
 
