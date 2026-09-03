@@ -28,7 +28,7 @@ export default function HomePage() {
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.25] max-w-4xl mx-auto">
-            ক্লাসিক্যাল হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
+            হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0052CC] to-emerald-600">
               আধুনিক প্রযুক্তির পূর্ণাঙ্গ শক্তি
             </span>
@@ -56,28 +56,6 @@ export default function HomePage() {
               <span>ডিজিটাল সেবাসমূহ দেখুন</span>
               <ChevronRight className="w-3.5 h-3.5" />
             </Link>
-          </div>
-
-          {/* Trust Checkmarks */}
-          <div className="pt-2 max-w-3xl mx-auto">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 text-xs font-semibold text-slate-700">
-              <div className="flex items-center justify-center gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span className="truncate">ডিজিটাল প্রেসক্রিপশন</span>
-              </div>
-              <div className="flex items-center justify-center gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span className="truncate">চেম্বার বিলিং ও স্টক</span>
-              </div>
-              <div className="flex items-center justify-center gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span className="truncate">জার্মান ওষুধের পথ্য</span>
-              </div>
-              <div className="flex items-center justify-center gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span className="truncate">গুগলে এলাকাভিত্তিক ১ নম্বর</span>
-              </div>
-            </div>
           </div>
 
           {/* Social Proof Bar */}
@@ -173,7 +151,7 @@ export default function HomePage() {
                 — মহাত্মা ডা. স্যামুয়েল হ্যানিম্যান (অর্গানন অব মেডিসিন, ১ম সূত্র)
               </p>
               <p className="text-xs text-emerald-200/90 pt-1 max-w-xl leading-relaxed">
-                আমরা ক্লাসিক্যাল চিকিৎসার বিজ্ঞান ও পবিত্রতা অক্ষুণ্ণ রেখে আপনার চেম্বারকে গুগল ও ডিজিটালে শীর্ষ শক্তিতে রূপান্তরিত করি।
+                আমরা হোমিওপ্যাথি চিকিৎসার বিজ্ঞান ও পবিত্রতা অক্ষুণ্ণ রেখে আপনার চেম্বারকে গুগল ও ডিজিটালে শীর্ষ শক্তিতে রূপান্তরিত করি।
               </p>
             </div>
 
@@ -190,7 +168,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 4. CLASSICAL HOMEOPATHY MEETS DIGITAL PRECISION ===== */}
+      {/* ===== 4. HOMEOPATHY MEETS DIGITAL PRECISION ===== */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="badge-pill mb-2 inline-flex">
