@@ -23,19 +23,20 @@ export default function Navbar() {
         
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="relative w-10 h-10 flex items-center justify-center">
+          <div className="relative w-9 h-9 flex items-center justify-center">
             <Image
-              src="/logo.png"
+              src="/logo.png?v=3"
               alt="Homeo Network Logo"
-              width={40}
-              height={40}
-              className="object-contain transform group-hover:scale-105 transition-transform"
+              width={36}
+              height={36}
+              className="w-full h-full object-contain transform group-hover:scale-105 transition-transform"
               priority
+              unoptimized
             />
           </div>
           <div className="flex items-center gap-2">
             <span className="text-xl font-bold tracking-tight text-[#0047BA]">
-              Homeo<span className="text-[#1E293B]">Network</span>
+              Homeo<span className="text-[#0084FF]">Network</span>
             </span>
             <span className="hidden sm:inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#0047BA] border border-blue-200">
               হোমিওপ্যাথ চিকিৎসকদের জন্য

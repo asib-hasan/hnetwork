@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   description:
     "বাংলাদেশ হোমিওপ্যাথি বোর্ডের নিবন্ধিত DHMS ও বিএইচএমএস চিকিৎসকদের আধুনিক ওয়েবসাইট, গুগল ম্যাপস ১ নম্বর এসইও, ক্লিনিক ম্যানেজমেন্ট সফটওয়্যার ও চেম্বার অটোমেশন।",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.png?v=3",
+    shortcut: "/logo.png?v=3",
+    apple: "/logo.png?v=3",
   },
 };
 
