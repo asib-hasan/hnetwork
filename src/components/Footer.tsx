@@ -22,8 +22,8 @@ export default function Footer() {
                   className="object-contain"
                 />
               </div>
-              <span className="text-xl font-bold text-white">
-                Homeo<span className="text-[#0084FF]">Network</span>
+              <span className="text-xl font-bold text-white tracking-tight">
+                Homeo<span className="text-slate-300">Network</span>
               </span>
             </Link>
 
@@ -33,10 +33,10 @@ export default function Footer() {
 
             <div className="flex flex-wrap gap-2 pt-1">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-[10px] border border-slate-700">
-                <ShieldCheck className="w-3 h-3 text-emerald-400" /> সর্বোচ্চ নিরাপত্তা
+                <ShieldCheck className="w-3 h-3 text-blue-400" /> সর্বোচ্চ নিরাপত্তা
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-[10px] border border-slate-700">
-                <HeartPulse className="w-3 h-3 text-[#0084FF]" /> ডিগ্রিধারী ডাক্তার-প্রথম
+                <HeartPulse className="w-3 h-3 text-[#38BDF8]" /> ডিগ্রিধারী ডাক্তার-প্রথম
               </span>
             </div>
           </div>
@@ -96,19 +96,19 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#0084FF] shrink-0" />
-                <a href="tel:+8801886950505" className="hover:text-white transition-colors text-slate-200">
-                  +৮৮০ ১৮৮৬-৯৫০৫০৫
+                <Phone className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
+                <a href="tel:+8801628044781" className="hover:text-white transition-colors text-slate-200">
+                  +৮৮০ ১৬২৮-০৪৪৭৮১
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#0084FF] shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
                 <a href="mailto:support@homeonetwork.com.bd" className="hover:text-white transition-colors text-slate-200">
                   support@homeonetwork.com.bd
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#0084FF] shrink-0 mt-0.5" />
+                <MapPin className="w-3.5 h-3.5 text-[#38BDF8] shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-slate-200">বাংলা মোটর, ঢাকা-১০০০</span>
                   <span className="text-[11px] text-slate-400">মিরপুর-১৪ (সরকারি হোমিও মেডিকেল কলেজ সংলগ্ন)</span>

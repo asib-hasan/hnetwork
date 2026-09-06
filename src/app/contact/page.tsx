@@ -47,48 +47,48 @@ export default function ContactPage() {
 
               <div className="space-y-3 pt-1">
                 <a
-                  href="https://wa.me/8801886950505"
+                  href="https://wa.me/8801628044781"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 p-3 rounded-xl bg-emerald-50 border border-emerald-200 hover:bg-emerald-100/70 transition-all"
+                  className="flex items-start gap-3 p-3 rounded-xl bg-blue-50/70 border border-blue-200 hover:bg-blue-100/70 transition-all"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-[#0047BA] text-white flex items-center justify-center shrink-0">
                     <MessageSquare className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">হোয়াটসঅ্যাপ ইনস্ট্যান্ট কনসালটেশন</div>
-                    <div className="text-xs text-emerald-700 font-semibold">+৮৮০ ১৮৮৬-৯৫০৫০৫</div>
+                    <div className="text-xs text-[#0047BA] font-semibold">+৮৮০ ১৬২৮-০৪৪৭৮১</div>
                     <span className="text-[10px] text-slate-500">সাধারণত ৫ মিনিটে উত্তর দেওয়া হয়</span>
                   </div>
                 </a>
 
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0052CC] flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0047BA] flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">সরাসরি ফোন কল হটলাইন</div>
-                    <a href="tel:+8801886950505" className="text-xs text-[#0052CC] font-semibold hover:underline">
-                      +৮৮০ ১৮৮৬-৯৫০৫০৫
+                    <a href="tel:+8801628044781" className="text-xs text-[#0047BA] font-semibold hover:underline">
+                      +৮৮০ ১৬২৮-০৪৪৭৮১
                     </a>
                     <span className="text-[10px] text-slate-500 block">সকাল ৯:০০ - রাত ১০:০০ (প্রতিদিন)</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0052CC] flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0047BA] flex items-center justify-center shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">অফিসিয়াল ইমেইল</div>
-                    <a href="mailto:support@homeonetwork.com.bd" className="text-xs text-[#0052CC] font-semibold hover:underline">
+                    <a href="mailto:support@homeonetwork.com.bd" className="text-xs text-[#0047BA] font-semibold hover:underline">
                       support@homeonetwork.com.bd
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0052CC] flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0047BA] flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -104,8 +104,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-start gap-3 text-xs text-emerald-900">
-              <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+            <div className="bg-blue-50 border border-blue-200 p-4 rounded-xl flex items-start gap-3 text-xs text-slate-800">
+              <ShieldCheck className="w-5 h-5 text-[#0047BA] shrink-0 mt-0.5" />
               <div>
                 <strong className="block text-slate-900">চিকিৎসকদের তথ্যের সর্বোচ্চ নিরাপত্তা:</strong>
                 আপনার চেম্বারের যাবতীয় রোগীর তথ্য ও ডিজিটাল প্রেসক্রিপশন রেকর্ড শতভাগ এনক্রিপ্টেড এবং সম্পূর্ণ আপনার নিজস্ব নিয়ন্ত্রণে থাকে।

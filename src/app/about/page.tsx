@@ -43,10 +43,10 @@ export default function AboutPage() {
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               অথচ গতানুগতিক আইটি ফার্মগুলো চিকিৎসকদের বাস্তব চেম্বারের চ্যালেঞ্জ বোঝে না। তারা জানে না কীভাবে ডিগ্রিধারী চিকিৎসকের প্রাতিষ্ঠানিক মর্যাদা ও বোর্ড রেজিস্ট্রেশন সঠিকভাবে তুলে ধরতে হয়, কীভাবে গুগল ম্যাপসে স্থানীয় নতুন রোগীদের দৃষ্টি আকর্ষণ করতে হয়, কিংবা চেম্বারে ডিজিটাল প্রেসক্রিপশন ও বিলিং কতটা দ্রুত ও সহজে সম্পন্ন করা দরকার। এই দূরত্ব ঘুচিয়ে বাংলাদেশি রেজিস্টার্ড চিকিৎসকদের পেশাদার মর্যাদা ও চেম্বারে রোগী সংখ্যা বাড়াতেই <strong className="text-slate-900">Homeo Network</strong> প্রতিষ্ঠিত হয়েছে।
             </p>
-            <div className="pt-2 flex flex-wrap gap-3 text-xs font-medium text-blue-800">
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> ১০০% হোমিওপ্যাথি-কেন্দ্রিক আর্কিটেকচার</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> গুগল ম্যাপসে থানা ও জেলাভিত্তিক শীর্ষ অবস্থান</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> বিকাশ ও নগদ কিউআর পেমেন্ট সমন্বিত</span>
+            <div className="pt-2 flex flex-wrap gap-3 text-xs font-medium text-blue-900">
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA]" /> ১০০% হোমিওপ্যাথি-কেন্দ্রিক আর্কিটেকচার</span>
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA]" /> গুগল ম্যাপসে থানা ও জেলাভিত্তিক শীর্ষ অবস্থান</span>
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA]" /> বিকাশ ও নগদ কিউআর পেমেন্ট সমন্বিত</span>
             </div>
           </div>
 
@@ -55,6 +55,7 @@ export default function AboutPage() {
               src="/images/male-doctor-consultation.jpg"
               alt="বাংলাদেশি ডিগ্রিধারী হোমিওপ্যাথিক কনসালটেন্টের রোগী পর্যবেক্ষণ"
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/80 to-transparent p-3 text-white">

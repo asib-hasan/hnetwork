@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bn" className={`${hindSiliguri.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col font-sans bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-[#EFF6FF] selection:text-[#0052CC]">
+      <body className="min-h-screen flex flex-col font-sans bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-[#EFF6FF] selection:text-[#0047BA]">
         <Navbar />
         <main className="flex-grow">
           {children}

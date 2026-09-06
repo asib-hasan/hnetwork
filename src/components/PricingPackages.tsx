@@ -86,7 +86,7 @@ export default function PricingPackages() {
             onClick={() => setBillingCycle("setup")}
             className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
               billingCycle === "setup"
-                ? "bg-[#0052CC] text-white shadow-xs"
+                ? "bg-[#0047BA] text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
@@ -97,7 +97,7 @@ export default function PricingPackages() {
             onClick={() => setBillingCycle("annual")}
             className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
               billingCycle === "annual"
-                ? "bg-[#0052CC] text-white shadow-xs"
+                ? "bg-[#0047BA] text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
@@ -112,7 +112,7 @@ export default function PricingPackages() {
             key={pkg.id}
             className={`rounded-xl p-6 bg-white border flex flex-col justify-between transition-all ${
               pkg.popular
-                ? "border-[#0052CC] shadow-md ring-1 ring-blue-100"
+                ? "border-[#0047BA] shadow-md ring-1 ring-blue-100"
                 : "border-slate-200 hover:border-slate-300"
             }`}
           >
@@ -127,7 +127,7 @@ export default function PricingPackages() {
                   </span>
                 </div>
                 {pkg.popular && (
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-[#0052CC]">
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-[#0047BA]">
                     সর্বাধিক জনপ্রিয়
                   </span>
                 )}
@@ -155,7 +155,7 @@ export default function PricingPackages() {
                 <ul className="space-y-2 text-xs text-slate-600">
                   {pkg.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}

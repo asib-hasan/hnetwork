@@ -35,9 +35,9 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-2">
             <span className="text-xl font-bold tracking-tight text-[#0047BA]">
-              Homeo<span className="text-[#0084FF]">Network</span>
+              Homeo<span className="text-[#1E293B]">Network</span>
             </span>
-            <span className="hidden sm:inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <span className="hidden sm:inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#0047BA] border border-blue-200">
               হোমিওপ্যাথ চিকিৎসকদের জন্য
             </span>
           </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                   isActive
-                    ? "text-[#0052CC] bg-[#EFF6FF] font-bold"
+                    ? "text-[#0047BA] bg-[#EFF6FF] font-bold"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                 }`}
               >
@@ -66,12 +66,12 @@ export default function Navbar() {
         {/* Action Button */}
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="https://wa.me/8801886950505"
+            href="https://wa.me/8801628044781"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-semibold text-slate-600 hover:text-[#0052CC] flex items-center gap-1.5"
+            className="text-xs font-semibold text-slate-600 hover:text-[#0047BA] flex items-center gap-1.5"
           >
-            <PhoneCall className="w-3.5 h-3.5 text-emerald-600" />
+            <PhoneCall className="w-3.5 h-3.5 text-[#0047BA]" />
             <span>হোয়াটসঅ্যাপ হটলাইন</span>
           </a>
           <Link

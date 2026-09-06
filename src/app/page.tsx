@@ -23,13 +23,13 @@ export default function HomePage() {
     <div className="space-y-16 sm:space-y-24 pb-20">
 
       {/* ===== 1. HERO SECTION (NO IMAGE - CLEAN & HIGH-CONVERSION) ===== */}
-      <section className="pt-12 pb-8 sm:pt-16 sm:pb-14 bg-gradient-to-b from-emerald-50/50 via-white to-transparent">
+      <section className="pt-12 pb-8 sm:pt-16 sm:pb-14 bg-gradient-to-b from-blue-50/60 via-slate-50/30 to-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-7">
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.25] max-w-4xl mx-auto">
             হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0052CC] to-emerald-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0047BA] via-[#0057C2] to-[#0284C7]">
               আধুনিক প্রযুক্তির পূর্ণাঙ্গ শক্তি
             </span>
           </h1>
@@ -61,11 +61,11 @@ export default function HomePage() {
           {/* Social Proof Bar */}
           <div className="pt-1 flex flex-wrap items-center justify-center gap-3 text-xs text-slate-500">
             <div className="flex -space-x-2">
-              <div className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
-                ডি
+              <div className="w-6 h-6 rounded-full bg-[#0047BA] text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
+                DH
               </div>
-              <div className="w-6 h-6 rounded-full bg-[#0052CC] text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
-                বি
+              <div className="w-6 h-6 rounded-full bg-slate-800 text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
+                BH
               </div>
               <div className="w-6 h-6 rounded-full bg-amber-500 text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
                 ৫★
@@ -84,11 +84,11 @@ export default function HomePage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
           <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-2">
+            <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#0047BA] flex items-center justify-center mx-auto mb-2">
               <Users className="w-4 h-4" />
             </div>
             <div className="text-2xl font-extrabold text-slate-900">
-              ৫০০<span className="text-emerald-600">+</span>
+              ৫০০<span className="text-[#0047BA]">+</span>
             </div>
             <div className="text-xs font-semibold text-slate-600 mt-0.5">
               নিবন্ধিত ডাক্তার ডিজিটাইজড
@@ -96,11 +96,11 @@ export default function HomePage() {
           </div>
 
           <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0052CC] flex items-center justify-center mx-auto mb-2">
+            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0047BA] flex items-center justify-center mx-auto mb-2">
               <Zap className="w-4 h-4" />
             </div>
             <div className="text-2xl font-extrabold text-slate-900">
-              ৮৫ হাজার<span className="text-[#0052CC]">+</span>
+              ৮৫ হাজার<span className="text-[#0047BA]">+</span>
             </div>
             <div className="text-xs font-semibold text-slate-600 mt-0.5">
               রোগী ও প্রেসক্রিপশন ডিজিটাইজড
@@ -108,11 +108,11 @@ export default function HomePage() {
           </div>
 
           <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-2">
+            <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center mx-auto mb-2">
               <MapPin className="w-4 h-4" />
             </div>
             <div className="text-2xl font-extrabold text-slate-900">
-              ৬৪<span className="text-emerald-600"> জেলা</span>
+              ৬৪<span className="text-slate-700"> জেলা</span>
             </div>
             <div className="text-xs font-semibold text-slate-600 mt-0.5">
               দেশব্যাপী ডাক্তার নেটওয়ার্ক
@@ -120,11 +120,11 @@ export default function HomePage() {
           </div>
 
           <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0052CC] flex items-center justify-center mx-auto mb-2">
+            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0047BA] flex items-center justify-center mx-auto mb-2">
               <Activity className="w-4 h-4" />
             </div>
             <div className="text-2xl font-extrabold text-slate-900">
-              ৩.৮<span className="text-[#0052CC]"> গুণ</span>
+              ৩.৮<span className="text-[#0047BA]"> গুণ</span>
             </div>
             <div className="text-xs font-semibold text-slate-600 mt-0.5">
               গড় রোগী বৃদ্ধি হার
@@ -136,10 +136,10 @@ export default function HomePage() {
 
       {/* ===== 3. HAHNEMANNIAN PHILOSOPHICAL BANNER ===== */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-2xl p-6 sm:p-8 bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-950 text-white shadow-lg border border-slate-800 relative overflow-hidden">
+        <div className="rounded-2xl p-6 sm:p-8 bg-gradient-to-r from-slate-950 via-slate-900 to-[#0B2240] text-white shadow-lg border border-slate-800 relative overflow-hidden">
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold border border-blue-500/30">
                 <span>Similia Similibus Curentur</span>
                 <span>•</span>
                 <span>Aude Sapere</span>
@@ -147,18 +147,18 @@ export default function HomePage() {
               <h3 className="text-lg sm:text-xl font-bold text-white italic leading-relaxed">
                 &ldquo;চিকিৎসকের একমাত্র ও সর্বোচ্চ ব্রত হলো অসুস্থ মানুষকে আরোগ্য প্রদান করা, যাকে প্রকৃত চিকিৎসা বলা হয়।&rdquo;
               </h3>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-slate-400">
                 — মহাত্মা ডা. স্যামুয়েল হ্যানিম্যান (অর্গানন অব মেডিসিন, ১ম সূত্র)
               </p>
-              <p className="text-xs text-emerald-200/90 pt-1 max-w-xl leading-relaxed">
-                আমরা হোমিওপ্যাথি চিকিৎসার বিজ্ঞান ও পবিত্রতা অক্ষুণ্ণ রেখে আপনার চেম্বারকে গুগল ও ডিজিটালে শীর্ষ শক্তিতে রূপান্তরিত করি।
+              <p className="text-xs text-blue-100/90 pt-1 max-w-xl leading-relaxed">
+                আমরা হোমিওপ্যাথি চিকিৎসার বিজ্ঞান ও পেশাদার মর্যাদা অক্ষুণ্ণ রেখে আপনার চেম্বারকে গুগল ও ডিজিটালে শীর্ষ শক্তিতে রূপান্তরিত করি।
               </p>
             </div>
 
             <div className="shrink-0 text-center">
               <Link
                 href="/about"
-                className="btn-primary bg-emerald-600 hover:bg-emerald-700 text-white text-xs py-2.5 px-5 font-bold shadow-md inline-flex items-center gap-1.5"
+                className="btn-primary text-xs py-2.5 px-5 font-bold shadow-md inline-flex items-center gap-1.5"
               >
                 <span>আমাদের মিশন পড়ুন</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -192,6 +192,7 @@ export default function HomePage() {
                 src="/images/male-doctor-consultation.jpg"
                 alt="রোগীর সাথে কথা বলছেন ও ডিজিটাল প্রেসক্রিপশন প্রস্তুত করছেন অভিজ্ঞ চিকিৎসক"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-800 border border-slate-200 shadow-xs">
@@ -208,10 +209,10 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                <span className="text-emerald-700 font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> পেশেন্ট ডাটাবেস ও চেম্বার বিলিং রেকর্ড
+                <span className="text-slate-700 font-semibold flex items-center gap-1">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA]" /> পেশেন্ট ডাটাবেস ও চেম্বার বিলিং রেকর্ড
                 </span>
-                <Link href="/services#clinic-crm-software" className="text-[#0052CC] font-bold hover:underline flex items-center gap-0.5">
+                <Link href="/services#clinic-crm-software" className="text-[#0047BA] font-bold hover:underline flex items-center gap-0.5">
                   বিস্তারিত <ChevronRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -225,6 +226,7 @@ export default function HomePage() {
                 src="/images/homeo-remedy-tech.jpg"
                 alt="হোমিওপ্যাথিক ওষুধ, সুগার গ্লোবিউলস এবং মোবাইল অ্যাপ্লিকেশন"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-800 border border-slate-200 shadow-xs">
@@ -241,10 +243,10 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                <span className="text-emerald-700 font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> বারবার ফোন আসার ঝামেলা ৭৫% হ্রাস
+                <span className="text-slate-700 font-semibold flex items-center gap-1">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA]" /> বারবার ফোন আসার ঝামেলা ৭৫% হ্রাস
                 </span>
-                <Link href="/services#tech-automation" className="text-[#0052CC] font-bold hover:underline flex items-center gap-0.5">
+                <Link href="/services#tech-automation" className="text-[#0047BA] font-bold hover:underline flex items-center gap-0.5">
                   বিস্তারিত <ChevronRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -258,7 +260,7 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="badge-pill mb-2 inline-flex">
-            <Globe className="w-3.5 h-3.5 text-[#0052CC]" />
+            <Globe className="w-3.5 h-3.5 text-[#0047BA]" />
             <span>গুগলে জটিল রোগী আকর্ষণ</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -280,8 +282,8 @@ export default function HomePage() {
             { title: "বাতব্যথা ও সায়াটিকা", sub: "রিউমাটয়েড আর্থ্রাইটিস, কোমর ব্যথা", tag: "ব্যথামুক্ত জীবন" },
             { title: "শিশু স্বাস্থ্য ও বিকাশ", sub: "ঘন ঘন টনসিল, কৃমি ও বিকাশগত বিলম্ব", tag: "কনস্টিটিউশনাল" },
           ].map((item, idx) => (
-            <div key={idx} className="p-3.5 rounded-xl bg-white border border-slate-200 text-center space-y-1.5 shadow-2xs hover:border-[#0052CC] transition-all">
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
+            <div key={idx} className="p-3.5 rounded-xl bg-white border border-slate-200 text-center space-y-1.5 shadow-2xs hover:border-[#0047BA] transition-all">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#0047BA] border border-blue-200">
                 {item.tag}
               </span>
               <h4 className="text-xs font-bold text-slate-900 pt-1">{item.title}</h4>
@@ -357,32 +359,32 @@ export default function HomePage() {
             </div>
 
             {/* With Homeo Network */}
-            <div className="p-6 space-y-3.5 bg-emerald-50/30">
+            <div className="p-6 space-y-3.5 bg-blue-50/40">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600">
+                <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-[#0047BA]">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-900">Homeo Network-এর সাথে</h3>
-                  <span className="text-[11px] text-emerald-700 font-medium">স্বয়ংক্রিয় ও দেশব্যাপী গ্রহণযোগ্যতা</span>
+                  <span className="text-[11px] text-[#0047BA] font-semibold">স্বয়ংক্রিয় ও দেশব্যাপী গ্রহণযোগ্যতা</span>
                 </div>
               </div>
 
               <ul className="space-y-2 text-xs text-slate-700 font-medium">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
                   <span>২ সেকেন্ডে রোগীর পূর্ববর্তী ডিজিটাল প্রেসক্রিপশন ও চেম্বার তথ্য প্রদর্শন</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
                   <span>সরাসরি হোয়াটসঅ্যাপ হটলাইন ও সিরিয়াল কনফার্মেশন</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
                   <span>গুগল সার্চ ও গুগল ম্যাপসে জটিল রোগের জন্য ১ নম্বর অবস্থান</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
                   <span>চেম্বারের গুগল ম্যাপস লোকেশন ও ডিরেকশন স্বয়ংক্রিয়ভাবে রোগীর কাছে পৌঁছে যাওয়া</span>
                 </li>
               </ul>
@@ -417,7 +419,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs">
+              <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-xs">
                 তা
               </div>
               <div>
@@ -427,7 +429,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-xl p-6 bg-white border border-emerald-400 shadow-xs flex flex-col justify-between space-y-4">
+          <div className="rounded-xl p-6 bg-white border border-[#0047BA] shadow-md ring-1 ring-blue-100 flex flex-col justify-between space-y-4">
             <div className="space-y-2.5">
               <div className="flex gap-0.5 text-amber-400">
                 {[...Array(5)].map((_, i) => (
@@ -439,7 +441,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#0047BA] text-white flex items-center justify-center font-bold text-xs">
                 সা
               </div>
               <div>
@@ -461,7 +463,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-[#EFF6FF] text-[#0052CC] flex items-center justify-center font-bold text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#EFF6FF] text-[#0047BA] flex items-center justify-center font-bold text-xs">
                 ক
               </div>
               <div>

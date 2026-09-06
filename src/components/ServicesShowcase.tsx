@@ -35,7 +35,7 @@ export default function ServicesShowcase() {
   });
 
   const renderIcon = (name: string) => {
-    const props = { className: "w-5 h-5 text-[#0052CC]" };
+    const props = { className: "w-5 h-5 text-[#0047BA]" };
     switch (name) {
       case "Globe":
         return <Globe {...props} />;
@@ -71,7 +71,7 @@ export default function ServicesShowcase() {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
                 isActive
-                  ? "bg-[#0052CC] text-white shadow-xs"
+                  ? "bg-[#0047BA] text-white shadow-xs"
                   : "bg-white border border-slate-200 text-slate-600 hover:text-slate-900"
               }`}
             >
@@ -98,7 +98,7 @@ export default function ServicesShowcase() {
                   {renderIcon(service.iconName)}
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0052CC] block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0047BA] block">
                     {service.tag}
                   </span>
                   <h2 className="text-lg font-bold text-slate-900">
@@ -118,7 +118,7 @@ export default function ServicesShowcase() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {service.deliverables.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-1.5 text-xs text-slate-600">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -144,7 +144,7 @@ export default function ServicesShowcase() {
               <div className="space-y-2">
                 {service.benefits.map((benefit, bIdx) => (
                   <div key={bIdx} className="flex items-start gap-2 text-xs text-slate-700">
-                    <span className="w-4 h-4 rounded-full bg-blue-100 text-[#0052CC] flex items-center justify-center shrink-0 font-bold text-[10px] mt-0.5">
+                    <span className="w-4 h-4 rounded-full bg-blue-100 text-[#0047BA] flex items-center justify-center shrink-0 font-bold text-[10px] mt-0.5">
                       {bIdx + 1}
                     </span>
                     <span>{benefit}</span>

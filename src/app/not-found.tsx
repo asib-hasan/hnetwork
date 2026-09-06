@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4 py-16">
       <div className="max-w-md mx-auto text-center space-y-4 bg-white p-8 rounded-xl border border-slate-200 shadow-xs">
-        <span className="text-xs font-bold uppercase tracking-wider text-[#0052CC] px-3 py-1 rounded-full bg-blue-50 border border-blue-200 inline-block">
+        <span className="text-xs font-bold uppercase tracking-wider text-[#0047BA] px-3 py-1 rounded-full bg-blue-50 border border-blue-200 inline-block">
           ৪০৪ পেজ পাওয়া যায়নি
         </span>
 
