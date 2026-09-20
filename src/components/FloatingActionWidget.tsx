@@ -33,7 +33,7 @@ export default function FloatingActionWidget() {
 
           <div className="space-y-2">
             <a
-              href="https://wa.me/8801628044781?text=আসসালামু%20আলাইকুম%20Homeo%20Network,%20আমি%20একজন%20হোমিওপ্যাথিক%20চিকিৎসক।%20আমার%20চেম্বার%20ডিজিটালাইজেশন%20ও%20রোগী%20বৃদ্ধি%20সম্পর্কে%20পরামর্শ%20নিতে%20চাই।"
+              href="https://wa.me/8801811999878?text=আসসালামু%20আলাইকুম%20Homeo%20Network,%20আমি%20একজন%20হোমিওপ্যাথিক%20চিকিৎসক।%20আমার%20চেম্বার%20ডিজিটালাইজেশন%20ও%20রোগী%20বৃদ্ধি%20সম্পর্কে%20পরামর্শ%20নিতে%20চাই।"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full p-2 rounded-lg bg-blue-50/70 hover:bg-blue-100/70 border border-blue-200 text-slate-800 text-xs font-semibold flex items-center gap-2.5 transition-all"
@@ -48,7 +48,7 @@ export default function FloatingActionWidget() {
             </a>
 
             <a
-              href="tel:+8801628044781"
+              href="tel:+8801811999878"
               className="w-full p-2 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold flex items-center gap-2.5 transition-all"
             >
               <div className="w-6 h-6 rounded-md bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
@@ -56,7 +56,7 @@ export default function FloatingActionWidget() {
               </div>
               <div className="flex flex-col">
                 <span className="text-slate-900">সরাসরি হটলাইন কল</span>
-                <span className="text-[10px] text-slate-500 font-normal">+৮৮০ ১৬২৮-০৪৪৭৮১</span>
+                <span className="text-[10px] text-slate-500 font-normal">+৮৮০ ১৮১১-৯৯৯৮৭৮</span>
               </div>
             </a>
 

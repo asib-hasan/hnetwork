@@ -47,7 +47,7 @@ export default function ContactPage() {
 
               <div className="space-y-3 pt-1">
                 <a
-                  href="https://wa.me/8801628044781"
+                  href="https://wa.me/8801811999878"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 p-3 rounded-xl bg-blue-50/70 border border-blue-200 hover:bg-blue-100/70 transition-all"
@@ -57,7 +57,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">হোয়াটসঅ্যাপ ইনস্ট্যান্ট কনসালটেশন</div>
-                    <div className="text-xs text-[#0047BA] font-semibold">+৮৮০ ১৬২৮-০৪৪৭৮১</div>
+                    <div className="text-xs text-[#0047BA] font-semibold">+৮৮০ ১৮১১-৯৯৯৮৭৮</div>
                     <span className="text-[10px] text-slate-500">সাধারণত ৫ মিনিটে উত্তর দেওয়া হয়</span>
                   </div>
                 </a>
@@ -68,8 +68,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">সরাসরি ফোন কল হটলাইন</div>
-                    <a href="tel:+8801628044781" className="text-xs text-[#0047BA] font-semibold hover:underline">
-                      +৮৮০ ১৬২৮-০৪৪৭৮১
+                    <a href="tel:+8801811999878" className="text-xs text-[#0047BA] font-semibold hover:underline">
+                      +৮৮০ ১৮১১-৯৯৯৮৭৮
                     </a>
                     <span className="text-[10px] text-slate-500 block">সকাল ৯:০০ - রাত ১০:০০ (প্রতিদিন)</span>
                   </div>
