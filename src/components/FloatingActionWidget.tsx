@@ -56,7 +56,7 @@ export default function FloatingActionWidget() {
               </div>
               <div className="flex flex-col">
                 <span className="text-slate-900">সরাসরি হটলাইন কল</span>
-                <span className="text-[10px] text-slate-500 font-normal">+৮৮০ ১৮১১-৯৯৯৮৭৮</span>
+                <span className="text-[10px] text-slate-500 font-normal">+880 1811-999878</span>
               </div>
             </a>
 

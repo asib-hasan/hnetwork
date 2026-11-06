@@ -34,14 +34,9 @@ export default function Navbar() {
               unoptimized
             />
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-tight text-[#0047BA]">
-              Homeo<span className="text-[#0084FF]">Network</span>
-            </span>
-            <span className="hidden sm:inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#0047BA] border border-blue-200">
-              হোমিওপ্যাথ চিকিৎসকদের জন্য
-            </span>
-          </div>
+          <span className="text-xl font-bold tracking-tight text-[#07418b]">
+            HomeoNetwork
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

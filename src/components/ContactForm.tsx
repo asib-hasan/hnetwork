@@ -2,25 +2,20 @@
 
 import React, { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { CheckCircle2, ShieldCheck, Stethoscope } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Stethoscope, MessageSquare } from "lucide-react";
 
 const availableServices = [
-  "ডিগ্রিধারী ডাক্তার ওয়েবসাইট",
-  "জাতীয় ডক্টর ডিরেক্টরি লিস্টিং",
-  "গুগল ম্যাপস ও লোকাল এসইও",
-  "টার্গেটেড ক্রনিক ফেসবুক অ্যাড",
-  "চেম্বার ব্র্যান্ডিং ও প্রেসক্রিপশন কিট",
-  "ক্লিনিক ম্যানেজমেন্ট সফটওয়্যার",
-  "সোশ্যাল মিডিয়া ও স্বাস্থ্য রিলস",
-  "হোয়াটসঅ্যাপ সিরিয়াল ও চেম্বার বট",
+  "ডাক্তার ওয়েবসাইট ডেভেলপমেন্ট",
+  "জাতীয় ডাক্তার ডিরেক্টরি",
+  "ডিজিটাল মার্কেটিং ও লোকাল এসইও",
 ];
 
 function ContactFormInner() {
   const searchParams = useSearchParams();
 
   const { initialServices, initialVolume, initialMessage } = useMemo(() => {
-    let services = ["ডিগ্রিধারী ডাক্তার ওয়েবসাইট", "গুগল ম্যাপস ও লোকাল এসইও"];
-    let volume = "20-50";
+    let services = ["ডাক্তার ওয়েবসাইট ডেভেলপমেন্ট", "ডিজিটাল মার্কেটিং ও লোকাল এসইও"];
+    let volume = "25-50";
     let message = "";
 
     if (searchParams) {
@@ -58,44 +53,80 @@ function ContactFormInner() {
     }
   };
 
+  const buildWhatsAppMessage = () => {
+    return [
+      `আসসালামু আলাইকুম Homeo Network!`,
+      `আমি একটি ফ্রি চেম্বার স্ট্র্যাটেজি সেশন বুক করতে আগ্রহী:`,
+      ``,
+      `• চিকিৎসকের নাম: ডা. ${formData.doctorName || "চিকিৎসক"} (${formData.degree})`,
+      `• চেম্বার/ক্লিনিক: ${formData.clinicName || "হোমিও চেম্বার"}`,
+      `• মোবাইল/হোয়াটসঅ্যাপ: ${formData.phone}`,
+      `• এলাকা ও জেলা: ${formData.city || "বাংলাদেশ"}`,
+      `• সাপ্তাহিক রোগী: ${formData.patientVolume} জন`,
+      `• নির্বাচিত সেবা: ${selectedServices.length > 0 ? selectedServices.join(", ") : "সকল সেবা"}`,
+      formData.message ? `• বিশেষ চাহিদা/বার্তা: ${formData.message}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+  };
+
+  const getWhatsAppUrl = () => {
+    const text = buildWhatsAppMessage();
+    return `https://wa.me/8801811999878?text=${encodeURIComponent(text)}`;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setIsSubmitted(true);
-    }, 600);
-  };
 
-  const whatsappMessage = encodeURIComponent(
-    `আসসালামু আলাইকুম Homeo Network! আমি ডা. ${formData.doctorName || "[আপনার নাম]"} (${formData.degree}), চেম্বার: ${formData.clinicName || "[চেম্বারের নাম]"}, ${formData.city || "বাংলাদেশ"}। আমি আগ্রহী: ${selectedServices.join(", ")} সেবা নিয়ে কথা বলতে চাই।`
-  );
+    const whatsappUrl = getWhatsAppUrl();
+
+    // Async server lead log
+    try {
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, services: selectedServices }),
+      }).catch(() => {});
+    } catch {
+      // Ignored
+    }
+
+    // Direct WhatsApp redirect so the message instantly reaches admin WhatsApp
+    if (typeof window !== "undefined") {
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    }
+
+    setLoading(false);
+    setIsSubmitted(true);
+  };
 
   return (
     <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs">
       {isSubmitted ? (
         <div className="text-center py-8 space-y-4">
-          <div className="w-12 h-12 rounded-full bg-blue-100 text-[#0047BA] flex items-center justify-center mx-auto">
+          <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
             <CheckCircle2 className="w-6 h-6" />
           </div>
           <h3 className="text-xl font-bold text-slate-900">
-            পরামর্শের অনুরোধ সফলভাবে গৃহীত হয়েছে!
+            বার্তাটি প্রস্তুত করা হয়েছে!
           </h3>
           <p className="text-xs text-slate-600 max-w-sm mx-auto leading-relaxed">
-            ধন্যবাদ, <strong>ডা. {formData.doctorName}</strong>। আমাদের মেডিকেল টেকনোলজি টিম আগামী ২ ঘণ্টার মধ্যে আপনার হোয়াটসঅ্যাপ বা ফোনে যোগাযোগ করবে।
+            ধন্যবাদ, <strong>ডা. {formData.doctorName}</strong>। আপনার বার্তা সরাসরি আমাদের অফিসিয়াল হোয়াটসঅ্যাপে পাঠানোর জন্য প্রস্তুত। স্বয়ংক্রিয়ভাবে হোয়াটসঅ্যাপ ওপেন না হয়ে থাকলে নিচের বাটনে ট্যাপ করুন:
           </p>
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2">
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2.5">
             <a
-              href={`https://wa.me/8801811999878?text=${whatsappMessage}`}
+              href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary py-2 px-4 text-xs"
+              className="btn-primary py-2.5 px-5 text-xs font-semibold flex items-center gap-1.5"
             >
-              সরাসরি হোয়াটসঅ্যাপে কথা বলুন
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>সরাসরি হোয়াটসঅ্যাপে পাঠান</span>
             </a>
             <button
               onClick={() => setIsSubmitted(false)}
-              className="btn-secondary py-2 px-4 text-xs"
+              className="btn-secondary py-2.5 px-4 text-xs font-semibold cursor-pointer"
             >
               আরেকটি বার্তা পাঠান
             </button>
@@ -109,7 +140,7 @@ function ContactFormInner() {
               ফ্রি চেম্বার ডিজিটালাইজেশন সেশন বুক করুন
             </h3>
             <p className="text-[11px] text-slate-500 mt-0.5">
-              আপনার চেম্বারের প্রসার, গুগল উপস্থিতি ও অটোমেশনের জন্য একটি ৩০ মিনিটের ফ্রি কনসালটেশন।
+              ফর্মটি পূরণ করলেই বিস্তারিত তথ্যসহ বার্তা সরাসরি আমাদের হোয়াটসঅ্যাপে চলে আসবে।
             </p>
           </div>
 
@@ -219,9 +250,9 @@ function ContactFormInner() {
                     key={service}
                     type="button"
                     onClick={() => toggleService(service)}
-                    className={`px-2.5 py-1 rounded-md text-xs transition-all ${
+                    className={`px-3 py-1.5 rounded-lg text-xs transition-all cursor-pointer ${
                       active
-                        ? "bg-blue-50 border border-[#0047BA] text-[#0047BA] font-semibold"
+                        ? "bg-[#EBF3FC] border border-[#07418b] text-[#07418b] font-semibold shadow-2xs"
                         : "bg-slate-50 border border-slate-200 text-slate-600 hover:border-slate-300"
                     }`}
                   >
@@ -249,13 +280,14 @@ function ContactFormInner() {
             <button
               type="submit"
               disabled={loading}
-              className="btn-primary w-full py-2.5 text-xs font-semibold"
+              className="btn-primary w-full py-2.5 text-xs font-semibold cursor-pointer flex items-center justify-center gap-2"
             >
-              {loading ? "জমা দেওয়া হচ্ছে..." : "ফ্রি চেম্বার স্ট্র্যাটেজি সেশন বুক করুন"}
+              <MessageSquare className="w-4 h-4" />
+              <span>{loading ? "হোয়াটসঅ্যাপে পাঠানো হচ্ছে..." : "বার্তাটি সরাসরি হোয়াটসঅ্যাপে পাঠান"}</span>
             </button>
             <div className="flex items-center justify-center gap-1 text-[10px] text-slate-400 mt-2">
               <ShieldCheck className="w-3 h-3 text-[#0047BA]" />
-              <span>চিকিৎসা তথ্যের পূর্ণ গোপনীয়তা • কোনো অপ্রয়োজনীয় স্প্যাম নয়</span>
+              <span>চিকিৎসা তথ্যের পূর্ণ গোপনীয়তা • সরাসরি অফিশিয়াল হোয়াটসঅ্যাপে ডেলিভারি</span>
             </div>
           </div>
         </form>

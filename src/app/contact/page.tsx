@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, MessageSquare, ShieldCheck, Clock } from "lucide-react";
+import { Phone, Mail, MessageSquare, ShieldCheck, Clock } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import FAQSection from "@/components/FAQSection";
 
@@ -57,7 +57,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">হোয়াটসঅ্যাপ ইনস্ট্যান্ট কনসালটেশন</div>
-                    <div className="text-xs text-[#0047BA] font-semibold">+৮৮০ ১৮১১-৯৯৯৮৭৮</div>
+                    <div className="text-xs text-[#0047BA] font-semibold">+880 1811-999878</div>
                     <span className="text-[10px] text-slate-500">সাধারণত ৫ মিনিটে উত্তর দেওয়া হয়</span>
                   </div>
                 </a>
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   <div>
                     <div className="text-xs font-bold text-slate-900">সরাসরি ফোন কল হটলাইন</div>
                     <a href="tel:+8801811999878" className="text-xs text-[#0047BA] font-semibold hover:underline">
-                      +৮৮০ ১৮১১-৯৯৯৮৭৮
+                      +880 1811-999878
                     </a>
                     <span className="text-[10px] text-slate-500 block">সকাল ৯:০০ - রাত ১০:০০ (প্রতিদিন)</span>
                   </div>
@@ -81,26 +81,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900">অফিসিয়াল ইমেইল</div>
-                    <a href="mailto:support@homeonetwork.com.bd" className="text-xs text-[#0047BA] font-semibold hover:underline">
-                      support@homeonetwork.com.bd
+                    <a href="mailto:support@homeonetwork.com" className="text-xs text-[#0047BA] font-semibold hover:underline">
+                      support@homeonetwork.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0047BA] flex items-center justify-center shrink-0">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-slate-900">প্রধান কার্যালয়</div>
-                    <p className="text-xs text-slate-600 leading-snug">
-                      রূপায়ন ট্রেড সেন্টার, বাংলা মোটর, ঢাকা-১০০০
-                    </p>
-                    <span className="text-[10px] text-slate-500 block mt-0.5">
-                      টেকনিক্যাল সাপোর্ট: মিরপুর-১৪ (সরকারি হোমিওপ্যাথিক মেডিকেল কলেজ সংলগ্ন), ঢাকা-১২০৬
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
 

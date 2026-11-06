@@ -99,4 +99,43 @@
   font-weight: 600;
 }
 
+/* Clean Outline Brand Button */
+.btn-outline-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.35rem;
+  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  color: #07418b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #D0E2F5;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 2px 0 rgba(7, 65, 139, 0.04);
+}
+
+.btn-outline-brand:hover {
+  background-color: #F0F6FD;
+  border-color: #07418b;
+  color: #07418b;
+}
+
+/* Bespoke Standard Card */
+.card-bespoke {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  border: 1px solid #E2EDF8;
+  box-shadow: 0 1px 3px 0 rgba(7, 65, 139, 0.04);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-bespoke:hover {
+  border-color: #CBDDF2;
+  box-shadow: 0 4px 12px 0 rgba(7, 65, 139, 0.08);
+}
+
+
 

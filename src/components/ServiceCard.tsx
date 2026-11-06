@@ -48,7 +48,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
 
   return (
     <Link
-      href={`/services#${service.id}`}
+      href="/services"
       className="group block p-6 rounded-xl bg-white border border-slate-200 hover:border-[#0047BA] hover:shadow-sm transition-all duration-150"
     >
       <div className="w-10 h-10 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center group-hover:bg-[#0047BA] group-hover:text-white transition-colors mb-4">

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, ShieldCheck, HeartPulse } from "lucide-react";
+import { Phone, Mail, ShieldCheck, HeartPulse } from "lucide-react";
 import { servicesList } from "@/data/servicesData";
 
 export default function Footer() {
@@ -96,21 +96,14 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
                 <a href="tel:+8801811999878" className="hover:text-white transition-colors text-slate-200">
-                  +৮৮০ ১৮১১-৯৯৯৮৭৮
+                  +880 1811-999878
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
-                <a href="mailto:support@homeonetwork.com.bd" className="hover:text-white transition-colors text-slate-200">
-                  support@homeonetwork.com.bd
+                <a href="mailto:support@homeonetwork.com" className="hover:text-white transition-colors text-slate-200">
+                  support@homeonetwork.com
                 </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#38BDF8] shrink-0 mt-0.5" />
-                <div>
-                  <span className="block text-slate-200">বাংলা মোটর, ঢাকা-১০০০</span>
-                  <span className="text-[11px] text-slate-400">মিরপুর-১৪ (সরকারি হোমিও মেডিকেল কলেজ সংলগ্ন)</span>
-                </div>
               </li>
             </ul>
           </div>

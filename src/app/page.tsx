@@ -12,7 +12,11 @@ import {
   MapPin,
   Globe,
   Sparkles,
-  ChevronRight
+  ChevronRight,
+  Search,
+  ShieldCheck,
+  PhoneCall,
+  ExternalLink
 } from "lucide-react";
 import { servicesList } from "@/data/servicesData";
 import ServiceCard from "@/components/ServiceCard";
@@ -22,235 +26,217 @@ export default function HomePage() {
   return (
     <div className="space-y-16 sm:space-y-24 pb-20">
 
-      {/* ===== 1. HERO SECTION (NO IMAGE - CLEAN & HIGH-CONVERSION) ===== */}
-      <section className="pt-12 pb-8 sm:pt-16 sm:pb-14 bg-gradient-to-b from-blue-50/60 via-slate-50/30 to-transparent">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-7">
+      {/* ===== 1. BESPOKE HERO SECTION (CLEAN, PROFESSIONAL & NON-AI) ===== */}
+      <section className="relative pt-8 pb-10 sm:pt-14 sm:pb-16 bg-gradient-to-b from-[#F0F6FD]/90 via-white to-white border-b border-[#E2EDF8]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+            
+            {/* Left Column: Clear Value Proposition */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              
+              {/* Main Headline - Solid, Confident Typography (No AI rainbow gradients) */}
+              <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#0B1E36] tracking-tight leading-[1.22]">
+                হোমিওপ্যাথিক প্র্যাকটিসের জন্য{" "}
+                <span className="text-[#07418b]">ওয়েবসাইট, ডিরেক্টরি</span> ও ডিজিটাল উপস্থিতি
+              </h1>
 
-          {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.25] max-w-4xl mx-auto">
-            হোমিওপ্যাথিক প্র্যাকটিসে আনুন{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0047BA] via-[#0057C2] to-[#0284C7]">
-              আধুনিক প্রযুক্তির পূর্ণাঙ্গ শক্তি
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            বাংলাদেশ হোমিওপ্যাথি বোর্ডের নিবন্ধিত DHMS ও ঢাকা বিশ্ববিদ্যালয় অধিভুক্ত BHMS চিকিৎসকদের জন্য বিশেষায়িত ডাক্তার ওয়েবসাইট, জাতীয় ডিরেক্টরি লিস্টিং, গুগল ম্যাপস ১ নম্বর এসইও এবং আধুনিক ক্লিনিক সফটওয়্যার।
-          </p>
-
-          {/* Action Buttons */}
-          <div className="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            <Link
-              href="/contact"
-              className="btn-primary text-xs sm:text-sm py-3 px-6 font-bold shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
-            >
-              <span>ফ্রি চেম্বার স্ট্র্যাটেজি সেশন বুক করুন</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <Link
-              href="/services"
-              className="btn-secondary text-xs sm:text-sm py-3 px-5 font-semibold text-center flex items-center justify-center gap-1.5 w-full sm:w-auto"
-            >
-              <span>ডিজিটাল সেবাসমূহ দেখুন</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-
-          {/* Social Proof Bar */}
-          <div className="pt-1 flex flex-wrap items-center justify-center gap-3 text-xs text-slate-500">
-            <div className="flex -space-x-2">
-              <div className="w-6 h-6 rounded-full bg-[#0047BA] text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
-                DH
-              </div>
-              <div className="w-6 h-6 rounded-full bg-slate-800 text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
-                BH
-              </div>
-              <div className="w-6 h-6 rounded-full bg-amber-500 text-white font-bold flex items-center justify-center text-[9px] ring-2 ring-white">
-                ৫★
-              </div>
-            </div>
-            <span>
-              ঢাকা, চট্টগ্রাম, সিলেটসহ সারাদেশে <strong>৫০০+ রেজিস্টার্ড চিকিৎসকদের</strong> বিশ্বস্ত প্ল্যাটফর্ম।
-            </span>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ===== 2. KEY STATS STRIP ===== */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-
-          <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#0047BA] flex items-center justify-center mx-auto mb-2">
-              <Users className="w-4 h-4" />
-            </div>
-            <div className="text-2xl font-extrabold text-slate-900">
-              ৫০০<span className="text-[#0047BA]">+</span>
-            </div>
-            <div className="text-xs font-semibold text-slate-600 mt-0.5">
-              নিবন্ধিত ডাক্তার ডিজিটাইজড
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0047BA] flex items-center justify-center mx-auto mb-2">
-              <Zap className="w-4 h-4" />
-            </div>
-            <div className="text-2xl font-extrabold text-slate-900">
-              ৮৫ হাজার<span className="text-[#0047BA]">+</span>
-            </div>
-            <div className="text-xs font-semibold text-slate-600 mt-0.5">
-              রোগী ও প্রেসক্রিপশন ডিজিটাইজড
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center mx-auto mb-2">
-              <MapPin className="w-4 h-4" />
-            </div>
-            <div className="text-2xl font-extrabold text-slate-900">
-              ৬৪<span className="text-slate-700"> জেলা</span>
-            </div>
-            <div className="text-xs font-semibold text-slate-600 mt-0.5">
-              দেশব্যাপী ডাক্তার নেটওয়ার্ক
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl border border-slate-200 p-5 text-center shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-[#EFF6FF] text-[#0047BA] flex items-center justify-center mx-auto mb-2">
-              <Activity className="w-4 h-4" />
-            </div>
-            <div className="text-2xl font-extrabold text-slate-900">
-              ৩.৮<span className="text-[#0047BA]"> গুণ</span>
-            </div>
-            <div className="text-xs font-semibold text-slate-600 mt-0.5">
-              গড় রোগী বৃদ্ধি হার
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ===== 3. HAHNEMANNIAN PHILOSOPHICAL BANNER ===== */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-2xl p-6 sm:p-8 bg-gradient-to-r from-slate-950 via-slate-900 to-[#0B2240] text-white shadow-lg border border-slate-800 relative overflow-hidden">
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="space-y-2 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold border border-blue-500/30">
-                <span>Similia Similibus Curentur</span>
-                <span>•</span>
-                <span>Aude Sapere</span>
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white italic leading-relaxed">
-                &ldquo;চিকিৎসকের একমাত্র ও সর্বোচ্চ ব্রত হলো অসুস্থ মানুষকে আরোগ্য প্রদান করা, যাকে প্রকৃত চিকিৎসা বলা হয়।&rdquo;
-              </h3>
-              <p className="text-xs text-slate-400">
-                — মহাত্মা ডা. স্যামুয়েল হ্যানিম্যান (অর্গানন অব মেডিসিন, ১ম সূত্র)
+              {/* Concrete Subtitle */}
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
+                বাংলাদেশ হোমিওপ্যাথি বোর্ডের নিবন্ধিত DHMS ও ঢাকা বিশ্ববিদ্যালয়ের BHMS চিকিৎসকদের নিজস্ব ওয়েবসাইট তৈরি, ভেরিফায়েড ডিরেক্টরি লিস্টিং এবং গুগলে স্থানীয় রোগী বৃদ্ধির নির্ভরযোগ্য মাধ্যম।
               </p>
-              <p className="text-xs text-blue-100/90 pt-1 max-w-xl leading-relaxed">
-                আমরা হোমিওপ্যাথি চিকিৎসার বিজ্ঞান ও পেশাদার মর্যাদা অক্ষুণ্ণ রেখে আপনার চেম্বারকে গুগল ও ডিজিটালে শীর্ষ শক্তিতে রূপান্তরিত করি।
-              </p>
-            </div>
 
-            <div className="shrink-0 text-center">
-              <Link
-                href="/about"
-                className="btn-primary text-xs py-2.5 px-5 font-bold shadow-md inline-flex items-center gap-1.5"
-              >
-                <span>আমাদের মিশন পড়ুন</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+              {/* Action Buttons */}
+              <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <Link
+                  href="/contact"
+                  className="btn-primary text-xs sm:text-sm py-3 px-6 font-semibold flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+                >
+                  <span>চেম্বারের জন্য কথা বলুন</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
 
-      {/* ===== 4. HOMEOPATHY MEETS DIGITAL PRECISION ===== */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="badge-pill mb-2 inline-flex">
-            <Sparkles className="w-3.5 h-3.5 text-blue-700" />
-            <span>হোমিওপ্যাথিতে সাধারণ আইটি কেন ব্যর্থ হয়?</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            হোমিওপ্যাথিক প্র্যাকটিসের স্বতন্ত্র বৈশিষ্ট্যের জন্য নির্মিত
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-            হোমিওপ্যাথিক চিকিৎসকদের প্রতিদিনের চেম্বার পরিচালনার জন্য সহজে ডিজিটাল প্রেসক্রিপশন প্রিন্ট, রোগী রেজিস্ট্রি, ভিজিট ফি ও ডিসপেনসারি ব্যবস্থাপনার সম্পূর্ণ সমাধান।
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-
-          {/* Card 1: Patient & Prescription */}
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs flex flex-col justify-between">
-            <div className="relative aspect-[16/10] w-full bg-slate-100">
-              <Image
-                src="/images/male-doctor-consultation.jpg"
-                alt="রোগীর সাথে কথা বলছেন ও ডিজিটাল প্রেসক্রিপশন প্রস্তুত করছেন অভিজ্ঞ চিকিৎসক"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-800 border border-slate-200 shadow-xs">
-                স্মার্ট প্রেসক্রিপশন
-              </div>
-            </div>
-            <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
-              <div className="space-y-2">
-                <h3 className="text-base font-bold text-slate-900">
-                  ডিজিটাল রোগী ব্যবস্থাপনা ও দ্রুত প্রেসক্রিপশন প্রিন্ট
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  রোগীর নাম বা মোবাইল নম্বর দিতেই ২ সেকেন্ডে পূর্ববর্তী ব্যবস্থাপত্র স্ক্রিনে দৃশ্যমান। কিউআর কোডযুক্ত বাংলা ও ইংরেজি প্রফেশনাল প্রেসক্রিপশন চোখের পলকে প্রিন্ট করুন।
-                </p>
-              </div>
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                <span className="text-slate-700 font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA]" /> পেশেন্ট ডাটাবেস ও চেম্বার বিলিং রেকর্ড
-                </span>
-                <Link href="/services#clinic-crm-software" className="text-[#0047BA] font-bold hover:underline flex items-center gap-0.5">
-                  বিস্তারিত <ChevronRight className="w-3.5 h-3.5" />
+                <Link
+                  href="/services"
+                  className="btn-outline-brand text-xs sm:text-sm py-3 px-5 font-semibold text-center flex items-center justify-center gap-1.5 cursor-pointer"
+                >
+                  <span>সেবাগুলো দেখুন</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-[#07418b]" />
                 </Link>
               </div>
+
+              {/* Trust Indicators - Real Capabilities */}
+              <div className="pt-4 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs text-slate-600 border-t border-slate-200/80">
+                <span className="flex items-center gap-1.5 font-medium text-[#0B1E36]">
+                  <CheckCircle2 className="w-4 h-4 text-[#07418b]" />
+                  <span>ক্লিনিকাল ওয়েবসাইট ডেভেলপমেন্ট</span>
+                </span>
+                <span className="flex items-center gap-1.5 font-medium text-[#0B1E36]">
+                  <CheckCircle2 className="w-4 h-4 text-[#07418b]" />
+                  <span>দেশব্যাপী ভেরিফায়েড ডিরেক্টরি</span>
+                </span>
+                <span className="flex items-center gap-1.5 font-medium text-[#0B1E36]">
+                  <CheckCircle2 className="w-4 h-4 text-[#07418b]" />
+                  <span>গুগল ম্যাপস ও লোকাল এসইও</span>
+                </span>
+              </div>
+
             </div>
+
+            {/* Right Column: Realistic Chamber Web & Directory Mockup */}
+            <div className="lg:col-span-5">
+              <div className="relative rounded-2xl border border-slate-200/90 bg-white shadow-[0_12px_32px_rgba(7,65,139,0.08)] overflow-hidden">
+                
+                {/* Browser Top Navigation Bar */}
+                <div className="bg-slate-50/90 px-4 py-2.5 border-b border-slate-200/80 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <span className="size-2.5 rounded-full bg-slate-300" />
+                    <span className="size-2.5 rounded-full bg-slate-300" />
+                    <span className="size-2.5 rounded-full bg-slate-300" />
+                  </div>
+                  <div className="bg-white px-3 py-1 rounded-md text-[11px] text-slate-600 font-mono flex items-center gap-1.5 border border-slate-200 shadow-2xs">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#07418b]" />
+                    <span>homeonetwork.com/dr-hasan</span>
+                  </div>
+                  <div className="w-7" />
+                </div>
+
+                {/* Doctor Chamber Interactive Portal Preview */}
+                <div className="p-5 space-y-4">
+                  
+                  {/* Doctor Profile Header */}
+                  <div className="flex items-start gap-3.5 pb-4 border-b border-slate-100">
+                    <div className="size-12 rounded-xl bg-[#07418b] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-xs">
+                      ডা
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-sm font-bold text-[#0B1E36] truncate">ডা. এম. এ. হাসান</h3>
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#EBF3FC] text-[#07418b] border border-[#D0E2F5] shrink-0">
+                          ভেরিফায়েড
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-600 mt-0.5">BHMS (ঢাকা বিশ্ববিদ্যালয়), ডিএইচএমএস • রেজি: ১২৪৫০</p>
+                      <p className="text-[11px] text-[#07418b] font-medium mt-0.5 flex items-center gap-1">
+                        <MapPin className="w-3 h-3" />
+                        <span>ধানমন্ডি, ঢাকা • ক্রনিক রোগ ও কেস-টেকিং স্পেশালিস্ট</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 3 Core Services in Chamber Portal */}
+                  <div className="space-y-2">
+                    
+                    {/* Deliverable 1: Website */}
+                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-[#F0F6FD] border border-[#D0E2F5] text-xs">
+                      <div className="flex items-center gap-2.5">
+                        <div className="size-6 rounded-md bg-[#07418b] text-white flex items-center justify-center shrink-0">
+                          <Globe className="w-3.5 h-3.5" />
+                        </div>
+                        <div>
+                          <span className="font-bold text-[#0B1E36] block">১. পার্সোনাল ওয়েবসাইট</span>
+                          <span className="text-[10px] text-slate-500">অনলাইন চেম্বার ও রোগী অ্যাপয়েন্টমেন্ট</span>
+                        </div>
+                      </div>
+                      <span className="text-[10px] font-bold text-[#07418b] bg-white px-2 py-0.5 rounded-md border border-[#D0E2F5]">
+                        লাইভ পোর্টাল
+                      </span>
+                    </div>
+
+                    {/* Deliverable 2: Directory */}
+                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs">
+                      <div className="flex items-center gap-2.5">
+                        <div className="size-6 rounded-md bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                          <Users className="w-3.5 h-3.5" />
+                        </div>
+                        <div>
+                          <span className="font-bold text-[#0B1E36] block">২. জাতীয় ডিরেক্টরি লিস্টিং</span>
+                          <span className="text-[10px] text-slate-500">সারাদেশের রোগীদের জন্য উন্মুক্ত প্রোফাইল</span>
+                        </div>
+                      </div>
+                      <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                        লিস্টেড
+                      </span>
+                    </div>
+
+                    {/* Deliverable 3: Digital Marketing */}
+                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs">
+                      <div className="flex items-center gap-2.5">
+                        <div className="size-6 rounded-md bg-amber-600 text-white flex items-center justify-center shrink-0">
+                          <Search className="w-3.5 h-3.5" />
+                        </div>
+                        <div>
+                          <span className="font-bold text-[#0B1E36] block">৩. গুগল ম্যাপস ও এসইও</span>
+                          <span className="text-[10px] text-slate-500">লোকাল এলাকায় গুগলে ১ নম্বর পজিশন</span>
+                        </div>
+                      </div>
+                      <span className="text-[10px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">
+                        #১ র্যাংক
+                      </span>
+                    </div>
+
+                  </div>
+
+                  {/* Patient Action Footer */}
+                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span className="text-[11px] font-medium text-slate-600">রোগীর সাথে সরাসরি যোগাযোগ:</span>
+                    <div className="flex items-center gap-2">
+                      <span className="px-3 py-1 rounded-lg bg-[#07418b] text-white text-[11px] font-semibold flex items-center gap-1 shadow-2xs">
+                        <PhoneCall className="w-3 h-3" />
+                        <span>কল করুন</span>
+                      </span>
+                      <span className="px-3 py-1 rounded-lg bg-emerald-600 text-white text-[11px] font-semibold flex items-center gap-1 shadow-2xs">
+                        <span>হোয়াটসঅ্যাপ</span>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 2. 3 CORE PILLARS OVERVIEW ===== */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+          <div className="card-bespoke p-6 space-y-2.5">
+            <div className="size-10 rounded-xl bg-[#F0F6FD] text-[#07418b] flex items-center justify-center border border-[#D0E2F5]">
+              <Globe className="w-5 h-5" />
+            </div>
+            <h3 className="text-base font-bold text-[#0B1E36]">
+              ১. ডাক্তার ওয়েবসাইট ডেভেলপমেন্ট
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              ডাক্তারের নিজের নামে কাস্টম ডোমেইন, চেম্বার শিডিউল, ভিজিট ফি, প্রেসক্রিপশন গাইড এবং মোবাইল-বান্ধব ইন্টারফেস।
+            </p>
           </div>
 
-          {/* Card 2: Remedies & Dispensing */}
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs flex flex-col justify-between">
-            <div className="relative aspect-[16/10] w-full bg-slate-100">
-              <Image
-                src="/images/homeo-remedy-tech.jpg"
-                alt="হোমিওপ্যাথিক ওষুধ, সুগার গ্লোবিউলস এবং মোবাইল অ্যাপ্লিকেশন"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-800 border border-slate-200 shadow-xs">
-                সিরিয়াল ও চ্যাটবট
-              </div>
+          <div className="card-bespoke p-6 space-y-2.5">
+            <div className="size-10 rounded-xl bg-[#F0F6FD] text-[#07418b] flex items-center justify-center border border-[#D0E2F5]">
+              <Users className="w-5 h-5" />
             </div>
-            <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
-              <div className="space-y-2">
-                <h3 className="text-base font-bold text-slate-900">
-                  হোয়াটসঅ্যাপ সিরিয়াল ও চেম্বার শিডিউল
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  রোগীর সিরিয়াল কনফার্মেশন, চেম্বার শিডিউল এবং গুগল ম্যাপস লোকেশন স্বয়ংক্রিয়ভাবে রোগীর হোয়াটসঅ্যাপে পৌঁছে দেওয়ার আধুনিক ব্যবস্থা।
-                </p>
-              </div>
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                <span className="text-slate-700 font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA]" /> বারবার ফোন আসার ঝামেলা ৭৫% হ্রাস
-                </span>
-                <Link href="/services#tech-automation" className="text-[#0047BA] font-bold hover:underline flex items-center gap-0.5">
-                  বিস্তারিত <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+            <h3 className="text-base font-bold text-[#0B1E36]">
+              ২. জাতীয় ডাক্তার ডিরেক্টরি
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              সারাদেশের ৬৪ জেলার রোগীদের নিকট ডিগ্রিধারী চিকিৎসকের ভেরিফায়েড পরিচিতি ও সরাসরি বুকিং সুবিধা।
+            </p>
+          </div>
+
+          <div className="card-bespoke p-6 space-y-2.5">
+            <div className="size-10 rounded-xl bg-[#F0F6FD] text-[#07418b] flex items-center justify-center border border-[#D0E2F5]">
+              <Search className="w-5 h-5" />
             </div>
+            <h3 className="text-base font-bold text-[#0B1E36]">
+              ৩. গুগল ম্যাপস ও ডিজিটাল মার্কেটিং
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              গুগল বিজনেস প্রোফাইল অপ্টিমাইজেশন ও লোকাল এসইও, যার মাধ্যমে আশপাশের ক্রনিক রোগীরা সহজে খুঁজে পাবে।
+            </p>
           </div>
 
         </div>
@@ -293,18 +279,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 6. SERVICES CATALOG ===== */}
+      {/* ===== 5. SERVICES CATALOG ===== */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
-            বিশেষায়িত ডিজিটাল সমাধান
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1E36] mb-2">
+            বিশেষায়িত ডিজিটাল সমাধান
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
-            হোমিওপ্যাথিক চেম্বার ও ক্লিনিকের প্রতিটি ধাপ স্বাচ্ছন্দ্যময় করার সম্পূর্ণ প্রযুক্তি কাঠামো।
+            ডিগ্রিধারী হোমিওপ্যাথিক চিকিৎসকদের প্র্যাকটিস আধুনিকায়ন ও রোগী বৃদ্ধির পূর্ণাঙ্গ সেবা।
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {servicesList.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
@@ -313,15 +299,15 @@ export default function HomePage() {
         <div className="mt-8 text-center">
           <Link
             href="/services"
-            className="btn-secondary text-xs py-2.5 px-6 inline-flex items-center gap-1.5 font-semibold"
+            className="btn-outline-brand text-xs sm:text-sm py-2.5 px-6 inline-flex items-center gap-1.5 font-semibold"
           >
-            <span>সকল সেবার বিস্তারিত বিবরণ দেখুন</span>
+            <span>সেবাগুলোর বিস্তারিত বিবরণ দেখুন</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
       </section>
 
-      {/* ===== 8. COMPARISON TABLE ===== */}
+      {/* ===== 6. COMPARISON TABLE ===== */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="rounded-xl overflow-hidden border border-slate-200 bg-white shadow-xs">
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
@@ -334,26 +320,26 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-900">গতানুগতিক সনাতন চেম্বার</h3>
-                  <span className="text-[11px] text-rose-600 font-medium">ম্যানুয়াল ও সীমাবদ্ধ পরিসর</span>
+                  <span className="text-[11px] text-rose-600 font-medium">ম্যানুয়াল ও সীমাবদ্ধ প্রচার</span>
                 </div>
               </div>
 
               <ul className="space-y-2 text-xs text-slate-600">
                 <li className="flex items-start gap-2">
                   <XCircle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
-                  <span>কাগজের মোটা ফাইল যা ভিজে বা হারিয়ে যাওয়ার ঝুঁকি থাকে</span>
+                  <span>কোয়াকদের ভিড়ে ডিগ্রিধারী চিকিৎসকের নিজস্ব কোনো অফিসিয়াল ওয়েবসাইট না থাকা</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <XCircle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
-                  <span>চেম্বারে রোগী দেখার ব্যস্ত সময়ে সিরিয়াল ও তথ্যের জন্য বারবার ফোন কলে চিকিৎসা বিঘ্নিত হওয়া</span>
+                  <span>গুগল সার্চ বা ম্যাপসে এলাকার রোগীরা চেম্বারের সঠিক তথ্য ও লোকেশন খুঁজে না পাওয়া</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <XCircle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
-                  <span>কোয়াকদের ভিড়ে ডিগ্রিধারী চিকিৎসকের গুগলে কোনো আনুষ্ঠানিক উপস্থিতি না থাকা</span>
+                  <span>জাতীয় ডিরেক্টরিতে নাম না থাকায় দূরবর্তী জটিল রোগীদের কাছে পৌঁছাতে না পারা</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <XCircle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
-                  <span>রোগীর সিরিয়াল ও সময়সূচির তথ্য দিতে সহকারীর প্রতিদিন ঘণ্টার পর ঘণ্টা সময় অপচয়</span>
+                  <span>টার্গেটেড ডিজিটাল মার্কেটিং না থাকায় শুধুমাত্র মুখের সুপারিশে রোগী সীমাবদ্ধ থাকা</span>
                 </li>
               </ul>
             </div>
@@ -361,31 +347,31 @@ export default function HomePage() {
             {/* With Homeo Network */}
             <div className="p-6 space-y-3.5 bg-blue-50/40">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-[#0047BA]">
+                <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-[#07418b]">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-900">Homeo Network-এর সাথে</h3>
-                  <span className="text-[11px] text-[#0047BA] font-semibold">স্বয়ংক্রিয় ও দেশব্যাপী গ্রহণযোগ্যতা</span>
+                  <span className="text-[11px] text-[#07418b] font-semibold">আধুনিক ও দেশব্যাপী গ্রহণযোগ্যতা</span>
                 </div>
               </div>
 
               <ul className="space-y-2 text-xs text-slate-700 font-medium">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
-                  <span>২ সেকেন্ডে রোগীর পূর্ববর্তী ডিজিটাল প্রেসক্রিপশন ও চেম্বার তথ্য প্রদর্শন</span>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#07418b] shrink-0 mt-0.5" />
+                  <span>নিজস্ব ডোমেইনে মোবাইল-বান্ধব ডাক্তার ওয়েবসাইট ও প্রফেশনাল পরিচিতি</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
-                  <span>সরাসরি হোয়াটসঅ্যাপ হটলাইন ও সিরিয়াল কনফার্মেশন</span>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#07418b] shrink-0 mt-0.5" />
+                  <span>গুগল সার্চ ও গুগল ম্যাপসে ক্রনিক রোগীর জন্য এলাকার ১ নম্বর অবস্থান</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
-                  <span>গুগল সার্চ ও গুগল ম্যাপসে জটিল রোগের জন্য ১ নম্বর অবস্থান</span>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#07418b] shrink-0 mt-0.5" />
+                  <span>দেশব্যাপী কেন্দ্রীয় ডাক্তার ডিরেক্টরিতে ভেরিফায়েড প্রোফাইল ও রোগীর আস্থা</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#0047BA] shrink-0 mt-0.5" />
-                  <span>চেম্বারের গুগল ম্যাপস লোকেশন ও ডিরেকশন স্বয়ংক্রিয়ভাবে রোগীর কাছে পৌঁছে যাওয়া</span>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#07418b] shrink-0 mt-0.5" />
+                  <span>টার্গেটেড ডিজিটাল প্রচারণা ও সরাসরি ফোন/হোয়াটসঅ্যাপ রোগী পরামর্শ সুবিধা</span>
                 </li>
               </ul>
             </div>

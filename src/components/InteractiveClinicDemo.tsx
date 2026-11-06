@@ -126,7 +126,7 @@ export default function InteractiveClinicDemo() {
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-slate-900">সুলতানা আফরোজ (৩৬ বছর)</h4>
-                      <p className="text-[11px] text-slate-500">ধানমন্ডি, ঢাকা | মোবাইল: ০১৭১১-***৪২০</p>
+                      <p className="text-[11px] text-slate-500">ধানমন্ডি, ঢাকা | মোবাইল: 01711-***420</p>
                     </div>
                   </div>
 
